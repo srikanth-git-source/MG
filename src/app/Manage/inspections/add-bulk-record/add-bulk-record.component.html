@@ -1,0 +1,81 @@
+<div class="NewHeader">
+  <h1 mat-dialog-title><span>Add</span> Bulk Records</h1>
+</div>
+<form class="form-horizontal">
+  <div mat-dialog-content class="row">
+    <div class="col-sm-12 no-padding">
+      <div class="">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="col-sm-12 control-label add-member-label">Enter Multiple Serial Numbers: </label>
+            
+            <div class="col-sm-12" style="margin-top:10px">
+              <textarea class="form-control txtarea" rows="9" placeholder="Enter Multiple Serial Numbers on Separate lines"></textarea>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="">
+            <label class=" control-label col-sm-4 add-member-label">Customer: </label>
+            <div class="col-sm-7" style="margin-bottom: 15px;">
+              <mat-select name="" id="" class="form-control" placeholder="Select Customer">
+                <mat-option [value]="0">Scifit</mat-option>
+                <mat-option [value]="1">Climate Master</mat-option>
+                <mat-option [value]="2">Civacon</mat-option>
+                <mat-option [value]="3">Purkeys</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="">
+
+            <label class="control-label col-sm-4 add-member-label" for="pwd"> Inspection Type: </label>
+            <div class="col-sm-7" style="margin-bottom: 15px;">
+              <mat-select name="" id="" class="form-control" placeholder="Select Inspection Type">
+                <mat-option [value]="0">Afterwash - PCB</mat-option>
+                <mat-option [value]="1">Coating - PCB</mat-option>
+                <mat-option [value]="2">Depanel - PCB</mat-option>
+                <mat-option [value]="3">Final - Box</mat-option>
+              </mat-select>
+            </div>
+            <div class="">
+              <label class="control-label col-sm-4">Ref Des: </label>
+              <div class="col-sm-7" style="margin-bottom: 15px;" >
+                  <input type="text" class="form-control" placeholder="Enter Reference Designator ">
+              </div>
+          </div>
+          </div>
+          <div class="form-group" >
+            <label class="control-label col-sm-4" style="margin-left: 15px;margin-right: -12px;">No Defects: </label>
+            <div class="col-sm-7">
+                <input type="checkbox" [checked]="isNoDefects" (click) = "changeDefects($event)" class="form-check-input" style="height: 23px;width: 28px;">
+                
+            </div>
+        </div>
+          <div class="" *ngIf="showNoDefect">
+            <div class="col-sm-4" >
+               <label class=" control-label" >Log Defects:
+            </label>
+            </div>
+              <div class="col-sm-7" style="margin-bottom: 15px;">
+                <mat-select multiple formControlName="LogDefects" style="margin-bottom: 7px;" class="form-control" placeholder="Select Log Defects">
+                  <mat-option #allSelected  [value]="0">Select All</mat-option>
+                  <mat-option *ngFor="let value of values" [value]="values">{{value}}</mat-option>
+                </mat-select>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<mat-dialog-actions align="end">
+  <button mat-raised-button (click)="close()" style="color: rgb(7, 10, 7); background-color: #e0e0e0;">
+    <mat-icon>cancel</mat-icon> Close
+  </button>
+  <button mat-raised-button class="btn-primary" (click)="saveUser()" [mat-dialog-close]="'test'">
+    <mat-icon>send</mat-icon> Save
+  </button>
+
+</mat-dialog-actions>

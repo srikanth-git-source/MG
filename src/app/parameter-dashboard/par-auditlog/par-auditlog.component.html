@@ -1,0 +1,161 @@
+<!-- Table -->
+<div >
+  <div class="col-xs-12" style="margin-left:10px;margin-top:38px ;">
+    <div id="grid-table-container" class="table-responsive" >
+      <div class="container-fluid">
+        <div class="w-100">
+          <div class="flex-p">
+            <div class="row wrap">
+              <div class="col-sm-12 no-padding">
+                <div class="row-wrap">
+                  <div class="w-100">
+                    <div class="row pull-right" style="margin-right: -5px;">
+                
+                          <div class="">
+                              <button style="margin-bottom: 7px"
+                              mat-raised-button
+                              color="primary"
+                              class="pull-right filters-hover margin-right-10 mt-3"
+                              (click)="filterToggle = !filterToggle"
+                            >
+                              <mat-icon>filter_list</mat-icon> Filter
+                            </button>
+                            <button  mat-raised-button style="margin-right: 12px;" color="primary" class="pull-right  mt-3"  (click)="addgrid()">
+                              <mat-icon>grid_on</mat-icon>Manage Grid
+                              </button>
+                        
+                          </div>
+                       
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" *ngIf="filterToggle" >
+        <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+          <mat-card class="filter"> 
+            <mat-card-content>
+              <div class="row">
+            
+                <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Category:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <mat-select class="form-control" placeholder="Select VIN:" required>
+                      <mat-option [value]="0">Exterior</mat-option>
+                      <mat-option [value]="1">Interior</mat-option>
+                
+                    </mat-select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Measure:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <mat-select class="form-control" placeholder="Select VIN:" required>
+                      <mat-option [value]="0">GAP</mat-option>
+                      <mat-option [value]="1">FLUSH</mat-option>
+                      <mat-option [value]="2">PARALLELISM</mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Checkpoint:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <input type="text" class="form-control" placeholder="Enter Checkpoint">
+
+                   </div>
+                  </div>
+               
+              </div>
+              <div class="row" style="padding-top:10px !important">
+                <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Value:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <input type="text" class="form-control" placeholder="Enter Value">
+                   </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Compilance:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <input type="text" class="form-control" placeholder="Enter Compilance">
+                 
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Color:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <mat-select class="form-control" placeholder="Select Color:" required>
+                      <mat-option [value]="0">Black</mat-option>
+                      <mat-option [value]="1">White</mat-option>
+                      <mat-option [value]="2">Blue</mat-option>
+                      <mat-option [value]="4">Orange</mat-option>
+                          </mat-select>
+                  </div>
+                </div>
+               
+              </div>
+            
+              <div class="row" style="padding-top:10px !important">
+                <div class="col-sm-12">
+                  <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
+                    <mat-icon>youtube_searched_for</mat-icon> Go
+                  </button>
+                  <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
+                    <mat-icon>settings_backup_restore</mat-icon> Clear
+                  </button>
+                </div> 
+               
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        
+      </div>
+      <table matSort id="example2" class="table table-bordered table-hover" style="width: 99%;">
+        <thead class="tbl-head">
+          <tr>
+            <th style="width: 50px;" class="theadcolor">S.No</th>
+            <th class="theadcolor">Category</th>
+            <th  class="theadcolor">Checkpoint</th>
+            <th style="width: 200px;" class="theadcolor">Measure</th>
+            <th class="theadcolor">LSL</th>
+            <th class="theadcolor">USL</th>
+            <th class="theadcolor">Value</th>
+            <th style="width: 50px;" class="theadcolor">Compilance</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of values">
+            <td class="text-center">{{item.sno}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.checkpoint}}</td>
+            <td>{{item.measure}}</td>
+            <td class="text-center">{{item.lsl}}</td>
+            <td class="text-center">{{item.usl}}</td>
+            <td class="text-center">{{item.value}}</td>
+            <td class="text-center">{{item.compilance}}</td>
+           
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+                [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>

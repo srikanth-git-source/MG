@@ -1,0 +1,214 @@
+<div class="row-wrap">
+  <div class="flex-p w-100">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row" style="margin-bottom:7px;">
+          <div class="col-xs-4 ">
+            <div class="flex-p">
+            </div>
+          </div>
+          <div class="col-xs-8 " style="margin-left:-10px">
+            <div class="flex-p">
+              <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+                (click)="filterToggle = !filterToggle">
+                <mat-icon>filter_list</mat-icon> Filter
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter table -->
+<div fxLayout="row wrap" *ngIf="filterToggle">
+  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+    <mat-card class="filter">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Site Surveyor">
+                <mat-option [value]="0">Rahul Prayakarao</mat-option>
+                <mat-option [value]="1">Shesha Rao</mat-option>
+                <mat-option [value]="2">Pavan Kumar</mat-option>
+                <mat-option [value]="3">Bharadwaj Reddy</mat-option>
+              </mat-select>
+
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Status">
+                <mat-option [value]="0">Assigned</mat-option>
+                <mat-option [value]="1">Resolved</mat-option>
+                <mat-option [value]="2">Closed</mat-option>
+                <mat-option [value]="3">Rejected</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Chronicity">
+                <mat-option [value]="0">Yes</mat-option>
+                <mat-option [value]="1">No</mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Priority">
+                <mat-option [value]="0">High</mat-option>
+                <mat-option [value]="1">Medium</mat-option>
+                <mat-option [value]="2">Low</mat-option>
+              </mat-select>
+
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <input type="date" class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <input type="date" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-sm-6">
+
+          </div>
+          <div class="col-sm-6">
+            <div class="col-lg-1" style="margin-left:295px!important;">
+              <button mat-raised-button class="pull-right btn-primary">
+                <mat-icon>youtube_searched_for</mat-icon> Go
+              </button>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left: -18px;">
+              <button mat-raised-button style="background-color:#37474f; color:#fff !important">
+                <mat-icon>settings_backup_restore</mat-icon> Clear
+              </button>
+            </div>
+            <div class="col-lg-1" style="margin-left:26px">
+              <a (click)="filterToggle = !filterToggle" class="pull-right"
+                style="font-size: 25px; cursor: pointer; margin-left: 5px;">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- 1 -->
+<div class="row col-12 mt-5">
+  <div class="col-4">
+    <div style="margin-left: 2%">
+      <div class="chart-header">
+        <p style="font-size: 17px;margin-top:10px;">Locations</p>
+      </div>
+      <div class="flex-p">
+        <mat-card>
+          <div class="w-100 h-300p">
+            <ngx-charts-pie-chart [scheme]="colorScheme" [results]="single" [legend]="showLegend"
+              [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient">
+            </ngx-charts-pie-chart>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div style="margin-left: 2%">
+      <div class="chart-header">
+        <p style="font-size: 17px;margin-top:10px;">Units</p>
+      </div>
+      <div class="flex-p">
+        <mat-card>
+          <div class="w-100 h-300p">
+            <ngx-charts-pie-chart [scheme]="colorScheme" [results]="two" [legend]="showLegend"
+              [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient">
+            </ngx-charts-pie-chart>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div style="margin-left: 2%">
+      <div class="chart-header">
+        <p style="font-size: 17px;margin-top:10px;">Sections</p>
+      </div>
+      <div class="flex-p">
+        <mat-card>
+          <div class="w-100 h-300p">
+            <ngx-charts-pie-chart [scheme]="colorScheme" [results]="three" [legend]="showLegend"
+              [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient">
+            </ngx-charts-pie-chart>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Table -->
+<div>
+  <div class="col-xs-12" style="margin-left:8px;margin-top:20px;">
+    <div id="grid-table-container" class="table-responsive" style="width: 99%;">
+      <h3>Recent Tickets</h3>
+      <table matSort id="example2" class="table table-bordered table-hover">
+        <thead class="tbl-head">
+          <tr>
+            <th class="theadcolor "> Ticket ID</th>
+            <th class="theadcolor "> Location</th>
+            <th class="theadcolor "> Unit</th>
+            <th class="theadcolor "> Block</th>
+            <th class="theadcolor "> Section</th>
+            <th class="theadcolor "> Priority</th>
+            <th class="theadcolor "> Status</th>
+            <th class="theadcolor "> Audit Type</th>
+            <th class="theadcolor "> Surveyor Name</th>
+            <th class="theadcolor "> Assigned To</th>
+            <th class="theadcolor "> Overdue</th>
+            <th class="theadcolor "> Due Date</th>
+            <th class="theadcolor "> Chronic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of values">
+            <td><a style="cursor: pointer;color:cornflowerblue">{{item.Ticket}}</a></td>
+            <td>{{item.Location}}</td>
+            <td>{{item.Unit}}</td>
+            <td>{{item.Block}}</td>
+            <td>{{item.Section}}</td>
+            <td>{{item.Priority}}</td>
+            <td>{{item.Status}}</td>
+            <td>{{item.Audit}}</td>
+            <td>{{item.Surveyor}}</td>
+            <td>{{item.Assigned}}</td>
+            <td>{{item.Overdue}}</td>
+            <td>{{item.DueDate}}</td>
+            <td>{{item.Chronic}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [length]="10" [pageIndex]="0" [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+<div fxLayout="row wrap">
+  <div class="flex-p w-100">
+    <div class="row" style="margin-bottom: 7px">
+      <div class="col-xs-12">
+        <div class="flex-p">
+          <button mat-raised-button class="pull-right add-hover-help btn-success-help"
+            style="margin-left: 10px; background-color: rgb(255, 255, 1)">
+            <mat-icon>help_outline</mat-icon> Help
+          </button>
+          <button mat-raised-button class="pull-right btn-primary" (click)="openUserDialog1(null)">
+            <mat-icon>add</mat-icon> Add Bulk Records
+          </button>
+          <button mat-raised-button class="pull-right btn-primary margin-right-10" (click)="openUserDialog(null)">
+            <mat-icon>add</mat-icon> Add Record
+          </button>
+          <button mat-raised-button class="pull-right add-hover margin-right-10 btn-primary" type="button">
+            <mat-icon>cloud_download</mat-icon> Download CSV
+          </button>
+          <button mat-raised-button color="primary" class="pull-right filter-hover margin-right-10"
+            (click)="filterToggle = !filterToggle">
+            <mat-icon>filter_list</mat-icon> Filter
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div fxLayout="row wrap" *ngIf="filterToggle">
+      <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+        <mat-card class="filter">
+          <mat-card-content>
+            <div class="row">
+              <div class="col-sm-4" style="padding-bottom:10px !important">
+                <div class="col-sm-4 newMarginClass">Keyword:</div>
+                <div class="col-sm-8">
+                  <input type="text" onCopy="return false" onPaste="return false" class="form-control"
+                    placeholder="Search by Assembly/ Work Order" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-4 newMarginClass">From Date:</div>
+                <div class="col-sm-8">
+                  <input class="form-control" placeholder="MM/DD/YYYY" class="form-control" id="db"
+                    [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" name="dt1" />
+                  <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-4 newMarginClass">To Date:</div>
+                <div class="col-sm-8">
+                  <input class="form-control" placeholder="MM/DD/YYYY" class="form-control" id="db"
+                    [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" name="dt2" />
+                  <owl-date-time [pickerType]="'calendar'" #dt2></owl-date-time>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-4 newMarginClass">Inspection Type:</div>
+                <div class="col-sm-8">
+                  <mat-select class="form-control" placeholder="Select Inspection type">
+                    <mat-option [value]="0">Afterwash - PCB</mat-option>
+                    <mat-option [value]="1">Coating - PCB</mat-option>
+                    <mat-option [value]="2">Depanel - PCB</mat-option>
+                    <mat-option [value]="3">RMA</mat-option>
+                  </mat-select>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-4 newMarginClass">Defect Code:</div>
+                <div class="col-sm-8">
+                  <mat-select multiple class="form-control" placeholder="Select Defect Code">
+                    <mat-option *ngFor="let value of values" [value]="values">{{value}}</mat-option>
+                  </mat-select>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-4 newMarginClass">Customer:</div>
+                <div class="col-sm-8">
+                  <mat-select class="form-control" placeholder="Select Customer">
+                    <mat-option [value]="0">Scifit</mat-option>
+                    <mat-option [value]="1">Climate Master</mat-option>
+                    <mat-option [value]="2">Civacon</mat-option>
+                    <mat-option [value]="3">Purkeys</mat-option>
+                  </mat-select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" style="padding-top: 10px !important; display: flex; justify-content: flex-end;">
+              <div class="col-lg-1">
+                <button mat-raised-button class="pull-right btn-primary">
+                  <mat-icon>youtube_searched_for</mat-icon> Search
+                </button>
+              </div>
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left: -10px; margin-right: -77px;">
+                <button mat-raised-button style="background-color: #37474f; color: #fff !important">
+                  <mat-icon>settings_backup_restore</mat-icon> Clear
+                </button>
+              </div>
+              <a (click)="filterToggle = !filterToggle" class="pull-right"
+                style="font-size: 25px; cursor: pointer;margin-left: 80px;">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+              </a>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+
+    <div fxLayout="row wrap">
+      <div class="table-responsive">
+        <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+            <tr class="tr-grid-header">
+              <th>Date & Time</th>
+              <th>Customer</th>
+              <th>Serial Number</th>
+              <th>Job Number</th>
+              <th>Quantity</th>
+              <th>Inspection Type</th>
+              <th>Defects</th>
+              <th>Ref Des</th>
+              <th>Logged By</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of tableList">
+              <td>
+                {{ items.daTi }}
+              </td>
+              <td>
+                {{items.customer}}
+              </td>
+              <td>
+                {{ items.serialNo }}
+              </td>
+              <td>
+                {{ items.jobNo }}
+              </td>
+              <td>
+                {{ items.quantity }}
+              </td>
+              <td>
+                {{ items.insTy }}
+              </td>
+              <th>
+                {{ items.defcts }}
+              </th>
+              <th>
+                {{ items.referenceDesignator }}
+              </th>
+              <td>
+                {{ items.logby }}
+              </td>
+              <td style="text-align: center !important">
+                <a title="Edit User" style="margin-right: 10px; cursor: pointer">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a mwlConfirmationPopover [popoverTitle]="popoverTitle" [popoverMessage]="popoverMessage"
+                  placement="left" (confirm)="deleteUser()" (cancel)="cancelClicked = true">
+                  <i style="cursor: pointer" title="Delete User" class="fa fa-trash red"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

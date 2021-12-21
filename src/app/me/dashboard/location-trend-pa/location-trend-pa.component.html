@@ -1,0 +1,172 @@
+<div class="col-sm-12">
+  <div class="col-md-2">
+    <div fxLayout="row wrap" #resizedDiv>
+        <div class="flex-p w-100">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12" style="margin-bottom: 10px;margin-top: 30px;;margin-left:-24px">
+                        <div class="pills w-100 row">
+                          <ul class="nav nav-pills">
+                            <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                                <a mat-raised-button
+                                   
+                                    style="margin-bottom: 10px;width:190px">
+                                    All Location</a>
+                            </li>
+                            <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                              <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                                 >
+                                  Hyderabad</a>
+                          </li>
+                            <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                                <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                                    >
+                                   Banglore</a>
+                            </li>
+                            <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                              <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                                  >
+                                  Mumbai</a>
+                          </li>
+                          <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                            <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                              >
+                               Delhi</a>
+                        </li>
+                        <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                          <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                            >
+                              Pune</a>
+                      </li>
+                      <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                        <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                           >
+                           Bhilai</a>
+                    </li>
+                    <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                      <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                          >
+                         Raipur</a>
+                  </li>
+                  <li routerLinkActive="active" class="col-xs-12 width-100" style="padding:0px;">
+                    <a mat-raised-button style="margin-bottom: 10px;width:190px"
+                      >
+                        Pondicherry</a>
+                </li>
+                        </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-10">
+  <div class="chart-header">
+    <h3 style="color: #212121;font-size:26;margin-top:10px;margin-left: 20%;">Demerit distribution by Model</h3>
+  </div>
+  <div id="grid-table-container" class="table-responsive" style="margin-top:25px;width: 95%;margin-left:17px">
+    <!-- <table matSort id="example2" class="table table-bordered table-hover">
+      <thead class="tbl-head">
+        <tr>
+          <th>Period</th>
+          <th class="text-center">Amount (AUD)</th>
+          <th class="text-center">Invoices</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          
+          <td>{{item.period }}</td>
+          <td class="text-center">{{item.amt }}</td>  
+          <td class="text-center"><a style="color:blue" routerLink="/mrc/accounting/Payables/ageing-invoices" matTooltip="View Invoice">{{item.inv }}</a></td>
+
+        </tr>
+
+      </tbody>
+    </table> -->
+    <table matSort id="example2" class="table table-bordered table-hover">
+      <thead class="tbl-head">
+        <tr >
+          <th class="text-center">Model</th>
+     
+          <th class="text-center">Issues</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td class="text-center">{{item.model }}</td>
+          
+          <td class="text-center">{{item.demerit }}</td> 
+                   </tr>
+                   <tr >
+                    <td class="text-center">Total</td>
+                   
+                    <td class="text-center">3341</td> 
+                             </tr>    
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+<div class="row col-10 mt-5">
+
+  <div class="col-6">
+    <!-- <div style="margin-left: 2px"> -->
+      
+      <!-- <div class="flex-p "> -->
+        <mat-card >
+          <div class="chart-header">
+            <p style="font-size: 20px;margin-top:10px;margin-left: 36%;">By Issues</p>
+          </div>
+        <!-- <div class="w-200 h-300p"> -->
+          <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="first"
+  
+            [explodeSlices]="explodeSlices"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+          >
+          </ngx-charts-pie-chart>
+         
+        <!-- </div> -->
+      
+      </mat-card>
+   
+    <!-- </div> -->
+  <!-- </div> -->
+  </div>
+  <div class="col-6">
+    <!-- <div style="margin-left: 2%"> -->
+      
+      <!-- <div class="flex-p "> -->
+        <mat-card >
+          <div class="chart-header">
+            <p style="font-size: 20px;margin-top:10px;margin-left: 36%;">By Demerits</p>
+          </div>
+        <!-- <div class="w-100 h-300p"> -->
+          <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="three"
+           
+            [explodeSlices]="explodeSlices"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+          >
+          </ngx-charts-pie-chart>
+         
+        <!-- </div> -->
+      
+      </mat-card>
+   
+    <!-- </div> -->
+  <!-- </div> -->
+  </div>
+  </div>
+</div>
+

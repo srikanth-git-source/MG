@@ -1,0 +1,35 @@
+<!-- Table -->
+<div >
+  <div class="col-xs-12" style="margin-left:19px;margin-top:38px ;">
+    <div id="grid-table-container" class="table-responsive" style="width: 100%;">
+      <table matSort id="example2" class="table table-bordered table-hover">
+        <thead class="tbl-head">
+          <tr>
+            <th class="theadcolor">S.No</th>
+            <th class="theadcolor">Module</th>
+            <th class="theadcolor">Function</th>
+            <th class="theadcolor">Defect</th>
+            <th class="theadcolor">Issue Description</th>
+            <th class="theadcolor">Side View</th>
+            <th class="theadcolor">Face View</th>
+            <th class="theadcolor">Indicative Agency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of values">
+            <td>{{item.sno}}</td>
+            <td>{{item.module}}</td>
+            <td>{{item.function}}</td>
+            <td>{{item.defect}}</td>
+            <td>{{item.issue}}</td>
+            <td>{{item.side}}</td>
+            <td>{{item.face}}</td>
+            <td>{{item.Indicative}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+                [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>

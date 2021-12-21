@@ -1,0 +1,229 @@
+<div class="row-wrap">
+  <div class="flex-p w-100">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row" style="margin-bottom:7px;">
+          <div class="col-xs-4 ">
+            <div class="flex-p">
+            </div>
+          </div>
+          <div class="col-xs-8 " style="margin-left:-10px">
+            <div class="flex-p">
+              <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+                (click)="filterToggle = !filterToggle">
+                <mat-icon>filter_list</mat-icon> Filter
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter table -->
+<div fxLayout="row wrap" *ngIf="filterToggle">
+  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+    <mat-card class="filter">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Location">
+                <mat-option [value]="0">Hyderabad</mat-option>
+                <mat-option [value]="1">New Delhi</mat-option>
+                <mat-option [value]="2">Ahmedabad</mat-option>
+                <mat-option [value]="3">Bengaluru</mat-option>
+                <mat-option [value]="4">Chennai</mat-option>
+                <mat-option [value]="5">Visakhapatnam</mat-option>
+
+              </mat-select>
+
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Unit">
+                <mat-option [value]="0">CTO1</mat-option>
+                <mat-option [value]="1">CTO1</mat-option>
+                <mat-option [value]="2">CTO2</mat-option>
+                <mat-option [value]="3">CTO3</mat-option>
+                <mat-option [value]="4">CTO1</mat-option>
+                <mat-option [value]="5">CTO5</mat-option>
+                <mat-option [value]="6">FTO1</mat-option>
+                <mat-option [value]="7">FTO2</mat-option>
+                <mat-option [value]="8">FTO3</mat-option>
+                <mat-option [value]="9">FTO4</mat-option>
+                <mat-option [value]="10">FTO5</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Year">
+                <mat-option [value]="0">2021</mat-option>
+                <mat-option [value]="1">2020</mat-option>
+                <mat-option [value]="2">2019</mat-option>
+                <mat-option [value]="3">2018</mat-option>
+                <mat-option [value]="4">2017</mat-option>
+                <mat-option [value]="5">2016</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+
+          <div class="col-lg-1" style="margin-left:195px!important;">
+            <button mat-raised-button class="pull-right btn-primary">
+              <mat-icon>youtube_searched_for</mat-icon> Go
+            </button>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left: -18px;">
+            <button mat-raised-button style="background-color:#37474f; color:#fff !important">
+              <mat-icon>settings_backup_restore</mat-icon> Clear
+            </button>
+          </div>
+          <a (click)="filterToggle = !filterToggle" class="pull-right"
+            style="font-size: 25px; cursor: pointer; margin-left: 5px;">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+          </a>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Table -->
+<div>
+  <div class="col-xs-12" style="margin-left:8px;">
+    <div id="grid-table-container" class="table-responsive" style="width: 99%;">
+      <h3>Audits (Avg Score)</h3>
+      <table matSort id="example2" class="table table-bordered table-hover">
+        <thead class="tbl-head">
+          <tr>
+            <th class="theadcolor ">Blocks</th>
+            <th class="theadcolor ">Jan</th>
+            <th class="theadcolor ">Feb</th>
+            <th class="theadcolor ">Mar</th>
+            <th class="theadcolor ">Apr</th>
+            <th class="theadcolor ">May</th>
+            <th class="theadcolor ">Jun</th>
+            <th class="theadcolor ">Jul</th>
+            <th class="theadcolor ">Aug</th>
+            <th class="theadcolor ">Sep</th>
+            <th class="theadcolor ">Oct</th>
+            <th class="theadcolor ">Nov</th>
+            <th class="theadcolor ">Dec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of values">
+            <td >{{item.Blocks}}</td>
+            <td >{{item.mon1}}</td>
+            <td >{{item.mon2}}</td>
+            <td >{{item.mon3}}</td>
+            <td >{{item.mon4}}</td>
+            <td >{{item.mon5}}</td>
+            <td >{{item.mon6}}</td>
+            <td >{{item.mon7}}</td>
+            <td >{{item.mon8}}</td>
+            <td >{{item.mon9}}</td>
+            <td >{{item.mon10}}</td>
+            <td >{{item.mon11}}</td>
+            <td >{{item.mon12}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+        [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator> -->
+    </div>
+  </div>
+</div>
+
+<div class="row col-12 mt-5">
+
+  <div class="col-12">
+    <div class="flex-p">
+      <mat-card style="width: 1520px;">
+        <div class="chart-header">
+          <h3 class="text-center" style="font-size: 25px;">Audits</h3>
+        </div>
+        <div class="h-300p">
+          <ngx-charts-bar-vertical-stacked [scheme]="colorSchemee" [results]="multi" [gradient]="gradient" [legend]="showLegend"
+            [xAxis]="showXAxis" [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [animations]="animations" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical-stacked>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+  <div class="col-12">
+    <div class="flex-p">
+      <mat-card style="width: 1520px;">
+        <div class="chart-header">
+          <h3 class="text-center" style="font-size: 25px;">Tickets</h3>
+        </div>
+        <div class="w-100 h-300p">
+          <ngx-charts-bar-vertical-stacked [scheme]="colorSchemee" [results]="multii" [gradient]="gradient" [legend]="showLegend"
+            [xAxis]="showXAxis" [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [animations]="animations" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical-stacked>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+  <div class="col-12">
+    <div class="flex-p">
+      <mat-card style="width: 1520px;">
+        <div class="chart-header">
+          <h3 class="text-center" style="font-size: 25px;">Chronic Tickets</h3>
+        </div>
+        <div class="w-100 h-300p">
+          <ngx-charts-bar-vertical-stacked [scheme]="colorSchemee" [results]="multiii" [gradient]="gradient" [legend]="showLegend"
+            [xAxis]="showXAxis" [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [animations]="animations" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical-stacked>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+  <div class="col-12">
+    <div class="flex-p">
+      <mat-card style="width: 1520px;">
+        <div class="chart-header">
+          <h3 class="text-center" style="font-size: 25px;">Overdue Tickets</h3>
+        </div>
+        <div class="w-100 h-300p">
+          <ngx-charts-bar-vertical-stacked [scheme]="colorSchemee" [results]="multiiii" [gradient]="gradient" [legend]="showLegend"
+            [xAxis]="showXAxis" [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [animations]="animations" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical-stacked>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+  <div class="col-12">
+    <div class="flex-p">
+      <mat-card style="width: 1520px;">
+        <div class="chart-header">
+          <h3 class="text-center" style="font-size: 25px;">Adjusted Audit Score (%)</h3>
+        </div>
+        <div class="w-100 h-300p">
+          <ngx-charts-bar-vertical-stacked [scheme]="colorSchemeer" [results]="multi1"
+            [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel" [animations]="animations" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical-stacked>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+
+</div>

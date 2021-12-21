@@ -1,0 +1,304 @@
+<div style="margin-bottom: 25px;">
+  <div class="col-sm-12 ">
+    <div class="pull-right">
+      <a mat-raised-button class="navtabWidth pull-right" style="background-color: #dddddd;" (click)=" back()">
+        <mat-icon>keyboard_backspace</mat-icon> Back
+      </a>
+    </div>
+  </div>
+</div>
+<div class="col-md-12" style="margin-top: 10px;padding:0px;">
+  <div class="checklists-form">
+    <form id="w0" action="/check-lists/create" method="post">
+      <div class="col-lg-12 col-md-12 shadow-boxes">
+
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="control-label col-sm-3 add-member-label" style="margin-left: -7px">Checklist Name: </label>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+              <input type="text" class="form-control" placeholder="Checklist Name"
+                required>
+            </div>
+          </div>
+  
+        </div>
+        
+
+        <div class="col-md-12" style="padding-top: 14px;">
+          <label>Select Section:</label>
+        </div>
+        <div class="col-md-12" style="padding-top: 0px;">
+          <div class="pills col-md-3">
+            <ul style="margin:0px;padding:0px;" class="nav nav-pills">
+              <!-- <li><button class="btn btn-default active">Building &amp; Infra DRL</button></li>
+              <li><button class="btn btn-default active">Drainage</button></li>
+              <li><button class="btn btn-default active">Pipe Works</button></li>
+              <li><button class="btn btn-default active">Water System</button></li>
+              <li><button class="btn btn-default active">Plant &amp; Equipment</button></li>
+              <li><button class="btn btn-default active">Compressed air &amp; Nitrogen</button></li>
+              <li><button class="btn btn-default active">HVAC</button></li>
+              <li><button class="btn btn-default active">Process Equip &amp; Systems</button></li> -->
+              <ul class="nav nav-pills">
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Building &amp; Infra DRL</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Drainage</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Pipe Works</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Water System</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Plant &amp; Equipment</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Compressed air &amp; Nitrogen</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    HVAC</a>
+                </li>
+                <li routerLinkActive="active" routerLink="/addchecklist">
+
+                  <a mat-raised-button style="margin-bottom: 10px;width:260px;height: 55px;">
+                    Process Equip &amp; Systems</a>
+                </li>
+
+              </ul>
+            </ul>
+          </div>
+          <div class="col-md-9">
+            <div class="col-md-12 padding0" style="border:1px solid #ddd">
+
+              <div class="col-md-12 col-lg-12 col-sm-12 nopadding" style="margin-bottom: 10px;">
+                <h4 style="text-indent: 13px;">Question Template</h4>
+              </div>
+
+              <div class="col-md-12 col-lg-12 col-sm-12 questionnaire-form padding0">
+                <div class="form-group field-questions-q_checklist_id required">
+
+                  <input type="hidden" id="questions-q_checklist_id" class="form-control"
+                    name="Questions[q_checklist_id]" value="">
+
+                  <p class="help-block help-block-error"></p>
+                </div>
+
+
+                <div class="form-group field-checked_value">
+
+                  <input type="hidden" id="checked_value" class="form-control" name="Questions[checkedvalue]">
+
+                  <p class="help-block help-block-error"></p>
+                </div>
+
+                <div class="fl width100 marginTB10">
+                  <div class="col-md-12 col-lg-12 col-sm-12 marginTB10 padding0">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                      <label class="required-label">Question :</label>
+                    </div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="form-group field-questions-q_text required">
+
+                        <textarea id="questions-q_text" class="form-control mrgn-left-11" name="Questions[q_text]"
+                          rows="2" placeholder="Type your audit question here..." aria-required="true"></textarea>
+
+                        <p class="help-block help-block-error"></p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-sm-12 margintop10 padding0">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                      <label class="">Is Mandatory ? </label>
+                    </div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="form-group field-questions-is_mandatory">
+
+                        <div>
+                          <input type="hidden" name="Questions[is_mandatory]" value="">
+                          <div id="questions-is_mandatory">
+                            <div class="col-md-2 col-sm-6 padding0" style="    padding-left: 7px !important;">
+                              <label><input type="radio" name="Questions[is_mandatory]" checked="" value="1">
+                                <span style="margin-left: 10px;">Yes</span></label>
+                            </div>
+                            <div class="col-md-2 col-sm-6 padding0" style="    padding-left: 7px !important;">
+                              <label><input type="radio" name="Questions[is_mandatory]" value="0">
+                                <span style="margin-left: 10px;">No</span></label>
+                            </div>
+                          </div>
+                          <p class="help-block help-block-error"></p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 margintop10 padding0">
+                    <div class="col-sm-3 col-lg-3 col-md-3">
+                      <label class="">Is Not Applicable ? </label>
+                    </div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <input type="checkbox" class="form-control" style="width: 14px;height: 17px;margin-left: 12px;">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 marginTB10">
+                    <div class="col-sm-3 col-lg-3 col-md-3 marginTB10 padding0">
+                      <label>Access :</label>
+                    </div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="form-group field-questions-q_access_type">
+
+                        <div>
+                          <input type="hidden" name="Questions[q_access_type]" value="">
+                          <div id="questions-q_access_type">
+                            <div class="col-md-3 padding0"><label class=""><input class="checkcheckbox" type="checkbox"
+                                  name="Questions[q_access_type][]" value="1"> <span style="margin-left: 10px;">Camera</span></label></div>
+                            <div class="col-md-3 padding0"><label class=""><input class="checkcheckbox" type="checkbox"
+                                  name="Questions[q_access_type][]" value="2"> <span style="margin-left: 10px;">Gallery</span></label></div>
+                            <div class="col-md-3 padding0"><label class=""><input class="checkcheckbox" type="checkbox"
+                                  name="Questions[q_access_type][]" value="3"> <span style="margin-left: 10px;">File</span></label></div>
+                            <div class="col-md-3 padding0"><label class=""><input class="checkcheckbox" type="checkbox"
+                                  name="Questions[q_access_type][]" value="4"> <span style="margin-left: 10px;">All</span></label></div>
+                          </div>
+                          <p class="help-block help-block-error"></p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 marginTB10">
+                    <div class="col-sm-3 col-lg-3 col-md-3 marginTB10 padding0">
+                      <label class="required-label">Priority :</label>
+                    </div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="form-group field-questions-q_priority_type required">
+
+                        <div>
+                          <input type="hidden" name="Questions[q_priority_type]" value="">
+                          <div id="questions-q_priority_type" aria-required="true">
+                            <div class="col-md-4 padding0"><label class=""><input type="radio"
+                                  name="Questions[q_priority_type]" value="1"> <span style="margin-left: 10px;">High</span></label></div>
+                            <div class="col-md-4 padding0"><label class=""><input type="radio"
+                                  name="Questions[q_priority_type]" value="2"> <span style="margin-left: 10px;">Medium</span></label></div>
+                            <div class="col-md-4 padding0"><label class=""><input type="radio"
+                                  name="Questions[q_priority_type]" value="3"> <span style="margin-left: 10px;">Low</span></label></div>
+                          </div>
+                          <p class="help-block help-block-error"></p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 marginTB10">
+                    <div class="col-sm-3 col-lg-3 col-md-3 marginTB10 padding0">
+                      <label class="required-label">Response Type :</label>
+                    </div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="form-group field-questions-q_response_type required">
+
+                        <input type="hidden" name="Questions[q_response_type]" value="">
+                        <div id="questions-q_response_type" aria-required="true">
+                          <div class="col-md-4 padding0"><label class=""><input class="response_type_radio_btn"
+                                data-category="category1" type="radio" name="Questions[q_response_type]" value="1">
+                              <span style="margin-left: 10px;">True/False</span></label></div>
+                          <div class="col-md-4 padding0"><label class=""><input class="response_type_radio_btn"
+                                data-category="category1" type="radio" name="Questions[q_response_type]" value="2">
+                              <span style="margin-left: 10px;">Yes/No</span></label></div>
+                          <div class="col-md-4 padding0"><label class=""><input class="response_type_radio_btn"
+                                data-category="category1" type="radio" name="Questions[q_response_type]" value="3">
+                              <span style="margin-left: 10px;">Rating Scale</span></label></div>
+                          <div class="col-md-4 padding0"><label class=""><input class="response_type_radio_btn"
+                                data-category="category2" type="radio" name="Questions[q_response_type]" value="4">
+                              <span style="margin-left: 10px;">Single Choice</span></label></div>
+                          <div class="col-md-4 padding0"><label class=""><input class="response_type_radio_btn"
+                                data-category="category2" type="radio" name="Questions[q_response_type]" value="5">
+                              <span style="margin-left: 10px;">Multiple Choice</span></label></div>
+                          <div class="col-md-4 padding0"><label class=""><input class="response_type_radio_btn"
+                                data-category="category3" type="radio" name="Questions[q_response_type]" value="6">
+                              <span style="margin-left: 10px;">Numeric</span></label></div>
+                        </div>
+
+                        <p class="help-block help-block-error"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 marginTB10 optionstab hidden">
+                    <div class="col-sm-3 col-lg-3 col-md-3">Options:</div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="col-sm-12" id="options_wrapper">
+                        <div class="options_container no_value">
+                          <input class="form-control inputOption margin-right-10" name="options[]" placeholder="Option"
+                            type="text" value="">
+                          <button type="button" title="Clear this text"
+                            class="btn btn-sm  btn-bordered-info clear_option_btn">
+                            <i class="fa fa-long-arrow-left  padding-r-3 " aria-hidden="true"></i> <span
+                              class="hidden-xs hidden-sm">Clear</span>
+                          </button>
+                          <button type="button" title="Delete this Option"
+                            class="btn btn-sm btn-bordered-danger delete_option_btn">
+                            <i class="fa fa-close padding-r-3"></i> <span class="hidden-xs hidden-sm">Delete</span>
+                          </button>
+                          <button type="button" title="Add one more option"
+                            class="btn btn-sm  btn-bordered-success add_option_btn">
+                            <i class="fa fa-plus padding-r-3 "></i> <span class="hidden-xs hidden-sm">Add Option</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 marginTB10  numeric_options hidden">
+                    <div class="col-sm-3 col-lg-3 col-md-3">Options:</div>
+                    <div class="col-sm-9 col-lg-9 col-md-9">
+                      <div class="col-sm-4">
+                        <label class="required-label" for="numeric_min">Min</label>
+                        <input type="text" id="numeric_min" name="numeric[min]"
+                          class="form-control numeric_input numbers" placeholder="Min Value">
+                      </div>
+                      <div class="col-sm-4">
+                        <label class="required-label" for="numeric_max">Max</label>
+                        <input type="text" id="numeric_max" name="numeric[max]"
+                          class="form-control numeric_input numbers" placeholder="Max Value">
+                      </div>
+                      <div class="col-sm-4">
+                        <label class="required-label" for="numeric_threshold">Threshold</label>
+                        <input type="text" id="numeric_threshold" name="numeric[threshold]"
+                          class="form-control numeric_input numbers" placeholder="Threshold Value">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="col-sm-12 marginTB10 text-center"
+                      style="margin-bottom: 10px;margin-left: 15px;text-align:right;margin-top: 10px;">
+                      <a class="btn btn-success">Save &amp; Next</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-12 col-md-12" style="margin-top: 20px;">
+          <div class="col-sm-3 col-lg-3 col-md-3">
+            <label></label>
+          </div>
+          <div class="col-sm-9 col-lg-9 col-md-9">
+            <div class="col-sm-9 col-lg-9 col-md-9 input-group">
+              <a class="btn btn-default close-btn" style="margin-right: 10px;" href="/check-lists">Cancel</a> <a
+                href="javascript:void(0)" class="btn btn-success">Save to Checklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

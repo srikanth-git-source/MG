@@ -1,0 +1,64 @@
+<div fxLayout="row wrap">
+  <div class="flex-p w-100">
+
+    
+    <div fxLayout="column" fxLayoutAlign="center center" class=" box-header" >
+      <img alt="logo" class="logo-default logo-img" style="height: 400px;width: 700px;" src="../../assets/puc2.png">
+  </div>
+
+
+    <!-- <div fxLayout="row wrap">
+      <div class="table-responsive">
+        <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+            <tr class="tr-grid-header">
+              <th class="text-center">Inpection Code</th>
+              <th class="text-center">Inspection Type</th>
+              <th class="text-center">Status</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor= "let items of tableList">
+              <td class="text-center">
+                {{items.sno}}
+              </td>
+              <td class="text-center">
+                {{items.perLevel}}
+              </td>
+              <td  style="text-align: center !important;">                                
+                <a                 
+                [ngStyle]="{'color': items.vcStatus? 'blue' : 'red','cursor':'pointer'}"
+                mwlConfirmationPopover
+                [popoverTitle]="popoverStatusTitle"
+                [popoverMessage]="popoverStatusMessage"
+                placement="left"
+                (confirm)="saveStatus();items.vcStatus=!items.vcStatus"
+                (cancel)="cancelClicked = true"
+                >
+                {{items.vcStatus?'Active':'Inactive'}}
+            </a>
+            </td>
+            <td style="text-align: center !important;">
+              <a title="Edit User" style="margin-right: 10px; cursor: pointer;" >
+                  <i class="fa fa-edit"></i>
+              </a>
+              <a mwlConfirmationPopover
+              [popoverTitle]="popoverTitle"
+              [popoverMessage]="popoverMessage"
+              placement="left"
+              (confirm)="deleteUser()"
+              (cancel)="cancelClicked = true">
+              <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+              </a>          
+           </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div> -->
+
+  </div>
+</div>

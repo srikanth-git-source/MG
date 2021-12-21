@@ -1,0 +1,113 @@
+<div class="row-wrap">
+  <div class="flex-p w-100">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row" style="margin-bottom:7px;">
+          <div class="col-xs-4 ">
+            <div class="flex-p">
+            </div>
+          </div>
+          <div class="col-xs-8 " style="margin-left:-10px">
+            <div class="flex-p">
+              <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+                (click)="filterToggle = !filterToggle">
+                <mat-icon>filter_list</mat-icon> Filter
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter table -->
+<div fxLayout="row wrap" *ngIf="filterToggle">
+  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+    <mat-card class="filter">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Location">
+                <mat-option [value]="0">Hyderabad</mat-option>
+                <mat-option [value]="1">New Delhi</mat-option>
+                <mat-option [value]="2">Ahmedabad</mat-option>
+                <mat-option [value]="3">Bengaluru</mat-option>
+                <mat-option [value]="4">Chennai</mat-option>
+                <mat-option [value]="5">Visakhapatnam</mat-option>
+
+              </mat-select>
+
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-sm-8">
+              <mat-select class="form-control" placeholder="Unit">
+                <mat-option [value]="0">CTO1</mat-option>
+                <mat-option [value]="1">CTO1</mat-option>
+                <mat-option [value]="2">CTO2</mat-option>
+                <mat-option [value]="3">CTO3</mat-option>
+                <mat-option [value]="4">CTO1</mat-option>
+                <mat-option [value]="5">CTO5</mat-option>
+                <mat-option [value]="6">FTO1</mat-option>
+                <mat-option [value]="7">FTO2</mat-option>
+                <mat-option [value]="8">FTO3</mat-option>
+                <mat-option [value]="9">FTO4</mat-option>
+                <mat-option [value]="10">FTO5</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-lg-1" style="margin-left:195px!important;">
+            <button mat-raised-button class="pull-right btn-primary">
+              <mat-icon>youtube_searched_for</mat-icon> Go
+            </button>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left: -18px;">
+            <button mat-raised-button style="background-color:#37474f; color:#fff !important">
+              <mat-icon>settings_backup_restore</mat-icon> Clear
+            </button>
+          </div>
+          <a (click)="filterToggle = !filterToggle" class="pull-right"
+            style="font-size: 25px; cursor: pointer; margin-left: 5px;">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Table -->
+<div >
+  <div class="col-xs-12" style="margin-left:8px;margin-top:20px;">
+    <div id="grid-table-container" class="table-responsive" style="width: 99%;">
+      <table matSort id="example2" class="table table-bordered table-hover">
+        <thead class="tbl-head">
+          <tr>
+            <th class="theadcolor text-center">Blocks</th>
+            <th class="theadcolor text-center">2019</th>
+            <th class="theadcolor text-center">2018</th>
+            <th class="theadcolor text-center">2017</th>
+            <th class="theadcolor text-center">2016</th>
+            <th class="theadcolor text-center">2015</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of values">
+            <td class="text-center">{{item.Blocks}}</td>
+            <td class="text-center">{{item.year1}}</td>
+            <td class="text-center">{{item.year2}}</td>
+            <td class="text-center">{{item.year3}}</td>
+            <td class="text-center">{{item.year4}}</td>
+            <td class="text-center">{{item.year5}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [length]="10" [pageIndex]="0" [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>

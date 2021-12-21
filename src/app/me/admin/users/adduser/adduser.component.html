@@ -1,0 +1,71 @@
+<div class="NewHeader">
+  <h1 mat-dialog-title>
+    {{data ? 'Update' : 'Add'}} Audit
+  </h1>
+</div>
+<div mat-dialog-content >
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Full Name: </label>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <input type="text" class="form-control" placeholder="Enter Full Name ">
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4 add-member-label">Email : </label>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <input type="email" class="form-control" placeholder="Enter Email">
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 add-member-label">Username: </label>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <input type="text" class="form-control" placeholder="Enter Username">
+     
+    </div>
+</div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 add-member-label">Location: </label>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <mat-select class="form-control" placeholder="Select Location:" required>
+        <mat-option [value]="0">Hyderabad</mat-option>
+        <mat-option [value]="1">Banglore</mat-option>
+        <mat-option [value]="2">Mumbai</mat-option>
+        <mat-option [value]="4">Pune</mat-option>
+        <mat-option [value]="5">Raipur</mat-option>
+        <mat-option [value]="5">Bhilai</mat-option>
+      </mat-select>
+    </div>
+</div>
+    <div class="form-group">
+      <label class="control-label col-sm-4 add-member-label">Office: </label>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <mat-select class="form-control" placeholder="Select Office:" required>
+          <mat-option [value]="0">Hyderabad</mat-option>
+          <mat-option [value]="1">Banglore</mat-option>
+          <mat-option [value]="2">Mumbai</mat-option>
+          <mat-option [value]="4">Pune</mat-option>
+          <mat-option [value]="5">Raipur</mat-option>
+          <mat-option [value]="5">Bhilai</mat-option>
+        </mat-select>
+      </div>
+  </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4 add-member-label">Role: </label>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <mat-select class="form-control" placeholder="Select Role:" required>
+                <mat-option [value]="0">Admin</mat-option>
+                <mat-option [value]="1">Staff</mat-option>
+                <mat-option [value]="2">Manager</mat-option>
+              </mat-select>
+
+            </div>
+        </div>
+   
+    </form>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="btn-primary"  [mat-dialog-close]="'test'"> <mat-icon>send</mat-icon><span
+             >Save</span></button>
+    <button mat-raised-button class="add-dark-hover btn-default" (click)="close()"><mat-icon>cancel</mat-icon>Close</button>
+</mat-dialog-actions> 

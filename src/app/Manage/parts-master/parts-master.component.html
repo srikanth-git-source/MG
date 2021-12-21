@@ -1,0 +1,72 @@
+<div fxLayout="row wrap">
+  <div class="flex-p w-100">
+    <div class="row" style="margin-bottom:14px;">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="w-100 flex-p">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="w-100 flex-p">
+          <button mat-raised-button class="pull-right add-hover-help btn-success-help"
+            style="margin-left: 10px; background-color: rgb(255, 255, 1);">
+            <mat-icon>help_outline</mat-icon> Help
+          </button>
+          <button mat-raised-button class="pull-right add-hover margin-right-10 btn-primary"
+            (click)="openClientDialog()">
+            <mat-icon>add</mat-icon> Add
+            Parts
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div fxLayout="row wrap">
+      <div class="table-responsive">
+        <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+            <tr class="tr-grid-header">
+              <th>Part Name</th>
+              <th class="text-center">Part Number</th>
+              <th class="text-center">Available Qty</th>
+              <th class="text-center">Created Date</th>
+              <th>Created By</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of tableList">
+              <td>
+                {{items.sno}}
+              </td>
+              <td class="text-center">
+                {{items.perLevel}}
+              </td>
+              <td class="text-center">
+                {{items.perSetting}}
+              </td>
+              <td class="text-center">
+                {{items.data}}
+              </td>
+              <td>
+                {{items.data2}}
+              </td>
+              <td style="text-align: center !important;">
+                <a title="Edit User" style="margin-right: 10px; cursor: pointer;">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a mwlConfirmationPopover [popoverTitle]="popoverTitle" [popoverMessage]="popoverMessage"
+                  placement="left" (confirm)="deleteUser()" (cancel)="cancelClicked = true">
+                  <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
