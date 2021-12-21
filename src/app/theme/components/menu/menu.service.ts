@@ -21,15 +21,15 @@ export class MenuService {
         new Menu (1, 'Radar', '/dashboard/statistics', null, 'dashboard', null, false, 0,"white",true),
         new Menu (2, 'Dashboard', '/new-dashboard', null, 'assignment', null, false, 0,"white",true),
         // new Menu (3, 'Calender', '/calender', null, 'calendar_today', null, false, 0,"white",true),
-        new Menu (4, 'Audits', '/audits/checklistaudit', null, 'saved_search', null, false, 0,"white",true),
+        new Menu (4, 'Audits', '/audits/checklistaudit', null, 'find_in_page', null, false, 0,"white",true),
         new Menu (2, 'Checklist Setup', '/checklist', null, 'assignment', null, false, 0,"white",true),
         new Menu (5, 'Parameter Setup', '/parameter-setup', null, 'confirmation_number', null, false, 0,"white",true),
         new Menu (6, 'Admin', '/admin', null, 'admin_panel_settings', null, true, 0,"white",true),   
         new Menu (7, 'Users', '/admin/users', null, 'groups', null, false, 6,"white",true), 
-        new Menu (8, 'Organisations', '/admin/organisation/location', null, 'person', null, false, 6,"white",true),
+        new Menu (8, 'Organisations', '/admin/organisation/location', null, 'event_seat', null, false, 6,"white",true),
         new Menu (9, 'Settings', '/admin/settings', null, 'manage_accounts', null, false, 6,"white",true), 
-        new Menu (10, 'Lookup Options', '/admin/lookup-options', null, 'warning', null, false, 6,"white",true), 
-        new Menu (11, 'Master Data', '/admin/master-data/model', null, 'person', null, false, 6,"white",true),
+        new Menu (10, 'Lookup Options', '/admin/lookup-options', null, 'launch', null, false, 6,"white",true), 
+        new Menu (11, 'Master Data', '/admin/master-data/model', null, 'horizontal_split', null, false, 6,"white",true),
         );
       } else if (this.userType == 'inspector') {
         temp.push(

@@ -64,7 +64,6 @@ public addlookup(item) {
     });
 }
 
-
 deleteUser(){
     this.alertService.createAlert('Successfully deleted.', 1);
 }

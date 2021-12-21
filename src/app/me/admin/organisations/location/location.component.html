@@ -63,7 +63,7 @@
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-5">
             <div class="col-sm-3" >
               <label class="pull-right" style="margin-top: 6px;"  >Location Name:</label>
             </div>
@@ -80,7 +80,18 @@
               </mat-select>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-5">
+            <div class="col-sm-3" >
+              <label class="pull-right" style="margin-top: 6px;"  >Status:</label>
+            </div>
+            <div class="col-sm-6" >
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option [value]="0">Active</mat-option>
+                <mat-option [value]="1">Inactive</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-sm-2">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
@@ -125,10 +136,10 @@
           
                           <td class="text-center editDel">
                               <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
-                                  matTooltip="Update Location" (click)="addmodule(item)">
+                                  matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>
-                              <a><i class="fa fa-trash red" matTooltip="Delete Location"
+                              <a><i class="fa fa-trash red" matTooltip="Delete"
                                       style="cursor: pointer;"></i></a>
                           </td>
                       </tr>
