@@ -46,7 +46,7 @@
               <label class="pull-right" style="margin-top: 6px;" >Code:</label>
             </div>
             <div class="col-sm-8" >
-              <mat-select class="form-control" placeholder="Select Code." required>
+              <mat-select class="form-control" placeholder="Select Code" required>
                 <mat-option [value]="0">Side View</mat-option>
                 <mat-option [value]="1">Face View</mat-option>
                 <mat-option [value]="2">Demerit</mat-option>
@@ -58,7 +58,7 @@
               <label class="pull-right" style="margin-top: 6px;" >Lookups:</label>
             </div>
             <div class="col-sm-8" >
-              <input type="text"  placeholder="Search Lookups." class="form-control">
+              <input type="text"  placeholder="Search Lookups" class="form-control">
             </div>
           </div>
           <div class="col-sm-4">
@@ -106,13 +106,13 @@
                         </a>
                     </td>
                     <td style="text-align: center !important;">
-                        <a title="Edit Lookup" style="margin-right: 10px; cursor: pointer;"  (click)="addlookup(applicant)">
+                        <a title="Edit" style="margin-right: 10px; cursor: pointer;"  (click)="addlookup(applicant)">
                             <i class="fa fa-edit"></i>
                         </a>
                         <a mwlConfirmationPopover [popoverTitle]="popoverTitle"
-                            [popoverMessage]="popoverMessage" placement="left" (confirm)="deleteLookup()"
+                            [popoverMessage]="popoverMessage" placement="left" (confirm)="deleteLookup(item)"
                             (cancel)="cancelClicked = true">
-                            <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+                            <i style="cursor: pointer;" title="Delete" class="fa fa-trash red"></i>
                         </a>
   
                     </td>

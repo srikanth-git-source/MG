@@ -63,30 +63,58 @@
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
-          <div class="col-sm-6">
-            <div class="col-sm-3" >
+          <div class="col-sm-4">
+            <div class="col-sm-4" >
               <label class="pull-right" style="margin-top: 6px;" >Agency Name:</label>
             </div>
-            <div class="col-sm-6" >
+            <div class="col-sm-8" >
               <mat-select class="form-control" placeholder="Select Agency Name" required>
                 <mat-option [value]="0">General Agency</mat-option>
                 <mat-option [value]="1">Paint</mat-option>
                 <mat-option [value]="2">Body</mat-option>
                 <mat-option [value]="4">SQE</mat-option>
-                
               </mat-select>
             </div>
-            
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
+            <div class="col-sm-4" >
+              <label class="pull-right" style="margin-top: 6px;" >Location Name:</label>
+            </div>
+            <div class="col-sm-8" >
+              <mat-select class="form-control" placeholder="Select Location Name" required>
+                <mat-option [value]="0">Hyderabad</mat-option>
+                <mat-option [value]="1">Banglore</mat-option>
+                <mat-option [value]="2">Mumbai</mat-option>
+                <mat-option [value]="4">Pune</mat-option>
+                <mat-option [value]="5">Raipur</mat-option>
+                <mat-option [value]="5">Bhilai</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="col-sm-4" >
+              <label class="pull-right" style="margin-top: 6px;" >Status:</label>
+            </div>
+            <div class="col-sm-8" >
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option [value]="0">Active</mat-option>
+                <mat-option [value]="1">Inactive</mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+       
+        <div class="row" style="padding-top:10px !important">
+         
+          <div class="col-sm-12">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
             <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
               <mat-icon>settings_backup_restore</mat-icon> Clear
             </button>
-          </div>
-          
+          </div> 
+         
         </div>
           <!-- <div class="row">
             <div class="col-sm-6">
@@ -148,10 +176,10 @@
           
                           <td class="text-center editDel">
                               <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
-                                  matTooltip="Update Agency" (click)="addmodule(item)">
+                                  matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>
-                              <a><i class="fa fa-trash red" matTooltip="Delete Agency"
+                              <a><i class="fa fa-trash red" matTooltip="Delete"
                                       style="cursor: pointer;"></i></a>
                           </td>
                       </tr>

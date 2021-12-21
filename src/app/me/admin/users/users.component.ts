@@ -33,8 +33,15 @@ export class UsersComponent implements OnInit {
     window.open('/#/parameter-dashboard/issuelog-par');
   }
 
-  addUser(){
+  // addUser(){
+  //   this.dialog.open(AdduserComponent,{
+  //     width:"600px",
+  //     height:"auto"
+  //   })
+  // }
+  public addUser(item){
     this.dialog.open(AdduserComponent,{
+      data:item,
       width:"600px",
       height:"auto"
     })

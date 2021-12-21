@@ -14,7 +14,7 @@
                 
                           <div class="">
                             
-                            <button style="margin-bottom: 7px" mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3"  (click)="addUser()">
+                            <button style="margin-bottom: 7px" mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3"  (click)="addUser(null)">
                               <mat-icon >add</mat-icon> Add User
                               </button>
                               <button style="margin-bottom: 7px"
@@ -155,7 +155,7 @@
               {{item.status?'Active':'Inactive'}}
           </a></td>
             <td class="text-center editDel">
-              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="addUser()">
+              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="addUser(item)">
                 <i class="fa fa-edit" style="color: cornflowerblue"></i>
               </a>
               <a><i class="fa fa-trash red" matTooltip="Delete" style="cursor: pointer;"></i>
