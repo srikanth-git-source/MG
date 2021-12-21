@@ -19,9 +19,9 @@ import { AddAgencyComponent } from './agency/add-agency/add-agency.component';
 
 export const routes = [
   { path: '',  pathMatch: 'full' },
-  { path: 'location', component: LocationComponent, data: { breadcrumb: 'Lookup Options' }},
+  { path: 'location', component: LocationComponent, data: { breadcrumb: 'Organizations' }},
   // { path: 'department', component: DepartmentComponent, data: { breadcrumb: 'Lookup Options' }},
-  { path: 'agency', component: AgencyComponent, data: { breadcrumb: 'Lookup Options' }},
+  { path: 'agency', component: AgencyComponent, data: { breadcrumb: 'Organizations' }},
   
 ];
 @NgModule({

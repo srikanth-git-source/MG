@@ -29,10 +29,10 @@ export class AgencyComponent implements OnInit {
         
 
   values = [
-    {agency:"General Agency",status:true},
-    {agency:"Paint",status:true},
-    {agency:"Body",status:true},
-    {agency:"SQE",status:true},
+    {agency:"General Agency",location:"Hyderabad",status:true},
+    {agency:"Paint",location:"Banglore",status:true},
+    {agency:"Body",location:"Pune",status:true},
+    {agency:"SQE",location:"Delhi",status:true},
     
   ]
   statusOptions = [
