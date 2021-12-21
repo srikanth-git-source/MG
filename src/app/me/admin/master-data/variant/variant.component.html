@@ -86,7 +86,7 @@ padding-left: 0px;">
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="col-sm-3" >
               <label class="pull-right" style="margin-top: 6px;" >Variant Name:</label>
             </div>
@@ -99,7 +99,25 @@ padding-left: 0px;">
               </mat-select>
             </div>
           </div>
-          <div class="col-sm-6">
+
+
+          <div class="col-sm-4">
+            <div class="col-sm-3">
+              <label class="pull-right" style="margin-top: 6px;">Status:</label>
+            </div>
+            <div class="col-sm-6">
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option *ngFor="let option of Status" [value]="option.value">
+                  {{option.name}}
+                </mat-option>
+                
+              </mat-select>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
