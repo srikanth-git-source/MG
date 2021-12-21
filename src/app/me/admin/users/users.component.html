@@ -1,6 +1,6 @@
 <!-- Table -->
 <div >
-  <div class="col-xs-12" style="margin-left:8px;margin-top:10px;">
+  <div class="col-xs-12" style="margin-left:-6px;margin-top:10px; width: 102%;">
     <div id="grid-table-container" class="table-responsive" style="width: 99%;">
   
       <div class="container-fluid">
@@ -41,7 +41,8 @@
         </div>
       </div>
       <div fxLayout="row wrap" *ngIf="filterToggle" >
-        <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+        <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-left: -6px;
+        margin-right: -4px">
           <mat-card class="filter"> 
             <mat-card-content>
               <div class="row">
@@ -58,7 +59,7 @@
                     <label class="pull-right" style="margin-top: 6px;" >Office:</label>
                   </div>
                   <div class="col-sm-8" >
-                    <mat-select class="form-control" placeholder="Select VIN:" required>
+                    <mat-select class="form-control" placeholder="Select Office:" required>
                       <mat-option [value]="0">Hyderabad</mat-option>
                       <mat-option [value]="1">Banglore</mat-option>
                       <mat-option [value]="2">Mumbai</mat-option>
@@ -68,12 +69,31 @@
                     </mat-select>
                   </div>
                 </div>
+
+
                 <div class="col-sm-4">
+                  <div class="col-sm-4" >
+                    <label class="pull-right" style="margin-top: 6px;" >Location:</label>
+                  </div>
+                  <div class="col-sm-8" >
+                    <mat-select class="form-control" placeholder="Select Location:" required>
+                      <mat-option [value]="0">Hyderabad</mat-option>
+                      <mat-option [value]="1">Banglore</mat-option>
+                      <mat-option [value]="2">Mumbai</mat-option>
+                      <mat-option [value]="4">Pune</mat-option>
+                      <mat-option [value]="5">Raipur</mat-option>
+                      <mat-option [value]="5">Bhilai</mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4" style="margin-top: 26px;">
                   <div class="col-sm-4" >
                     <label class="pull-right" style="margin-top: 6px;" >Role:</label>
                   </div>
                   <div class="col-sm-8" >
-                    <mat-select class="form-control" placeholder="Select VIN:" required>
+                    <mat-select class="form-control" placeholder="Select Role:" required>
                       <mat-option [value]="0">Admin</mat-option>
                       <mat-option [value]="1">Staff</mat-option>
                       <mat-option [value]="2">Manager</mat-option>
@@ -100,7 +120,7 @@
         </div>
         
       </div>
-      <table  style="margin-top: 7px" matSort id="example2" class="table table-bordered table-hover">
+      <table  style="margin-top: 7px; padding-left: 20px; padding-right: 10px;" matSort id="example2" class="table table-bordered table-hover">
         <thead class="tbl-head">
           <tr>
             <th class="theadcolor">Full Name</th>
@@ -109,7 +129,7 @@
             <th class="theadcolor text-center">Location</th>
             <th class="theadcolor text-center">Office</th>
             <th class="theadcolor text-center">Role</th>
-            <th class="theadcolor text-center">Screen Permissions</th>
+            <th style="width: 50px;" class="theadcolor text-center">Permissions</th>
             <th class="theadcolor text-center">Status</th>
             <th class="theadcolor text-center">Action</th>
           </tr>
@@ -124,14 +144,14 @@
             <td class="text-center">{{item.Role}}</td>
 
             <td class="text-center">
-              <a  style="cursor: pointer; color: cornflowerblue;"  routerLink="/admin/manage-users/permissions">{{item.PermissionsCount}}</a>       
+              <a  style="cursor: pointer; color: cornflowerblue;" matTooltip="Click to view Permissions" routerLink="/admin/manage-users/permissions">{{item.PermissionsCount}}</a>       
             </td>
 
 
             <td class="text-center"><a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
               mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
               [popoverMessage]="popoverStatusMessage" placement="left"
-              (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true">
+              (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
               {{item.status?'Active':'Inactive'}}
           </a></td>
             <td class="text-center editDel">
