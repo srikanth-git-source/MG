@@ -1,4 +1,7 @@
-<div class="container-fluid">
+
+<!--Add Module and Filter Buttons-->
+
+<div class="container-fluid" style="padding-right: 1px; padding-left: 0px;">
   <div class="w-100">
     <div class="flex-p">
       <div class="row wrap">
@@ -10,7 +13,7 @@
                 <div class="col-xs-6">
                   <div class="col-xs-6"></div>
 
-                  <div class="col-xs-6" style="margin-left: -13px;">
+                  <div class="col-xs-6" style="margin-left: -13px;" >
                     <div class="">
                       
                       <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" (click)="addmodule(null)">
@@ -36,12 +39,14 @@
   </div>
 </div>
 
+
+<!--Filter Toggle-->
 <div fxLayout="row wrap" *ngIf="filterToggle" >
   <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-5">
             <div class="col-sm-3" >
               <label class="pull-right" style="margin-top: 6px;" >Module Name:</label>
             </div>
@@ -49,7 +54,25 @@
               <input type="text"  placeholder="Search Module Name.." class="form-control">
             </div>
           </div>
-          <div class="col-sm-6">
+
+
+          <div class="col-sm-5">
+            <div class="col-sm-3">
+              <label class="pull-right" style="margin-top: 6px;">Status:</label>
+            </div>
+            <div class="col-sm-6">
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option *ngFor="let option of Status" [value]="option.value">
+                  {{option.name}}
+                </mat-option>
+
+              </mat-select>
+            </div>
+          </div>
+
+
+<!--Go and Clear Buttons-->
+          <div class="col-sm-2">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
@@ -66,7 +89,9 @@
   
 </div>
 
-<div class="container-fluid" >
+
+<!--table -->
+<div class="container-fluid" style="padding-right: 1px; padding-left: 0px;">
   <div fxLayout="row wrap" #resizedDiv>
     <div class="flex-p w-100 sizeAlign">
        <div class="row" >
@@ -87,7 +112,7 @@
                               <a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
                                   mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
                                   [popoverMessage]="popoverStatusMessage" placement="left"
-                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true">
+                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
                                   {{item.status?'Active':'Inactive'}}
                               </a>
                           </td>
@@ -103,6 +128,7 @@
                       </tr>
                   </tbody>
               </table>
+              <!--Pagination-->
               <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
                   [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
           </div>

@@ -17,7 +17,7 @@
   </div>
       <mat-dialog-actions align="end">
         <button mat-raised-button class="btn-primary" type="button" (click)="close()">
-          <mat-icon>send</mat-icon><span> Save</span>
+          <mat-icon>send</mat-icon><span> {{ data ? 'Update' : 'Save'}}</span>
         </button>
           <button mat-raised-button (click)="close()"  type="button" style="color: rgb(7, 10, 7); background-color: #e0e0e0;">
               <mat-icon>cancel</mat-icon> Close
