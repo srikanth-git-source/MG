@@ -14,6 +14,7 @@ export class IssueMasterComponent implements OnInit {
   
   
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
@@ -39,11 +40,7 @@ export class IssueMasterComponent implements OnInit {
     {status:true,modulename:"Rear bumper",functioname:"Mutilation",defectname:"Scratch",issuename:"LHR Door outer scratch"},
     {status:true,modulename:"Fuel Flap",functioname:"Aesthetics",defectname:"Sink / flow marks",issuename:"Roof rail - Sink marks / Waviness"},
     {status:true,modulename:"Upper trim",functioname:"Mutilation",defectname:"Contamination",issuename:"Rear bumper contamination"},
-    {status:true,modulename:"Tailgate",functioname:"Aesthetics",defectname:"Uneven/Excess Gap/ Flushness",issuename:"LHF Door outer belt to rear door outer belt flush nok,2mm"},
-    {status:true,modulename:"Central Console",functioname:"Mutilation",defectname:"Improper assembly",issuename:"RHF Door black tape edge open"},
-    {status:true,modulename:"C pillar",functioname:"Aesthetics",defectname:"Dent/ Ding / Bump",issuename:"Fuel flap - Ding"},
-    {status:true,modulename:"REAR SEAT",functioname:"Mutilation",defectname:"Color / Shade Mismatch",issuename:"Door apeture / BSO color mismatch- G red"},
-  ]
+     ]
   statusOptions = [
     {value:1, name: 'Prepared Quote', colorCode: '#00ff0040'},
     {value:2, name: 'PM Quote Review', colorCode: '#C0C0C0'},

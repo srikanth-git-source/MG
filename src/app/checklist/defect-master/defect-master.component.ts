@@ -13,6 +13,7 @@ export class DefectMasterComponent implements OnInit {
   
   
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
@@ -37,11 +38,11 @@ export class DefectMasterComponent implements OnInit {
     {status:true,modulename:"Door",functioname:"Mutilation",defectname:"Tool / Scuff Marks"},
     {status:true,modulename:"Rear bumper",functioname:"Mutilation",defectname:"Scratch"},
     {status:true,modulename:"Fuel Flap",functioname:"Aesthetics",defectname:"Sink / flow marks"},
-    {status:true,modulename:"Upper trim",functioname:"Mutilation",defectname:"Contamination"},
-    {status:true,modulename:"Tailgate",functioname:"Aesthetics",defectname:"Uneven/Excess Gap/ Flushness"},
-    {status:true,modulename:"Central Console",functioname:"Mutilation",defectname:"Improper assembly"},
-    {status:true,modulename:"C pillar",functioname:"Aesthetics",defectname:"Dent/ Ding / Bump"},
-    {status:true,modulename:"REAR SEAT",functioname:"Mutilation",defectname:"Color / Shade Mismatch"},
+    // {status:true,modulename:"Upper trim",functioname:"Mutilation",defectname:"Contamination"},
+    // {status:true,modulename:"Tailgate",functioname:"Aesthetics",defectname:"Uneven/Excess Gap/ Flushness"},
+    // {status:true,modulename:"Central Console",functioname:"Mutilation",defectname:"Improper assembly"},
+    // {status:true,modulename:"C pillar",functioname:"Aesthetics",defectname:"Dent/ Ding / Bump"},
+    // {status:true,modulename:"REAR SEAT",functioname:"Mutilation",defectname:"Color / Shade Mismatch"},
   ]
   statusOptions = [
     {value:1, name: 'Prepared Quote', colorCode: '#00ff0040'},
