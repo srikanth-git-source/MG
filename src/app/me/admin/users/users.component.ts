@@ -44,5 +44,10 @@ export class UsersComponent implements OnInit {
   saveStatus() {
     this.alertService.createAlert('Successfully saved.', 1);
 }
+permissions()
+{
+  window.open('#/users/permissions')
+
+}
 
 }

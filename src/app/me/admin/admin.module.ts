@@ -16,6 +16,7 @@ import { DragulaModule, DragulaService } from "ng2-dragula";
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { AdduserComponent } from './users/adduser/adduser.component';
+import { PermissionsComponent } from './users/permissions/permissions.component';
 
 
 export const routes = [
@@ -24,6 +25,7 @@ export const routes = [
   { path: 'users', component: UsersComponent, data: { breadcrumb: 'Manage Users' }},
   // { path: 'organisation', component: OrganisationsComponent, loadChildren: './organisations/organisations.module#OrganisationsModule', pathMatch: 'full', data: { breadcrumb: 'Organization Setup' } },
   { path: 'settings', component: SettingsComponent, pathMatch: 'full', data: { breadcrumb: 'Settings' } },
+  { path: 'permissions', component: PermissionsComponent, loadChildren: './users/permissions/permissions.component', data: { breadcrumb: 'Settings' }},
 ];
 
 @NgModule({
@@ -43,6 +45,7 @@ export const routes = [
         OrganisationsComponent,
         SettingsComponent,
         AdduserComponent,
+        PermissionsComponent,
         
          ],
   entryComponents:[
