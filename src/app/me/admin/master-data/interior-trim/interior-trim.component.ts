@@ -10,6 +10,7 @@ import { AddInteriorTrimComponent } from './add-interior-trim/add-interior-trim.
 })
 export class InteriorTrimComponent implements OnInit {
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';

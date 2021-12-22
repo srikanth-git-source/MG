@@ -13,7 +13,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 })
 export class LookupOptionsComponent implements OnInit {
 
-  
+    Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   tableList = [
   {vcStatus:true,CodeMasterName:"Side View",LookupName:"LH",},
@@ -54,9 +54,9 @@ ngOnInit() {
 
 
 
-public addlookup(item) {
+public addlookup(applicant) {
     let dialogRef = this.dialog.open(AddLookupDialogComponent, {
-        data: item,
+        data: applicant,
         height: 'auto',
         width: '600px'
     });

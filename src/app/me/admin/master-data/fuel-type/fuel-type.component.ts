@@ -11,6 +11,7 @@ import { AddFuelTypeComponent } from './add-fuel-type/add-fuel-type.component';
 export class FuelTypeComponent implements OnInit {
 
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';

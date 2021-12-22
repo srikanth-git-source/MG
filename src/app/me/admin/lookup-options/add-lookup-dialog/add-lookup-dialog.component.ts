@@ -19,6 +19,7 @@ export class AddLookupDialogComponent implements OnInit { addLookupGroup: FormGr
   colors : Array<any> = [{'code':'green','name':'Green','colorClass':'dot_green'},{'code':'blue','name':'Blue','colorClass':'dot_blue'},{'code':'grey','name':'Grey','colorClass':'dot_grey'},{'code':'red','name':'Red','colorClass':'dot_red'}];
   constructor(public dialogRef: MatDialogRef<AddLookupDialogComponent>,@Inject(MAT_DIALOG_DATA) public user: number,
    private alertService: AlertService) { 
+     this.data = user
     console.log(this.user);
    }
 
