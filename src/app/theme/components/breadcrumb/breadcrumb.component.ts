@@ -130,6 +130,7 @@ export class BreadcrumbComponent {
             "Settings":"This screen is used to manage the settings in the application",
             "Lookup Options":"This screen is used to manage the lookup options throughout  the application",
             "Organizations" : "This screen is used to manage the organizations throughout  the application",
+            "Permissions": "This screen is used to manage the permissions throughout  the application",
             "Announcements":"This is Announcements Screen",
             "Message Center" : "All messages can be viewed here",
             "Screen":"This is a Screen",

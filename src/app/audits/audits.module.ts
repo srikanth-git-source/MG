@@ -16,6 +16,7 @@ import { ParameterAuditComponent } from './parameter-audit/parameter-audit.compo
 import { SharedModule } from '../shared/shared.module';
 import { ManageGridComponent } from './parameter-audit/manage-grid/manage-grid.component';
 import { AddparameterauditComponent } from './parameter-audit/addparameteraudit/addparameteraudit.component';
+import { AddchecklistauditComponent } from './checklist-audit/addchecklistaudit/addchecklistaudit.component';
 
 export const routes = [
   {path:'',component:ChecklistAuditComponent,data:{breadcrumb:'Audits'}},
@@ -26,7 +27,7 @@ export const routes = [
 
 
 @NgModule({
-  declarations: [ChecklistAuditComponent, ParameterAuditComponent, ManageGridComponent, AddparameterauditComponent],
+  declarations: [ChecklistAuditComponent, ParameterAuditComponent, ManageGridComponent, AddparameterauditComponent, AddchecklistauditComponent],
   imports: [
     CommonModule,NgxChartsModule,RouterModule.forChild(routes),
     SharedModule,ConfirmationPopoverModule,ReactiveFormsModule,FormsModule,
@@ -36,6 +37,6 @@ export const routes = [
     OwlDateTimeModule,OwlNativeDateTimeModule,
     ReactiveFormsModule,
     FormsModule,
-  ],entryComponents: [ManageGridComponent,AddparameterauditComponent]
+  ],entryComponents: [ManageGridComponent,AddparameterauditComponent,AddchecklistauditComponent]
 })
 export class AuditsModule { }

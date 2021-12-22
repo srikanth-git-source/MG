@@ -25,7 +25,7 @@ export const routes = [
   { path: 'users', component: UsersComponent, data: { breadcrumb: 'Manage Users' }},
   // { path: 'organisation', component: OrganisationsComponent, loadChildren: './organisations/organisations.module#OrganisationsModule', pathMatch: 'full', data: { breadcrumb: 'Organization Setup' } },
   { path: 'settings', component: SettingsComponent, pathMatch: 'full', data: { breadcrumb: 'Settings' } },
-  { path: 'permissions', component: PermissionsComponent, loadChildren: './users/permissions/permissions.component', data: { breadcrumb: 'Settings' }},
+  {path:'permissions',component:PermissionsComponent,data:{breadcrumb:'Permissions'}},
 ];
 
 @NgModule({

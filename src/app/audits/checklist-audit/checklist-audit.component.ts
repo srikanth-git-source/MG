@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AlertService } from 'src/app/shared/services/alert.service';
+import { AddchecklistauditComponent } from './addchecklistaudit/addchecklistaudit.component';
 
 @Component({
   selector: 'app-checklist-audit',
@@ -37,6 +38,15 @@ export class ChecklistAuditComponent implements OnInit {
   }
   saveStatus() {
     this.alertService.createAlert('Successfully saved.', 1);
+}
+public addchecklistaudit(auditdata) {
+  let dialogRef = this.dialog.open(AddchecklistauditComponent, {
+      data: auditdata,
+      height: 'auto',
+      width: '600px'
+  });
+  dialogRef.afterClosed().subscribe(data => {
+  });
 }
 }
 

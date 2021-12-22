@@ -11,7 +11,7 @@
                   <div class="w-100">
                     <div class="row pull-right" style="margin-right: -5px;">
                           <div class="">
-                            <button style="margin-bottom: 7px" mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3"  (click)="addParameter()">
+                            <button style="margin-bottom: 7px" mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3"  (click)="addParameter(null)">
                               <mat-icon >add</mat-icon> Add Parameter Audit
                               </button>
                               <button style="margin-bottom: 7px"
@@ -251,7 +251,7 @@
             <th class="theadcolor">Auditor</th>
             <th class="theadcolor">Model</th>
             <th class="theadcolor">Variant</th>
-            <th class="theadcolor">Intercam Trim</th>
+            <th class="theadcolor">Interior Trim</th>
             <th class="theadcolor">Color</th>
             <th class="theadcolor text-center">Transmission</th>
             <th class="theadcolor text-center">Fuel Type</th>
@@ -282,7 +282,7 @@
               {{item.status?'Active':'Inactive'}}
           </a></td>
             <td class="text-center editDel">
-              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="openAddAudit(item)">
+              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="addParameter(item)">
                 <i class="fa fa-edit" style="color: cornflowerblue"></i>
               </a>
               <a><i class="fa fa-trash red" matTooltip="Delete" style="cursor: pointer;"></i>

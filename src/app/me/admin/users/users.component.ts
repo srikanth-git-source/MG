@@ -46,7 +46,7 @@ export class UsersComponent implements OnInit {
 }
 permissions()
 {
-  window.open('#/users/permissions')
+  window.open('/#/admin/permissions');
 
 }
 
