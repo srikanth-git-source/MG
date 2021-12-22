@@ -41,11 +41,20 @@ export class ParameterAuditComponent implements OnInit {
       height:"auto"
     })
   }
-  addParameter(){
-    this.dialog.open(AddparameterauditComponent,{
-      width:"600px",
-      height:"auto"
-    })
+  // addParameter(){
+  //   this.dialog.open(AddparameterauditComponent,{
+  //     width:"600px",
+  //     height:"auto"
+  //   })
+  // }
+  public addParameter(auditdata) {
+    let dialogRef = this.dialog.open(AddparameterauditComponent, {
+        data: auditdata,
+        height: 'auto',
+        width: '600px'
+    });
+    dialogRef.afterClosed().subscribe(data => {
+    });
   }
   saveStatus() {
     this.alertService.createAlert('Successfully saved.', 1);
