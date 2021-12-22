@@ -2,7 +2,8 @@
 <div >
   <div class="col-xs-12" style="margin-left:8px;margin-top:10px;">
     <div id="grid-table-container" class="table-responsive" style="width: 99%;">
-      <h3>Checklist based Audit</h3>
+      <!-- <h3>Checklist based Audit</h3> -->
+      <!-- Add Filter -->
       <div class="container-fluid">
         <div class="w-100">
           <div class="flex-p">
@@ -11,16 +12,15 @@
                 <div class="row-wrap">
                   <div class="w-100">
                     <div class="row pull-right" style="margin-right: -5px;">
-                
                           <div class="">
-                            
-                           
+                            <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" (click)="addlookup(null)">
+                              <mat-icon>add</mat-icon> Add Checklist Audit
+                              </button>
                               <button style="margin-bottom: 7px"
                               mat-raised-button
                               color="primary"
                               class="pull-right filters-hover margin-right-10 mt-3"
-                              (click)="filterToggle = !filterToggle"
-                            >
+                              (click)="filterToggle = !filterToggle">
                               <mat-icon>filter_list</mat-icon> Filter
                             </button>
                             
@@ -36,6 +36,7 @@
           </div>
         </div>
       </div>
+      <!-- Filter UI -->
       <div fxLayout="row wrap" *ngIf="filterToggle" >
         <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
           <mat-card class="filter"> 
@@ -236,13 +237,16 @@
         </div>
         
       </div>
+      <!-- Table -->
       <table matSort id="example2" class="table table-bordered table-hover">
         <thead class="tbl-head">
           <tr>
             <th class="theadcolor">Date</th>
             <th class="theadcolor">VIN</th>
+            <th class="theadcolor">Audit Type</th>
             <th class="theadcolor">Issues</th>
             <th class="theadcolor">Demerits</th>
+            <th class="theadcolor">Location</th>
             <th class="theadcolor">Auditor</th>
             <th class="theadcolor">Model</th>
             <th class="theadcolor">Variant</th>
@@ -257,10 +261,12 @@
           <tr *ngFor="let item of values">
             <td>{{item.Date}}</td>
             <td>{{item.VIN}}</td>
+            <td>{{item.AuditType}}</td>
             <td>
               <a (click)="opendashboard()" style="color: cornflowerblue;cursor: pointer;">{{item.Issues}}</a>
             </td>
             <td>{{item.Demerits}}</td>
+            <td>{{item.Location}}</td>
             <td>{{item.Auditor}}</td>
             <td>{{item.Model}}</td>
             <td>{{item.Variant}}</td>
@@ -277,6 +283,7 @@
           </tr>
         </tbody>
       </table>
+      <!-- Pagination -->
       <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
                 [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
     </div>
