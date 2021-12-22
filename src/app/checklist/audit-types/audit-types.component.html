@@ -16,8 +16,8 @@
                   <div class="col-xs-6" style="margin-left: -13px;" >
                     <div class="">
                       
-                      <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" (click)="addmodule(null)">
-                        <mat-icon>add</mat-icon> Add Module
+                      <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" (click)="addaudit(null)">
+                        <mat-icon>add</mat-icon> Add Audit
                         </button>
                         <button
                         mat-raised-button
@@ -48,7 +48,7 @@
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-3" >
-              <label class="pull-right" style="margin-top: 6px;" >Module Name:</label>
+              <label class="pull-right" style="margin-top: 6px;" >Audit Type:</label>
             </div>
             <div class="col-sm-6" >
               <input type="text"  placeholder="Search Module Name" class="form-control">
@@ -71,7 +71,7 @@
           </div>
 
 
-<!--Go and Clear Buttons-->
+     <!--Go and Clear Buttons-->
           <div class="col-sm-2">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
@@ -100,7 +100,7 @@
               <table matSort id="example2" class="table table-bordered table-hover">
                   <thead class="tbl-head">
                       <tr>
-                          <th >Module Name</th>
+                          <th >Audit Type</th>
                           <th class="text-center">Status</th>
                           <th class="text-center" style="width: 112px!important;">Actions</th>
                       </tr>
@@ -119,7 +119,7 @@
           
                           <td class="text-center editDel">
                               <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
-                                  matTooltip="Edit" (click)="addmodule(item)">
+                                  matTooltip="Edit" (click)="addaudit(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>
                               <a><i class="fa fa-trash red" matTooltip="Delete"

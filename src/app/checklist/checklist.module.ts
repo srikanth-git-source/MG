@@ -19,6 +19,8 @@ import { AddModuleDialogueComponent } from './module-master/add-module-dialogue/
 import { AddFunctionDialogueComponent } from './function-master/add-function-dialogue/add-function-dialogue.component';
 import { AddDefectDialogueComponent } from './defect-master/add-defect-dialogue/add-defect-dialogue.component';
 import { AddIssueDialogueComponent } from './issue-master/add-issue-dialogue/add-issue-dialogue.component';
+import { AuditTypesComponent } from './audit-types/audit-types.component';
+import { AddAuditDialougeComponent } from './audit-types/add-audit-dialouge/add-audit-dialouge.component';
 
 
 export const routes = [
@@ -27,6 +29,7 @@ export const routes = [
   { path: 'function-master', component: FunctionMasterComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
   { path: 'defect-master', component: DefectMasterComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
   { path: 'issue-master', component: IssueMasterComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
+  { path: 'audit-types', component: AuditTypesComponent, data: { breadcrumb: 'Audit Bench-Checklists' }}
 ];
 
 @NgModule({
@@ -41,8 +44,8 @@ export const routes = [
   providers: [DragulaService],
   declarations: [ModuleMasterComponent, FunctionMasterComponent, DefectMasterComponent,
      IssueMasterComponent, AddModuleDialogueComponent, AddFunctionDialogueComponent, 
-     AddDefectDialogueComponent, AddIssueDialogueComponent],
-  entryComponents:[AddModuleDialogueComponent,AddFunctionDialogueComponent,AddDefectDialogueComponent, AddIssueDialogueComponent]
+     AddDefectDialogueComponent, AddIssueDialogueComponent, AuditTypesComponent, AddAuditDialougeComponent],
+  entryComponents:[AddModuleDialogueComponent,AddFunctionDialogueComponent,AddDefectDialogueComponent, AddIssueDialogueComponent,AddAuditDialougeComponent]
 })
 
 export class ChecklistModule { }
