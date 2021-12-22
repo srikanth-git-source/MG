@@ -1,3 +1,4 @@
+<!-- Master Data Tabs -->
 <div class="row-wrap">
   <div class="w-100">
 
@@ -40,7 +41,7 @@
   </div>
 
 </div>
-
+<!-- Add Filter Tabs -->
 <div class="container-fluid" style="padding-right: 8px; padding-left: 4px;">
   <div class="w-100">
     <div class="flex-p">
@@ -75,7 +76,7 @@
     </div>
   </div>
 </div>
-
+<!-- Fliter UI -->
 <div fxLayout="row wrap" *ngIf="filterToggle">
   <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-left: 5px; margin-right: 10px;">
     <mat-card class="filter">
@@ -126,7 +127,7 @@
   </div>
 
 </div>
-
+<!-- Table -->
 <div class="container-fluid" style="padding-right: 8px; padding-left: 4px;">
   <div fxLayout="row wrap" #resizedDiv>
     <div class="flex-p w-100 sizeAlign">
@@ -153,11 +154,11 @@
                   </td>
 
                   <td class="text-center editDel">
-                    <a style="cursor: pointer;margin-right:0px;margin-left: -5px; " matTooltip="Update Project"
+                    <a style="cursor: pointer;margin-right:0px;margin-left: -5px; " matTooltip="Edit"
                       (click)="addmodule(item)">
                       <i class="fa fa-edit" style="color: cornflowerblue"></i>
                     </a>
-                    <a><i class="fa fa-trash red" matTooltip="Delete Project" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-trash red" matTooltip="Delete" style="cursor: pointer;"></i></a>
                   </td>
                 </tr>
               </tbody>

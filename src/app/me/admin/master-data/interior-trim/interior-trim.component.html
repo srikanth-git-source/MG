@@ -1,4 +1,4 @@
-
+<!-- Master Data Tabs -->
 <div class="row-wrap">
   <div class="w-100">
 
@@ -41,7 +41,7 @@
   </div>
   
 </div>
-
+<!-- Add Filter Tabs -->
 <div class="container-fluid" style="padding-right: 7px;
 padding-left: 3px;">
   <div class="w-100">
@@ -80,14 +80,14 @@ padding-left: 3px;">
     </div>
   </div>
 </div>
-
+<!-- Filter UI -->
 <div fxLayout="row wrap" *ngIf="filterToggle"  >
   <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-right: 10px; margin-left: 4px;">
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
           <div class="col-sm-5">
-            <div class="col-sm-3" >
+            <div class="col-sm-4" >
               <label class="pull-right" style="margin-top: 6px;" >Interior Trim Name:</label>
             </div>
             <div class="col-sm-6" >
@@ -99,10 +99,8 @@ padding-left: 3px;">
               </mat-select>
             </div>
           </div>
-
-
           <div class="col-sm-5">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <label class="pull-right" style="margin-top: 6px;">Status:</label>
             </div>
             <div class="col-sm-6">
@@ -114,8 +112,6 @@ padding-left: 3px;">
               </mat-select>
             </div>
           </div>
-
-
           <div class="col-sm-2">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
@@ -132,7 +128,7 @@ padding-left: 3px;">
   </div>
   
 </div>
-
+<!-- Table -->
 <div class="container-fluid" style="padding-right: 7px;
 padding-left: 3px;">
   <div fxLayout="row wrap" #resizedDiv>
@@ -162,10 +158,10 @@ padding-left: 3px;">
           
                           <td class="text-center editDel">
                               <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
-                                  matTooltip="Update Project" (click)="addmodule(item)">
+                                  matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>
-                              <a><i class="fa fa-trash red" matTooltip="Delete Project"
+                              <a><i class="fa fa-trash red" matTooltip="Delete"
                                       style="cursor: pointer;"></i></a>
                           </td>
                       </tr>

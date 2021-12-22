@@ -1,7 +1,6 @@
-
+<!-- Master DataTabs -->
 <div class="row-wrap">
   <div class="w-100">
-
     <div class="col-xs-12" style="margin-top: 15px;margin-left: -10px;">
       <div class="pills">
           <ul class="nav nav-pills" style="margin-left: 10px;  margin-left: 4px;">
@@ -41,7 +40,7 @@
   </div>
   
 </div>
-
+<!-- Add Filter Tabs -->
 <div class="container-fluid" style="padding-right: 5px;
 padding-left: 0px;">
   <div class="w-100">
@@ -80,7 +79,7 @@ padding-left: 0px;">
     </div>
   </div>
 </div>
-
+<!-- Filter UI -->
 <div fxLayout="row wrap" *ngIf="filterToggle" >
   <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-right: 6px;">
     <mat-card class="filter"> 
@@ -133,7 +132,7 @@ padding-left: 0px;">
   </div>
   
 </div>
-
+<!-- Table -->
 <div class="container-fluid"  style="padding-right: 5px;
 padding-left: 0px;">
   <div fxLayout="row wrap" #resizedDiv>
@@ -163,10 +162,10 @@ padding-left: 0px;">
           
                           <td class="text-center editDel">
                               <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
-                                  matTooltip="Update Project" (click)="addmodule(item)">
+                                  matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>
-                              <a><i class="fa fa-trash red" matTooltip="Delete Project"
+                              <a><i class="fa fa-trash red" matTooltip="Delete"
                                       style="cursor: pointer;"></i></a>
                           </td>
                       </tr>

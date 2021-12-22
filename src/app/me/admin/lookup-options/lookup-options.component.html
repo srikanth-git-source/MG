@@ -1,3 +1,4 @@
+<!-- Add, Filter -->
 <div class="container-fluid">
   <div class="w-100">
     <div class="flex-p">
@@ -35,7 +36,7 @@
     </div>
   </div>
 </div>
-
+<!-- Filter -->
 <div fxLayout="row wrap" *ngIf="filterToggle" >
   <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" >
     <mat-card class="filter"> 
@@ -61,8 +62,6 @@
               <input type="text"  placeholder="Search Lookups" class="form-control">
             </div>
           </div>
-
-
           <div class="col-sm-3">
             <div class="col-sm-4">
               <label class="pull-right" style="margin-top: 6px;">Status:</label>
@@ -76,10 +75,7 @@
               </mat-select>
             </div>
           </div>
-
-
-
-          <div class="col-sm-2">
+          <div class="col-sm-3">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
@@ -95,7 +91,7 @@
   </div>
   
 </div>
-
+<!-- Table -->
 <div class="container-fluid">
   <div fxLayout="row wrap" style="margin-left: -6px;
   margin-right: -6px;">

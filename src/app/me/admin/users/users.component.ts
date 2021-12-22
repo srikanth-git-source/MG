@@ -24,21 +24,15 @@ export class UsersComponent implements OnInit {
 
 
   values = [
-    {full_name:"Navin malik",email:'navin@gmail.com',username:'navin',location:'Hyderabad',office:'Hyderabad',Role:'Admin',status:true,PermissionsCount :'21/80'},
-    {full_name:"Surya Teja",email:'surya@gmail.com',username:'surya',location:'Hyderabad',office:'Hyderabad',Role:'Manager',status:true,PermissionsCount :'56/80'},
-    {full_name:"Siva Kumar",email:'siva@gmail.com',username:'siva',location:'Banglore',office:'Banglore',Role:'Staff',status:true,PermissionsCount :'42/80'},
-    {full_name:"Amit Kumar",email:'ridhma@gmail.com',username:'ridhima',location:'Mumbai',office:'Mumbai',Role:'Staff',status:true,PermissionsCount :'80/80'},
+    {full_name:"Navin Malik",email:'navin@gmail.com',username:'Navin',location:'Hyderabad',office:'Hyderabad',Role:'Admin',status:true,PermissionsCount :'21/80'},
+    {full_name:"Surya Teja",email:'surya@gmail.com',username:'Surya',location:'Hyderabad',office:'Hyderabad',Role:'Manager',status:true,PermissionsCount :'56/80'},
+    {full_name:"Siva Kumar",email:'siva@gmail.com',username:'Siva',location:'Banglore',office:'Banglore',Role:'Staff',status:true,PermissionsCount :'42/80'},
+    {full_name:"Amit Kumar",email:'amit@gmail.com',username:'Amit',location:'Mumbai',office:'Mumbai',Role:'Staff',status:true,PermissionsCount :'80/80'},
   ]
   opendashboard(){
     window.open('/#/parameter-dashboard/issuelog-par');
   }
 
-  // addUser(){
-  //   this.dialog.open(AdduserComponent,{
-  //     width:"600px",
-  //     height:"auto"
-  //   })
-  // }
   public addUser(item){
     this.dialog.open(AdduserComponent,{
       data:item,
@@ -46,12 +40,7 @@ export class UsersComponent implements OnInit {
       height:"auto"
     })
   }
-  // addParameter(){
-  //   this.dialog.open(AddparameterauditComponent,{
-  //     width:"600px",
-  //     height:"auto"
-  //   })
-  // }
+
   saveStatus() {
     this.alertService.createAlert('Successfully saved.', 1);
 }
