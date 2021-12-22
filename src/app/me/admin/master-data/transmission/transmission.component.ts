@@ -10,6 +10,7 @@ import { AddTransmissionComponent } from './add-transmission/add-transmission.co
 })
 export class TransmissionComponent implements OnInit {
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';

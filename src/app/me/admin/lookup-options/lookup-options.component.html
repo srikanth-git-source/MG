@@ -41,8 +41,8 @@
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row" >
-          <div class="col-sm-4">
-            <div class="col-sm-4" >
+          <div class="col-sm-3">
+            <div class="col-sm-3" >
               <label class="pull-right" style="margin-top: 6px;" >Code:</label>
             </div>
             <div class="col-sm-8" >
@@ -53,7 +53,7 @@
               </mat-select>
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="col-sm-4" >
               <label class="pull-right" style="margin-top: 6px;" >Lookups:</label>
             </div>
@@ -61,7 +61,25 @@
               <input type="text"  placeholder="Search Lookups" class="form-control">
             </div>
           </div>
-          <div class="col-sm-4">
+
+
+          <div class="col-sm-3">
+            <div class="col-sm-4">
+              <label class="pull-right" style="margin-top: 6px;">Status:</label>
+            </div>
+            <div class="col-sm-6">
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option *ngFor="let option of Status" [value]="option.value">
+                  {{option.name}}
+                </mat-option>
+                
+              </mat-select>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-2">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
@@ -101,15 +119,15 @@
                             mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
                             [popoverMessage]="popoverStatusMessage" placement="left"
                             (confirm)="saveStatus();applicant.vcStatus=!applicant.vcStatus"
-                            (cancel)="cancelClicked = true">
+                            (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
                             {{applicant.vcStatus?'Active':'Inactive'}}
                         </a>
                     </td>
                     <td style="text-align: center !important;">
-                        <a title="Edit" style="margin-right: 10px; cursor: pointer;"  (click)="addlookup(applicant)">
+                        <a  style="margin-right: 10px; cursor: pointer; color: cornflowerblue" matTooltip="Edit" (click)="addlookup(applicant)">
                             <i class="fa fa-edit"></i>
                         </a>
-                        <a mwlConfirmationPopover [popoverTitle]="popoverTitle"
+                        <a mwlConfirmationPopover [popoverTitle]="popoverTitle" matTooltip="Delete"
                             [popoverMessage]="popoverMessage" placement="left" (confirm)="deleteLookup(item)"
                             (cancel)="cancelClicked = true">
                             <i style="cursor: pointer;" title="Delete" class="fa fa-trash red"></i>

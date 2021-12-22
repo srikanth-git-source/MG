@@ -86,7 +86,7 @@ padding-left: 0px;">
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <div class="col-sm-3" >
               <label class="pull-right" style="margin-top: 6px;" >Variant Name:</label>
             </div>
@@ -101,7 +101,7 @@ padding-left: 0px;">
           </div>
 
 
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <div class="col-sm-3">
               <label class="pull-right" style="margin-top: 6px;">Status:</label>
             </div>
@@ -117,7 +117,7 @@ padding-left: 0px;">
 
 
 
-          <div class="col-sm-4">
+          <div class="col-sm-2">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
@@ -156,7 +156,7 @@ padding-left: 0px;">
                               <a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
                                   mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
                                   [popoverMessage]="popoverStatusMessage" placement="left"
-                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true">
+                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
                                   {{item.status?'Active':'Inactive'}}
                               </a>
                           </td>

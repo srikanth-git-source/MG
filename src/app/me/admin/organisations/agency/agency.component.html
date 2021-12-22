@@ -169,7 +169,7 @@
                               <a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
                                   mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
                                   [popoverMessage]="popoverStatusMessage" placement="left"
-                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true">
+                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
                                   {{item.status?'Active':'Inactive'}}
                               </a>
                           </td>
