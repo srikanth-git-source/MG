@@ -12,6 +12,7 @@ export class FunctionMasterComponent implements OnInit {
 
   
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
@@ -37,10 +38,10 @@ export class FunctionMasterComponent implements OnInit {
     {status:true,modulename:"Rear bumper",functioname:"Mutilation"},
     {status:true,modulename:"Fuel Flap",functioname:"Aesthetics"},
     {status:true,modulename:"Upper trim",functioname:"Mutilation"},
-    {status:true,modulename:"Tailgate",functioname:"Aesthetics"},
-    {status:true,modulename:"Central Console",functioname:"Mutilation"},
-    {status:true,modulename:"C pillar",functioname:"Aesthetics"},
-    {status:true,modulename:"REAR SEAT",functioname:"Mutilation"},
+    // {status:true,modulename:"Tailgate",functioname:"Aesthetics"},
+    // {status:true,modulename:"Central Console",functioname:"Mutilation"},
+    // {status:true,modulename:"C pillar",functioname:"Aesthetics"},
+    // {status:true,modulename:"REAR SEAT",functioname:"Mutilation"},
   ]
   statusOptions = [
     {value:1, name: 'Prepared Quote', colorCode: '#00ff0040'},

@@ -1,4 +1,6 @@
-<div class="container-fluid">
+
+<!--Add Function And Filter Buttons-->
+<div class="container-fluid" style="padding-right: 5px;padding-left: 1px;">
   <div class="w-100">
     <div class="flex-p">
       <div class="row wrap">
@@ -36,8 +38,10 @@
   </div>
 </div>
 
+
+<!--Filter Toggle-->
 <div fxLayout="row wrap" *ngIf="filterToggle" >
-  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-right: 7px;">
     <mat-card class="filter"> 
       <mat-card-content>
         <div class="row">
@@ -45,7 +49,7 @@
             <div class="col-sm-4" >
               <label class="pull-right" style="margin-top: 6px;" >Module Name:</label>
             </div>
-            <div class="col-sm-8" >
+            <div class="col-sm-6" >
               <mat-select class="form-control" placeholder="Select Module Name" required>
                 <mat-option [value]="0">BSO</mat-option>
                 <mat-option [value]="1">Door</mat-option>
@@ -63,11 +67,28 @@
             <div class="col-sm-4" >
               <label class="pull-right" style="margin-top: 6px;" >Function Name:</label>
             </div>
-            <div class="col-sm-8" >
+            <div class="col-sm-6" >
               <input type="text"  placeholder="Search Function Name.." class="form-control">
             </div>
           </div>
+
+
+          
           <div class="col-sm-4">
+            <div class="col-sm-3">
+              <label class="pull-right" style="margin-top: 6px;">Status:</label>
+            </div>
+            <div class="col-sm-6">
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option *ngFor="let option of Status" [value]="option.value">
+                  {{option.name}}
+                </mat-option>
+
+              </mat-select>
+            </div>
+          </div>
+
+          <div class="col-sm-2" style="margin-left: 75%;margin-top: 18px;">
             <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
               <mat-icon>youtube_searched_for</mat-icon> Go
             </button>
@@ -84,7 +105,10 @@
   
 </div>
 
-<div class="container-fluid" >
+
+
+<!--Table-->
+<div class="container-fluid" style="padding-right: 5px;padding-left: 1px;" >
   <div fxLayout="row wrap" #resizedDiv>
     <div class="flex-p w-100 sizeAlign">
        <div class="row" >
@@ -107,22 +131,23 @@
                               <a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
                                   mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
                                   [popoverMessage]="popoverStatusMessage" placement="left"
-                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true">
+                                  (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
                                   {{item.status?'Active':'Inactive'}}
                               </a>
                           </td>
           
                           <td class="text-center editDel">
                               <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
-                                  matTooltip="Update Project" (click)="addfunction(item)">
+                                  matTooltip="Update" (click)="addfunction(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>
-                              <a><i class="fa fa-trash red" matTooltip="Delete Project"
+                              <a><i class="fa fa-trash red" matTooltip="Delete"
                                       style="cursor: pointer;"></i></a>
                           </td>
                       </tr>
                   </tbody>
               </table>
+              <!--Page Size-->
               <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
                   [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
           </div>

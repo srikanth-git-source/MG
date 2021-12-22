@@ -11,6 +11,7 @@ import { AddModuleDialogueComponent } from './add-module-dialogue/add-module-dia
 export class ModuleMasterComponent implements OnInit {
 
   gridCmp: any;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
 
   constructor(public dialog: MatDialog, private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
@@ -36,10 +37,10 @@ export class ModuleMasterComponent implements OnInit {
     {modulename:"Rear bumper",status:true},
     {modulename:"Fuel Flap",status:true},
     {modulename:"Upper trim",status:true},
-    {modulename:"Tailgate",status:true},
-    {modulename:"Central Console",status:true},
-    {modulename:"C pillar",status:true},
-    {modulename:"REAR SEAT",status:true},
+    // {modulename:"Tailgate",status:true},
+    // {modulename:"Central Console",status:true},
+    // {modulename:"C pillar",status:true},
+    // {modulename:"REAR SEAT",status:true},
   ]
   statusOptions = [
     {value:1, name: 'Prepared Quote', colorCode: '#00ff0040'},
