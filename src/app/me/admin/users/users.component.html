@@ -1,8 +1,8 @@
-<!-- Table -->
+<!-- User Screen -->
 <div >
   <div class="col-xs-12" style="margin-left:-6px;margin-top:10px; width: 102%;">
     <div id="grid-table-container" class="table-responsive" style="width: 99%;">
-  
+      <!-- Tabs,Addbutton,Filter -->
       <div class="container-fluid">
         <div class="w-100">
           <div class="flex-p">
@@ -40,6 +40,7 @@
           </div>
         </div>
       </div>
+      <!-- Filter -->
       <div fxLayout="row wrap" *ngIf="filterToggle" >
         <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-left: -6px;
         margin-right: -4px">
@@ -69,8 +70,6 @@
                     </mat-select>
                   </div>
                 </div>
-
-
                 <div class="col-sm-4">
                   <div class="col-sm-4" >
                     <label class="pull-right" style="margin-top: 6px;" >Location:</label>
@@ -86,8 +85,6 @@
                     </mat-select>
                   </div>
                 </div>
-
-
                 <div class="col-sm-4" style="margin-top: 26px;">
                   <div class="col-sm-4" >
                     <label class="pull-right" style="margin-top: 6px;" >Role:</label>
@@ -100,10 +97,35 @@
                     </mat-select>
                   </div>
                 </div>
-               
+                <div class="col-sm-4" style="margin-top: 26px;">
+                  <div class="col-sm-4" >
+                    <!-- <label class="pull-right" style="margin-top: 6px;" >Role:</label> -->
+                  </div>
+                  <div class="col-sm-8" >
+                    <!-- <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
+                      <mat-icon>youtube_searched_for</mat-icon> Go
+                    </button>
+                    <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
+                      <mat-icon>settings_backup_restore</mat-icon> Clear
+                    </button> -->
+                  </div>
+                </div>
+                <div class="col-sm-4" style="margin-top: 26px;">
+                  <div class="col-sm-4" >
+                    <!-- <label class="pull-right" style="margin-top: 6px;" >Role:</label> -->
+                  </div>
+                  <div class="col-sm-8" >
+                    <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
+                      <mat-icon>youtube_searched_for</mat-icon> Go
+                    </button>
+                    <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
+                      <mat-icon>settings_backup_restore</mat-icon> Clear
+                    </button>
+                  </div>
+                </div>
               </div>
              
-              <div class="row" style="padding-top:10px !important">
+              <!-- <div class="row" style="padding-top:10px !important">
                
                 <div class="col-sm-12">
                   <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
@@ -114,12 +136,13 @@
                   </button>
                 </div> 
                
-              </div>
+              </div> -->
             </mat-card-content>
           </mat-card> 
         </div>
         
       </div>
+      <!-- Table-->
       <table  style="margin-top: 7px; padding-left: 20px; padding-right: 10px;" matSort id="example2" class="table table-bordered table-hover">
         <thead class="tbl-head">
           <tr>

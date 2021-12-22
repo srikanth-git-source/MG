@@ -1,18 +1,18 @@
 <div fxLayout="row wrap" #resizedDiv>
+  <!-- Table -->
   <div class="flex-p w-100" style="width: 100% !important ; margin-left: -9px;">
     <div class="table-responsive sizeAlign">
       <table
         id="example2"
         style="margin-top: 10px"
-        class="table table-bordered table-hover table-striped"
-      >
+        class="table table-bordered table-hover table-striped">
         <thead class="tbl-head">
           <tr class="tr-grid-header">
             <th>Name</th>
             <th>Description</th>
             <th>Previous Value</th>
             <th>New Value</th>
-            <th>Actions</th>
+            <th class="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -71,16 +71,17 @@
               </div>
             </td>
             <td>
-              <a
-                style="margin-right: 10px"
+              <a style="margin-right: 10px;display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;"
                 class="status"
                 mwlConfirmationPopover
                 [popoverTitle]="popoverStatusTitle"
                 [popoverMessage]="popoverStatusMessage"
                 placement="left"
                 (confirm)="saveSettings()"
-                (cancel)="cancelClicked = true"
-              >
+                (cancel)="cancelClicked = true">
                 Save
               </a>
             </td>

@@ -48,13 +48,13 @@ export class SettingsComponent implements OnInit {
       intSettingsId: 4,
       name: "Notification Email",
       description: "Default Admin Notification Email	",
-      old_value: "sg@optionmatrix.com",
+      old_value: "mg@optionmatrix.com",
     },
     {
       intSettingsId: 5,
       name: "Time Zone",
       description: "Default Time Zone",
-      old_value: "EDT",
+      old_value: "IST",
     },
   ];
 
