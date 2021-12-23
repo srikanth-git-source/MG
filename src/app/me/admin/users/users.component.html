@@ -148,7 +148,7 @@
           <tr>
             <th class="theadcolor">Full Name</th>
             <th class="theadcolor">Email</th>
-            <th class="theadcolor">Username</th>
+            <th style="width: 50px;" class="theadcolor">Username</th>
             <th class="theadcolor text-center">Location</th>
             <th class="theadcolor text-center">Office</th>
             <th class="theadcolor text-center">Role</th>
@@ -167,7 +167,7 @@
             <td class="text-center">{{item.Role}}</td>
 
             <td class="text-center">
-              <a  style="cursor: pointer; color: cornflowerblue;" (click)= "permissions()" matTooltip="Click to view Permissions">{{item.PermissionsCount}}</a>       
+              <a  style="cursor: pointer; color: cornflowerblue;"  routerLink = "/admin/permissions" matTooltip="Click to view Permissions">{{item.PermissionsCount}}</a>       
             </td>
 
 

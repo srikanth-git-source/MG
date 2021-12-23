@@ -1,3 +1,47 @@
-<p>
-  permissions works!
-</p>
+<div fxLayout="row wrap">
+    <div class="table-responsive flex-p">
+        <mat-dialog-actions style="margin-bottom: 10px; margin-top: 15px;margin-left: 5px;float: right" >
+
+            <a routerLink="/admin/users" ><button mat-raised-button class="btn-default"><mat-icon>keyboard_backspace</mat-icon>Back</button></a> 
+          <button mat-raised-button class="btn-primary" style="margin-left: 10px;" (click)="saveUserPermissions()"><mat-icon>save</mat-icon>Save</button>
+                 
+            </mat-dialog-actions> 
+            
+           
+        
+            <table id="example2" class="table table-bordered table-hover">
+                <thead class="tbl-head">
+                    <tr class="tr-grid-header">
+                        <th>Screen Permissions</th>
+                        <th class="style text-center">Create</th>
+                        <th class="style text-center">Read</th>
+                        <th class="style text-center">Update</th>
+                        <th class="style text-center">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of items" >
+                        <td>{{item.screen}}</td>
+                        <td class="style text-center">
+                            <input  type="checkbox" [(ngModel)]="item.Create">
+                            
+                          </td>
+                        <td class="style text-center">
+                            <input  type="checkbox" [(ngModel)]="item.Read">
+                            
+                          </td>
+                        <td class="style text-center">
+                            <input  type="checkbox" [(ngModel)]="item.Update">
+                            
+                          </td>
+                        <td class="style text-center">
+                            <input  type="checkbox" [(ngModel)]="item.Delete">
+                           
+                          </td>
+                    </tr>
+                        
+               
+                    </tbody>
+                </table>
+            </div>
+        </div>
