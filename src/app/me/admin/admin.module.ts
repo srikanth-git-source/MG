@@ -46,6 +46,7 @@ export const routes = [
         SettingsComponent,
         AdduserComponent,
         PermissionsComponent,
+      
         
          ],
   entryComponents:[
