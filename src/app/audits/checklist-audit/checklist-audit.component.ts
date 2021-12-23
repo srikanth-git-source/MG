@@ -27,7 +27,7 @@ export class ChecklistAuditComponent implements OnInit {
   }
 
   values = [
-    {Date:'1-11-2021',VIN:'HR07 BP0721',AuditType:'Produsct Quality Audit',Issues:'51',Demerits:'1891',Location:'Hyderabad',Auditor:'Surya',Model:'Hector',Variant:'Manual',Interior_Trim:'High',Colour:'White',Transmission:'Manual',Fuel_Type:'Diesel', Status: true },
+    {Date:'1-11-2021',VIN:'HR07 BP0721',AuditType:'Product Quality Audit',Issues:'51',Demerits:'1891',Location:'Hyderabad',Auditor:'Surya',Model:'Hector',Variant:'Manual',Interior_Trim:'High',Colour:'White',Transmission:'Manual',Fuel_Type:'Diesel', Status: true },
     {Date:'12-11-2021',VIN:'HR02 BP0421',AuditType:'Body Audit',Issues:'12',Demerits:'1771',Location:'Banglore',Auditor:'Siva',Model:'Astor',Variant:'Automatic',Interior_Trim:'Low',Colour:'Black',Transmission:'AMT',Fuel_Type:'Petrol', Status: true },
     {Date:'15-11-2021',VIN:'HR07 EP0021',AuditType:'Paint Audit',Issues:'69',Demerits:'1261',Location:'Mumbai',Auditor:'Navin',Model:'Gloster',Variant:'Manual',Interior_Trim:'High',Colour:'Blue',Transmission:'DCT',Fuel_Type:'Petrol', Status: true },
     {Date:'23-10-2021',VIN:'HR07 RG7218',AuditType:'Body Audit',Issues:'14',Demerits:'1001',Location:'Pune',Auditor:'Ridhima',Model:'Astor',Variant:'Automatic',Interior_Trim:'Medium',Colour:'White',Transmission:'AMT',Fuel_Type:'Petrol', Status: true },

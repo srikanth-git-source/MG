@@ -21,11 +21,11 @@ import { AddParnotesComponent } from './par-notes/add-parnotes/add-parnotes.comp
 import { MglTimelineModule } from 'angular-mgl-timeline';
 
 export const routes = [
-  {path:'',component:ParAuditlogComponent,data:{breadcrumb:'Audits'}},
-  {path:'issuelog-par',component:ParAuditlogComponent,data:{breadcrumb:'Audits'}},
-  {path:'notes-par',component:ParNotesComponent,data:{breadcrumb:'Audits'}},
-  {path:'analytics-par',component:ParAnalyticsComponent,data:{breadcrumb:'Audits'}},
-  {path:'overview-par',component:ParOverviewComponent,data:{breadcrumb:'Audits'}},
+  {path:'',component:ParAuditlogComponent,data:{breadcrumb:'Parameter Issuelog'}},
+  {path:'issuelog-par',component:ParAuditlogComponent,data:{breadcrumb:'Parameter Issuelog'}},
+  {path:'notes-par',component:ParNotesComponent,data:{breadcrumb:'Parameter Issuelog'}},
+  {path:'analytics-par',component:ParAnalyticsComponent,data:{breadcrumb:'Parameter Issuelog'}},
+  {path:'overview-par',component:ParOverviewComponent,data:{breadcrumb:'Parameter Issuelog'}},
 ];
 
 @NgModule({

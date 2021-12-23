@@ -12,6 +12,10 @@
                     <div class="row pull-right" style="margin-right: -5px;">
                 
                           <div class="">
+                            <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" >
+                              <!-- (click)="addchecklistissuelineitem(null)" -->
+                              <mat-icon>add</mat-icon> Add Issue Lineitem
+                              </button>
                               <button style="margin-bottom: 7px"
                               mat-raised-button
                               color="primary"
@@ -20,9 +24,9 @@
                             >
                               <mat-icon>filter_list</mat-icon> Filter
                             </button>
-                            <button  mat-raised-button style="margin-right: 12px;" color="primary" class="pull-right  mt-3"  (click)="addgrid()">
+                            <!-- <button  mat-raised-button style="margin-right: 12px;" color="primary" class="pull-right  mt-3"  (click)="addgrid()">
                               <mat-icon>grid_on</mat-icon>Manage Grid
-                              </button>
+                              </button> -->
                         
                           </div>
                        
@@ -137,6 +141,7 @@
             <th class="theadcolor">USL</th>
             <th class="theadcolor">Value</th>
             <th style="width: 50px;" class="theadcolor">Compilance</th>
+            <th class="theadcolor">Actions</th>
             
           </tr>
         </thead>
@@ -150,7 +155,15 @@
             <td class="text-center">{{item.usl}}</td>
             <td class="text-center">{{item.value}}</td>
             <td class="text-center">{{item.compilance}}</td>
-           
+            <td class="text-center editDel">
+              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="addchecklistissuelineitem(item)">
+                <!-- (click)="addchecklistissuelineitem(item)" -->
+                
+                <i class="fa fa-edit" style="color: cornflowerblue"></i>
+              </a>
+              <a><i class="fa fa-trash red" matTooltip="Delete" style="cursor: pointer;"></i>
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>

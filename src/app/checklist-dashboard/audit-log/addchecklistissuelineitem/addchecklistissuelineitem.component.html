@@ -1,0 +1,113 @@
+<div class="NewHeader">
+  <h1 mat-dialog-title>
+    {{data ? 'Update' : 'Add'}} Issue Lineitem
+  </h1>
+</div>
+<div mat-dialog-content >
+    <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-4 add-member-label">Module : </label>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <mat-select class="form-control" placeholder="Select Module" required>
+          <mat-option [value]="0">BSO</mat-option>
+          <mat-option [value]="1">Door</mat-option>
+          <mat-option [value]="2">Rear bumper</mat-option>
+          <mat-option [value]="3">Fuel Flap</mat-option>
+          <mat-option [value]="4">Upper trim</mat-option>
+          <mat-option [value]="5">Tailgate</mat-option>
+          <mat-option [value]="6">Central Console</mat-option>
+          <mat-option [value]="7">Pillar</mat-option>
+          <mat-option [value]="8">REAR SEAT</mat-option>
+          </mat-select>
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 add-member-label">Function: </label>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <mat-select class="form-control" placeholder="Select Function" required>
+        <mat-option [value]="0">Aesthetics</mat-option>
+        <mat-option [value]="1">Mutilation</mat-option>
+      </mat-select>
+     
+    </div>
+</div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 add-member-label">Defect: </label>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <mat-select class="form-control" placeholder="Select Defect" required>
+        <mat-option [value]="0">	Thin Paint</mat-option>
+        <mat-option [value]="1">	Tool / Scuff Marks</mat-option>
+        <mat-option [value]="2">	Scratch</mat-option>
+        <mat-option [value]="3">	Sink / flow marks</mat-option>
+        <mat-option [value]="4">Contamination</mat-option>
+        <mat-option [value]="5">	Uneven/Excess Gap/ Flushness</mat-option>
+        <mat-option [value]="6">	Improper assembly</mat-option>
+        <mat-option [value]="7">	Dent/ Ding / Bump</mat-option>
+        <mat-option [value]="8">	Color / Shade Mismatch</mat-option>
+      </mat-select>
+    </div>
+</div>
+    <div class="form-group">
+      <label class="control-label col-sm-4 add-member-label">Issue: </label>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <mat-select class="form-control" placeholder="Select Issue" required>
+          <mat-option [value]="0">Fuel filler hinge area/Fuel flap edge - Thin Paint & Paint Run down	</mat-option>
+          <mat-option [value]="1">RHR BSO Ding	</mat-option>
+          <mat-option [value]="2">LHR Door outer scratch	</mat-option>
+          <mat-option [value]="4">Roof rail - Sink marks / Waviness</mat-option>
+        </mat-select>
+      </div>
+  </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4 add-member-label">Side View: </label>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <mat-select class="form-control" placeholder="Select Side View" required>
+                <mat-option [value]="0">LH</mat-option>
+                <mat-option [value]="1">RH</mat-option>
+                <mat-option [value]="2">BH</mat-option>
+              </mat-select>
+
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">Face View: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <mat-select class="form-control" placeholder="Select Face View" required>
+              <mat-option [value]="0">FT</mat-option>
+              <mat-option [value]="1">RR</mat-option>
+              <mat-option [value]="2">BH</mat-option>
+            </mat-select>
+          </div>
+         </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">Agency: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <mat-select class="form-control" placeholder="Select Agency" required>
+              <mat-option [value]="0">General Agency</mat-option>
+              <mat-option [value]="1">Paint</mat-option>
+              <mat-option [value]="2">Body</mat-option>
+              <mat-option [value]="3">SQE</mat-option>
+            </mat-select>
+
+          </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Demerit: </label>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <mat-select class="form-control" placeholder="Select Demerit" required>
+            <mat-option [value]="0">1</mat-option>
+            <mat-option [value]="1">10</mat-option>
+            <mat-option [value]="2">20</mat-option>
+            <mat-option [value]="3">50</mat-option>
+          </mat-select>
+
+        </div>
+    </div>
+ 
+    </form>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="btn-primary"  [mat-dialog-close]="'test'"> <mat-icon>send</mat-icon><span
+             >{{data ? 'Update' : 'Save'}}</span></button>
+    <button mat-raised-button class="add-dark-hover btn-default" (click)="close()"><mat-icon>cancel</mat-icon>Close</button>
+</mat-dialog-actions> 
