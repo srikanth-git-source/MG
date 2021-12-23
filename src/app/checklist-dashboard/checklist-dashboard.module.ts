@@ -19,21 +19,22 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
 import { NotesComponent } from './notes/notes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddNotesComponent } from './notes/add-notes/add-notes.component';
+import { AddchecklistissuelineitemComponent } from './audit-log/addchecklistissuelineitem/addchecklistissuelineitem.component';
 
 
 
 
 
 export const routes = [
-  {path:'',component:AuditLogComponent,data:{breadcrumb:'Audits'}},
-  {path:'issuelog',component:AuditLogComponent,data:{breadcrumb:'Audits'}},
-  {path:'analytics',component:AnalyticsComponent,data:{breadcrumb:'Audits'}},
-  {path:'overview',component:OverviewComponent,data:{breadcrumb:'Audits'}},
-  {path:'notes',component:NotesComponent,data:{breadcrumb:'Audits'}},
+  {path:'',component:AuditLogComponent,data:{breadcrumb:'Checklist Issuelog'}},
+  {path:'issuelog',component:AuditLogComponent,data:{breadcrumb:'Checklist Issuelog'}},
+  {path:'analytics',component:AnalyticsComponent,data:{breadcrumb:'Checklist Issuelog'}},
+  {path:'overview',component:OverviewComponent,data:{breadcrumb:'Checklist Issuelog'}},
+  {path:'notes',component:NotesComponent,data:{breadcrumb:'Checklist Issuelog'}},
 ];
 
 @NgModule({
-  declarations: [AuditLogComponent, AnalyticsComponent, OverviewComponent, NotesComponent, AddNotesComponent],
+  declarations: [AuditLogComponent, AnalyticsComponent, OverviewComponent, NotesComponent, AddNotesComponent, AddchecklistissuelineitemComponent],
   imports: [
     CommonModule,NgxChartsModule,RouterModule.forChild(routes),
     SharedModule,ConfirmationPopoverModule,ReactiveFormsModule,FormsModule,
@@ -43,6 +44,6 @@ export const routes = [
     OwlDateTimeModule,OwlNativeDateTimeModule,
     ReactiveFormsModule,
     FormsModule,
-  ],entryComponents: [AddNotesComponent]
+  ],entryComponents: [AddNotesComponent,AddchecklistissuelineitemComponent]
 })
 export class ChecklistDashboardModule { }

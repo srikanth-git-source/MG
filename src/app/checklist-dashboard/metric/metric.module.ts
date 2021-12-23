@@ -20,10 +20,12 @@ import { TransmissionComponent } from './transmission/transmission.component';
 import { VariantComponent } from './variant/variant.component';
 import { ModuleComponent } from './module/module.component';
 import { ModelComponent } from './model/model.component';
+import { AudittypeComponent } from './audittype/audittype.component';
 
 
 export const routes = [
-  {path:'',component:SeverityComponent,data:{breadcrumb:'Audits'}},
+  {path:'',component:AudittypeComponent,data:{breadcrumb:'Audits'}},
+  {path:'audittype',component:AudittypeComponent,data:{breadcrumb:'Audits'}},
   {path:'severity',component:SeverityComponent,data:{breadcrumb:'Audits'}},
   {path:'agency',component:AgencyComponent,data:{breadcrumb:'Audits'}},
   {path:'model',component:ModelComponent,data:{breadcrumb:'Audits'}},
@@ -34,7 +36,7 @@ export const routes = [
 ];
 
 @NgModule({
-  declarations: [SeverityComponent, AgencyComponent, FuelTypeComponent,ModelComponent, TransmissionComponent, VariantComponent, ModuleComponent],
+  declarations: [SeverityComponent, AgencyComponent, FuelTypeComponent,ModelComponent, TransmissionComponent, VariantComponent, ModuleComponent, AudittypeComponent],
   imports: [
     CommonModule,NgxChartsModule,RouterModule.forChild(routes),NgxChartsModule,
     SharedModule,ConfirmationPopoverModule,ReactiveFormsModule,FormsModule,
