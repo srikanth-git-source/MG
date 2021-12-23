@@ -1,6 +1,6 @@
 <!-- Table -->
 <div >
-  <div class="col-xs-12" style="margin-left:10px;margin-top:38px ;">
+  <div class="col-xs-12" style="margin-left:10px;margin-top: -3px; padding-right: 4px; padding-left: 0px;">
     <div id="grid-table-container" class="table-responsive" >
       <div class="container-fluid">
         <div class="w-100">
@@ -11,8 +11,8 @@
                   <div class="w-100">
                     <div class="row pull-right" style="margin-right: -5px;">
                 
-                          <div class="">
-                            <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" >
+                          <div class="" style="padding-right: 15px;">
+                            <button mat-raised-button class="pull-right  btn-primary margin-right-5 mt-3" (click)="addparameterlistissuelineitem(null)" >
                               <!-- (click)="addchecklistissuelineitem(null)" -->
                               <mat-icon>add</mat-icon> Add Issue Lineitem
                               </button>
@@ -39,8 +39,10 @@
           </div>
         </div>
       </div>
+
+      <!--Filter Toggle-->
       <div fxLayout="row wrap" *ngIf="filterToggle" >
-        <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+        <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-left: -9px;margin-right: 9px;">
           <mat-card class="filter"> 
             <mat-card-content>
               <div class="row">
@@ -114,6 +116,8 @@
                
               </div>
             
+
+              <!--Go and Search Buttons-->
               <div class="row" style="padding-top:10px !important">
                 <div class="col-sm-12">
                   <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
@@ -130,6 +134,9 @@
         </div>
         
       </div>
+
+
+      <!--Table-->
       <table matSort id="example2" class="table table-bordered table-hover" style="width: 99%;">
         <thead class="tbl-head">
           <tr>
@@ -156,7 +163,7 @@
             <td class="text-center">{{item.value}}</td>
             <td class="text-center">{{item.compilance}}</td>
             <td class="text-center editDel">
-              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="addchecklistissuelineitem(item)">
+              <a style="cursor: pointer;margin-right:10px; " matTooltip="Edit" (click)="addparameterlistissuelineitem(item)">
                 <!-- (click)="addchecklistissuelineitem(item)" -->
                 
                 <i class="fa fa-edit" style="color: cornflowerblue"></i>
@@ -167,6 +174,8 @@
           </tr>
         </tbody>
       </table>
+
+      <!--Pagination-->
       <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
                 [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
     </div>
