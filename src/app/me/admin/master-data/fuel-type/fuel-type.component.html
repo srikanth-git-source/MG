@@ -84,10 +84,10 @@
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-4">
-              <label class="pull-right" style="margin-top: 6px;">Fuel Type Name:</label>
+              <label class="pull-right" style="margin-top: 6px;">Fuel Type:</label>
             </div>
             <div class="col-sm-6">
-              <mat-select class="form-control" placeholder="Select Fuel Type Name" required>
+              <mat-select class="form-control" placeholder="Select Fuel Type" required>
                 <mat-option [value]="0">Petrol</mat-option>
                 <mat-option [value]="1">Diesel</mat-option>
                 <mat-option [value]="2">EV</mat-option>
@@ -138,7 +138,7 @@
             <table matSort id="example2" class="table table-bordered table-hover">
               <thead class="tbl-head">
                 <tr>
-                  <th>Fuel Type Name</th>
+                  <th>Fuel Type</th>
                   <th class="text-center">Status</th>
                   <th class="text-center" style="width: 112px!important;">Actions</th>
                 </tr>
@@ -155,7 +155,7 @@
                   </td>
 
                   <td class="text-center editDel">
-                    <a style="cursor: pointer;margin-right:0px;margin-left: -5px; " matTooltip="Edit"
+                    <a style="cursor: pointer;margin-right:10px;" matTooltip="Edit"
                       (click)="addmodule(item)">
                       <i class="fa fa-edit" style="color: cornflowerblue"></i>
                     </a>

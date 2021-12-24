@@ -63,16 +63,16 @@
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-3" >
-              <label class="pull-right" style="margin-top: 6px;">Location Name:</label>
+              <label class="pull-right" style="margin-top: 6px;">Location:</label>
             </div>
             <div class="col-sm-6" >
-              <mat-select class="form-control" placeholder="Select Location Name" required>
+              <mat-select class="form-control" placeholder="Select Location" required>
                 <mat-option [value]="0">Mumbai</mat-option>
                 <mat-option [value]="1">Banglore</mat-option>
                 <mat-option [value]="2">Chennai</mat-option>
                 <mat-option [value]="4">Hyderabad</mat-option>
                 <mat-option [value]="5">Raipur</mat-option>
-                <mat-option [value]="0">Bhilai</mat-option>
+                <mat-option [value]="0">Vadodara</mat-option>
                 <mat-option [value]="1">Pune</mat-option>
                 <mat-option [value]="2">Delhi</mat-option>
               </mat-select>
@@ -113,7 +113,7 @@
               <table matSort id="example2" class="table table-bordered table-hover">
                   <thead class="tbl-head">
                       <tr>
-                          <th >Location Name</th>
+                          <th >Location</th>
                           <th class="text-center">Status</th>
                           <th class="text-center" style="width: 112px!important;">Actions</th>
                       </tr>
@@ -131,7 +131,7 @@
                           </td>
           
                           <td class="text-center editDel">
-                              <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
+                              <a style="cursor: pointer;margin-right:10px; "
                                   matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>

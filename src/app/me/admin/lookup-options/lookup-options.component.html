@@ -38,12 +38,13 @@
 </div>
 <!-- Filter -->
 <div fxLayout="row wrap" *ngIf="filterToggle" >
-  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" >
+  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins" style="margin-left: -6px;
+  margin-right: -4px">
     <mat-card class="filter"> 
       <mat-card-content>
-        <div class="row" >
-          <div class="col-sm-3">
-            <div class="col-sm-3" >
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="col-sm-4" >
               <label class="pull-right" style="margin-top: 6px;" >Code:</label>
             </div>
             <div class="col-sm-8" >
@@ -54,40 +55,76 @@
               </mat-select>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="col-sm-4" >
-              <label class="pull-right" style="margin-top: 6px;" >Lookups:</label>
+              <label class="pull-right" style="margin-top: 6px;" >Lookup:</label>
             </div>
             <div class="col-sm-8" >
-              <input type="text"  placeholder="Search Lookups" class="form-control">
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="col-sm-4">
-              <label class="pull-right" style="margin-top: 6px;">Status:</label>
-            </div>
-            <div class="col-sm-6">
-              <mat-select class="form-control" placeholder="Select Status" required>
-                <mat-option *ngFor="let option of Status" [value]="option.value">
-                  {{option.name}}
-                </mat-option>
-                
+              <mat-select class="form-control" placeholder="Select Lookup" required>
+                <mat-option [value]="0">LH</mat-option>
+                <mat-option [value]="1">RH</mat-option>
+                <mat-option [value]="2">BH</mat-option>
+                <mat-option [value]="3">FT</mat-option>
+                <mat-option [value]="4">RR</mat-option>
+                <mat-option [value]="5">1</mat-option>
+                <mat-option [value]="6">5</mat-option>
+                <mat-option [value]="7">10</mat-option>
+                <mat-option [value]="8">20</mat-option>
+                <mat-option [value]="9">50</mat-option>
               </mat-select>
             </div>
           </div>
-          <div class="col-sm-3">
-            <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
-              <mat-icon>youtube_searched_for</mat-icon> Go
-            </button>
-            <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
-              <mat-icon>settings_backup_restore</mat-icon> Clear
-            </button>
+          <div class="col-sm-4">
+            <div class="col-sm-4" >
+              <label class="pull-right" style="margin-top: 6px;" >Status:</label>
+            </div>
+            <div class="col-sm-8" >
+              <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option [value]="0">Active</mat-option>
+                <mat-option [value]="1">Inactive</mat-option>
+              </mat-select>
+            </div>
           </div>
-         
-         
+          <div class="col-sm-4" style="margin-top: 26px;">
+            <div class="col-sm-4" >
+              <!-- <label class="pull-right" style="margin-top: 6px;" >Status:</label> -->
+            </div>
+            <div class="col-sm-8" >
+              <!-- <mat-select class="form-control" placeholder="Select Status" required>
+                <mat-option [value]="0">Active</mat-option>
+                <mat-option [value]="1">Inactive</mat-option>
+              </mat-select> -->
+            </div>
+          </div>
+          <div class="col-sm-4" style="margin-top: 26px;">
+            <div class="col-sm-4" >
+              <!-- <label class="pull-right" style="margin-top: 6px;" >Role:</label> -->
+            </div>
+            <div class="col-sm-8" >
+              <!-- <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
+                <mat-icon>youtube_searched_for</mat-icon> Go
+              </button>
+              <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
+                <mat-icon>settings_backup_restore</mat-icon> Clear
+              </button> -->
+            </div>
+          </div>
+          <div class="col-sm-4" style="margin-top: 26px;">
+            <div class="col-sm-4" >
+              <!-- <label class="pull-right" style="margin-top: 6px;" >Role:</label> -->
+            </div>
+            <div class="col-sm-8" >
+              <button mat-raised-button class="pull-right btn-primary" style="margin-left: 5px;">
+                <mat-icon>youtube_searched_for</mat-icon> Go
+              </button>
+              <button mat-raised-button style="background-color:#37474f; color:#fff !important;"  class="pull-right" >
+                <mat-icon>settings_backup_restore</mat-icon> Clear
+              </button>
+            </div>
+          </div>
         </div>
       </mat-card-content>
-    </mat-card>
+    </mat-card> 
   </div>
   
 </div>
@@ -100,17 +137,16 @@
             <thead class="tbl-head">
                 <tr class="tr-grid-header">
                     <th>Code</th>
-                    <th>Lookups</th>
-                    <th style="text-align: center !important;">Status</th>
-                    <th style="text-align: center !important;">Actions</th>
+                    <th class="text-center">Lookup</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let applicant of tableList">
                     <td >{{applicant.CodeMasterName}}</td>
-                    <td>{{applicant.LookupName}}</td>
-                    <td style="text-align: center !important;">
-  
+                    <td class="text-center">{{applicant.LookupName}}</td>
+                    <td class="text-center">
                         <a [ngStyle]="{'color': applicant.vcStatus? 'blue' : 'red','cursor':'pointer'}"
                             mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
                             [popoverMessage]="popoverStatusMessage" placement="left"
@@ -119,7 +155,7 @@
                             {{applicant.vcStatus?'Active':'Inactive'}}
                         </a>
                     </td>
-                    <td style="text-align: center !important;">
+                    <td class="text-center">
                         <a  style="margin-right: 10px; cursor: pointer; color: cornflowerblue" matTooltip="Edit" (click)="addlookup(applicant)">
                             <i class="fa fa-edit"></i>
                         </a>
@@ -128,7 +164,6 @@
                             (cancel)="cancelClicked = true">
                             <i style="cursor: pointer;" title="Delete" class="fa fa-trash red"></i>
                         </a>
-  
                     </td>
                 </tr>
             </tbody>

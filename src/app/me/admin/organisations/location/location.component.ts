@@ -36,8 +36,7 @@ export class LocationComponent implements OnInit {
     {location:"Pune",status:true},
     {location:"Raipur",status:true},
     {location:"Delhi",status:true},
-    {location:"Bhilai",status:true},
-    {location:"Pondicherry",status:true},
+    {location:"Vadodara",status:true},
    
   ]
   statusOptions = [

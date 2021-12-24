@@ -27,7 +27,7 @@ export class UsersComponent implements OnInit {
     {full_name:"Navin Malik",email:'navin@gmail.com',username:'Navin',location:'Hyderabad',office:'Hyderabad',Role:'Admin',status:true,PermissionsCount :'49/49'},
     {full_name:"Surya Teja",email:'surya@gmail.com',username:'Surya',location:'Hyderabad',office:'Hyderabad',Role:'Manager',status:true,PermissionsCount :'21/49'},
     {full_name:"Siva Kumar",email:'siva@gmail.com',username:'Siva',location:'Banglore',office:'Banglore',Role:'Staff',status:true,PermissionsCount :'42/49'},
-    {full_name:"Amit Kumar",email:'amit@gmail.com',username:'Amit',location:'Mumbai',office:'Mumbai',Role:'Staff',status:true,PermissionsCount :'30/49'},
+    {full_name:"Amit Kumar",email:'amit@gmail.com',username:'Amit',location:'Vadodara',office:'Vadodara',Role:'Staff',status:true,PermissionsCount :'30/49'},
   ]
   opendashboard(){
     window.open('/#/parameter-dashboard/issuelog-par');

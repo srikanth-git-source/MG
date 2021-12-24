@@ -87,10 +87,10 @@ padding-left: 0px;">
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-3" >
-              <label class="pull-right" style="margin-top: 6px;" >Variant Name:</label>
+              <label class="pull-right" style="margin-top: 6px;" >Variant Type:</label>
             </div>
             <div class="col-sm-6" >
-              <mat-select class="form-control" placeholder="Select Variant Name" required>
+              <mat-select class="form-control" placeholder="Select Variant Type" required>
                 <mat-option [value]="0">VDI</mat-option>
                 <mat-option [value]="1">SXI</mat-option>
                 <mat-option [value]="2">SXI(o)</mat-option>
@@ -143,7 +143,7 @@ padding-left: 0px;">
               <table matSort id="example2" class="table table-bordered table-hover">
                   <thead class="tbl-head">
                       <tr>
-                          <th >Variant Name</th>
+                          <th >Variant Type</th>
                           <th class="text-center">Status</th>
                           <th class="text-center" style="width: 112px!important;">Actions</th>
                       </tr>
@@ -161,7 +161,7 @@ padding-left: 0px;">
                           </td>
           
                           <td class="text-center editDel">
-                              <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
+                              <a style="cursor: pointer;margin-right:10px;"
                                   matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>

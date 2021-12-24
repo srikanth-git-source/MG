@@ -83,10 +83,10 @@ padding-left: 3px;">
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-3">
-              <label class="pull-right" style="margin-top: 6px;">Model Name:</label>
+              <label class="pull-right" style="margin-top: 6px;">Model:</label>
             </div>
             <div class="col-sm-6">
-              <mat-select class="form-control" placeholder="Select Model Name" required>
+              <mat-select class="form-control" placeholder="Select Model" required>
                 <mat-option [value]="0">Hector</mat-option>
                 <mat-option [value]="1">Astor</mat-option>
                 <mat-option [value]="2">Gloster</mat-option>
@@ -130,7 +130,7 @@ padding-left: 3px;">
   </div>
 
 </div>
-
+<!-- Table -->
 <div class="container-fluid" style="padding-right: 5px;
 padding-left: 3px;">
   <div fxLayout="row wrap" #resizedDiv>
@@ -141,7 +141,7 @@ padding-left: 3px;">
             <table matSort id="example2" class="table table-bordered table-hover">
               <thead class="tbl-head">
                 <tr>
-                  <th>Model Name</th>
+                  <th>Model</th>
                   <th class="text-center">Status</th>
                   <th class="text-center" style="width: 112px!important;">Actions</th>
                 </tr>
@@ -158,7 +158,7 @@ padding-left: 3px;">
                   </td>
 
                   <td class="text-center editDel">
-                    <a style="cursor: pointer;margin-right:0px;margin-left: -5px;" matTooltip="Edit"
+                    <a style="cursor: pointer;margin-right:10px;" matTooltip="Edit"
                       (click)="addmodule(item)">
                       <i class="fa fa-edit" style="color: cornflowerblue"></i>
                     </a>

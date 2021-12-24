@@ -84,10 +84,10 @@
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-3">
-              <label class="pull-right" style="margin-top: 6px;">Colour Name:</label>
+              <label class="pull-right" style="margin-top: 6px;">Colour:</label>
             </div>
             <div class="col-sm-6">
-              <mat-select class="form-control" placeholder="Select Colour Name" required>
+              <mat-select class="form-control" placeholder="Select Colour" required>
                 <mat-option [value]="0">white</mat-option>
                 <mat-option [value]="1">Black</mat-option>
                 <mat-option [value]="2">Blue</mat-option>
@@ -139,7 +139,7 @@
             <table matSort id="example2" class="table table-bordered table-hover">
               <thead class="tbl-head">
                 <tr>
-                  <th>Colour Name</th>
+                  <th>Colour</th>
                   <th class="text-center">Status</th>
                   <th class="text-center" style="width: 112px!important;">Actions</th>
                 </tr>
@@ -156,7 +156,7 @@
                   </td>
 
                   <td class="text-center editDel">
-                    <a style="cursor: pointer;margin-right:0px;margin-left: -5px; " matTooltip="Edit"
+                    <a style="cursor: pointer;margin-right:10px;" matTooltip="Edit"
                       (click)="addmodule(item)">
                       <i class="fa fa-edit" style="color: cornflowerblue"></i>
                     </a>
