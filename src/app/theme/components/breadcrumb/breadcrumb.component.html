@@ -22,12 +22,20 @@
         >
           {{ description[moduleTitle] || description["Dashboard"] }}
         </span>
-        <span
+        <!-- <span
           *ngIf="description[moduleTitle][subTitle]"
           class="page-title nomargin" 
           >{{ description[moduleTitle][subTitle] }}</span
-        >
+        > -->
+        <!-- <div *ngFor="let breadcrumb of breadcrumbs; let i = index;" class="breadcrumb-item" fxLayout="row"
+                        fxLayoutAlign="start center" style="float:right">
+                        <span class="breadcrumb-title active margin-right">
+                          {{(breadcrumb.name) | titlecase}}</span>
+                        <a [hidden]="i == (breadcrumbs.length - 1)"
+                            [routerLink]="[breadcrumb.url]">{{breadcrumb.name}}</a>
+                    </div> -->
       </div>
+           
     </mat-card>
   </div>
 </div>

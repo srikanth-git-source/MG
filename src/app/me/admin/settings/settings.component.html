@@ -21,7 +21,7 @@
             <td>{{ item.description }}</td>
             <td>{{ item.old_value }}</td>
             <td>
-              <div *ngIf="item.name == 'Time Zone'">
+              <!-- <div *ngIf="item.name == 'Time Zone'">
                 <select class="form-control" id="email">
                   <option>--Select--</option>
                   <option value="AST">AST</option>
@@ -35,15 +35,22 @@
                   <option value="MDT">MDT</option>
                   <option value="PDT">PDT</option>
                 </select>
-              </div>
+              </div> -->
               <div *ngIf="item.name == 'Grid Length'">
-                <select class="form-control" id="email">
+                <!-- <select class="form-control" id="email">
                   <option>--Select--</option>
                   <option value="10">10</option>
                   <option value="25">25</option>
                   <option value="50">50</option>
                   <option value="100">100</option>
-                </select>
+                </select> -->
+                <mat-select class="form-control" placeholder="Select Grid Length" required>
+                  <mat-option [value]="0">10</mat-option>
+                  <mat-option [value]="1">20</mat-option>
+                  <mat-option [value]="2">30</mat-option>
+                  <mat-option [value]="4">40</mat-option>
+                  <mat-option [value]="5">50</mat-option>
+                </mat-select>
               </div>
               <div *ngIf="item.name == 'Notification Email'">
                 <input
@@ -53,7 +60,7 @@
                   placeholder="Enter Notification Email"
                 />
               </div>
-              <div *ngIf="item.name == 'Prospect Follow-up Days'">
+              <!-- <div *ngIf="item.name == 'Prospect Follow-up Days'">
                 <input
                   type="email"
                   class="form-control"
@@ -68,7 +75,7 @@
                   id="email"
                   placeholder="Enter Opportunity Follow-up Days"
                 />
-              </div>
+              </div> -->
             </td>
             <td>
               <a style="margin-right: 10px;display: flex;
@@ -81,7 +88,8 @@
                 [popoverMessage]="popoverStatusMessage"
                 placement="left"
                 (confirm)="saveSettings()"
-                (cancel)="cancelClicked = true">
+                (cancel)="cancelClicked = true"
+                matTooltip="Click to Save">
                 Save
               </a>
             </td>

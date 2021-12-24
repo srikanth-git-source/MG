@@ -88,10 +88,10 @@ padding-left: 3px;">
         <div class="row">
           <div class="col-sm-5">
             <div class="col-sm-4" >
-              <label class="pull-right" style="margin-top: 6px;" >Interior Trim Name:</label>
+              <label class="pull-right" style="margin-top: 6px;" >Interior Trim:</label>
             </div>
             <div class="col-sm-6" >
-              <mat-select class="form-control" placeholder="Select Interior Trim Name" required>
+              <mat-select class="form-control" placeholder="Select Interior Trim" required>
                 <mat-option [value]="0">High</mat-option>
                 <mat-option [value]="1">Medium</mat-option>
                 <mat-option [value]="2">Low</mat-option>
@@ -139,7 +139,7 @@ padding-left: 3px;">
               <table matSort id="example2" class="table table-bordered table-hover">
                   <thead class="tbl-head">
                       <tr>
-                          <th >Interior Trim Name</th>
+                          <th >Interior Trim</th>
                           <th class="text-center">Status</th>
                           <th class="text-center" style="width: 112px!important;">Actions</th>
                       </tr>
@@ -157,7 +157,7 @@ padding-left: 3px;">
                           </td>
           
                           <td class="text-center editDel">
-                              <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
+                              <a style="cursor: pointer;margin-right:10px; "
                                   matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>

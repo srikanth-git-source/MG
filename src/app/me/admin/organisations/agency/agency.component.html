@@ -79,10 +79,10 @@
           </div>
           <div class="col-sm-4">
             <div class="col-sm-4" >
-              <label class="pull-right" style="margin-top: 6px;" >Location Name:</label>
+              <label class="pull-right" style="margin-top: 6px;" >Location:</label>
             </div>
             <div class="col-sm-8" >
-              <mat-select class="form-control" placeholder="Select Location Name" required>
+              <mat-select class="form-control" placeholder="Select Location" required>
                 <mat-option [value]="0">Hyderabad</mat-option>
                 <mat-option [value]="1">Banglore</mat-option>
                 <mat-option [value]="2">Mumbai</mat-option>
@@ -157,7 +157,7 @@
                   <thead class="tbl-head">
                       <tr>
                           <th >Agency Name</th>
-                          <th >Location Name</th>
+                          <th >Location</th>
                           <th class="text-center">Status</th>
                           <th class="text-center" style="width: 112px!important;">Actions</th>
                       </tr>
@@ -176,7 +176,7 @@
                           </td>
           
                           <td class="text-center editDel">
-                              <a style="cursor: pointer;margin-right:0px;margin-left: -5px; "
+                              <a style="cursor: pointer;margin-right:10px;"
                                   matTooltip="Edit" (click)="addmodule(item)">
                                   <i class="fa fa-edit" style="color: cornflowerblue"></i>
                               </a>

@@ -6,17 +6,16 @@
 
   <form class="form-horizontal">
       <div mat-dialog-content>
-
         <div class="form-group">
-          <label class="control-label col-sm-4 add-member-label">Location Name: </label>
+          <label class="control-label col-sm-4 add-member-label">Location: </label>
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-            <mat-select class="form-control" placeholder="Select Location Name" required>
+            <mat-select class="form-control" placeholder="Select Location" required>
               <mat-option [value]="0">Mumbai</mat-option>
               <mat-option [value]="1">Banglore</mat-option>
               <mat-option [value]="2">Chennai</mat-option>
               <mat-option [value]="4">Hyderabad</mat-option>
               <mat-option [value]="5">Raipur</mat-option>
-              <mat-option [value]="0">Bhilai</mat-option>
+              <mat-option [value]="0">Vadodara</mat-option>
               <mat-option [value]="1">Pune</mat-option>
               <mat-option [value]="2">Delhi</mat-option>
             </mat-select>
@@ -32,7 +31,7 @@
   </div>
       <mat-dialog-actions align="end">
         <button mat-raised-button class="btn-primary" type="button" (click)="close()">
-          <mat-icon>send</mat-icon> <span>{{ data ? 'Update' : 'Save'}}</span>
+          <mat-icon>send</mat-icon> <span>{{ data ? ' Update' : ' Save'}}</span>
         </button>
           <button mat-raised-button (click)="close()"  type="button" style="color: rgb(7, 10, 7); background-color: #e0e0e0;">
               <mat-icon>cancel</mat-icon> Close

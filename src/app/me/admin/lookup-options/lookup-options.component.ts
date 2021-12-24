@@ -23,7 +23,7 @@ export class LookupOptionsComponent implements OnInit {
   {vcStatus:true,CodeMasterName:"Face View",LookupName:"RR",},
   {vcStatus:true,CodeMasterName:"Face View",LookupName:"BH",},
   {vcStatus:true,CodeMasterName:"Demerit",LookupName:"1",},
-  {vcStatus:true,CodeMasterName:"Demerit",LookupName:"2",},
+  {vcStatus:true,CodeMasterName:"Demerit",LookupName:"5",},
   {vcStatus:true,CodeMasterName:"Demerit",LookupName:"10",},
   {vcStatus:true,CodeMasterName:"Demerit",LookupName:"20",},
   {vcStatus:true,CodeMasterName:"Demerit",LookupName:"50"}
