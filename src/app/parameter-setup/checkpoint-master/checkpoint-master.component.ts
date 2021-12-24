@@ -10,6 +10,7 @@ import { AddCheckpointComponent } from './add-checkpoint/add-checkpoint.componen
 })
 export class CheckpointMasterComponent implements OnInit {
   filterToggle = false;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
   constructor(public dialog: MatDialog,private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
   public popoverMessage: string = 'Are you sure you want to delete this.?';
@@ -34,8 +35,9 @@ export class CheckpointMasterComponent implements OnInit {
     window.open('/#/parameter-dashboard/issuelog-par');
   }
 
-  addcheckpoint(){
+  addcheckpoint(item){
     this.dialog.open(AddCheckpointComponent,{
+      data:item,
       width:"600px",
       height:"auto"
     })

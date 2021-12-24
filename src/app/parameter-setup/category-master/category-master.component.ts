@@ -10,6 +10,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 })
 export class CategoryMasterComponent implements OnInit {
   filterToggle = false;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
   constructor(public dialog: MatDialog,private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
   public popoverMessage: string = 'Are you sure you want to delete this.?';
@@ -30,8 +31,9 @@ export class CategoryMasterComponent implements OnInit {
 
 
  
-  addcategory(){
+  addcategory(item){
     this.dialog.open(AddCategoryComponent,{
+      data:item,
       width:"600px",
       height:"auto"
     })

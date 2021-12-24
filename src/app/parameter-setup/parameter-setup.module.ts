@@ -22,16 +22,19 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { SharedModule } from '../shared/shared.module';
 import { AddCheckpointComponent } from './checkpoint-master/add-checkpoint/add-checkpoint.component';
 import { AddMeasurementComponent } from './measurement-master/add-measurement/add-measurement.component';
+import { ParAuditTypeComponent } from './par-audit-type/par-audit-type.component';
+import { AddParAuditComponent } from './par-audit-type/add-par-audit/add-par-audit.component';
 export const routes = [
   { path: '', redirectTo: 'category-master', pathMatch: 'full' },
   { path: 'category-master', component: CategoryMasterComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
   { path: 'checkpoint-master', component: CheckpointMasterComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
   { path: 'measurement-master', component: MeasurementMasterComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
+  { path: 'par-audit-type', component: ParAuditTypeComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
  
 ];
 
 @NgModule({
-  declarations: [CategoryMasterComponent, MeasurementMasterComponent, CheckpointMasterComponent, AddCategoryComponent, AddCheckpointComponent, AddMeasurementComponent],
+  declarations: [CategoryMasterComponent, MeasurementMasterComponent, CheckpointMasterComponent, AddCategoryComponent, AddCheckpointComponent, AddMeasurementComponent, ParAuditTypeComponent, AddParAuditComponent],
   imports: [
      ModalModule,
     RouterModule.forChild(routes), DataTableModule,TableModule,MatDialogModule ,
@@ -42,6 +45,6 @@ export const routes = [
     AgmJsMarkerClustererModule, AgmCoreModule,
     ChartModule,OwlDateTimeModule,OwlNativeDateTimeModule,
   ],
-  entryComponents:[AddCategoryComponent,AddCheckpointComponent,AddMeasurementComponent]
+  entryComponents:[AddCategoryComponent,AddCheckpointComponent,AddMeasurementComponent,AddParAuditComponent]
 })
 export class ParameterSetupModule { }
