@@ -10,6 +10,7 @@ import { AddMeasurementComponent } from './add-measurement/add-measurement.compo
 })
 export class MeasurementMasterComponent implements OnInit {
   filterToggle = false;
+  Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
   constructor(public dialog: MatDialog,private alertService: AlertService) { }
   public popoverTitle: string = 'Confirm Delete';
   public popoverMessage: string = 'Are you sure you want to delete this.?';
@@ -34,8 +35,9 @@ export class MeasurementMasterComponent implements OnInit {
     window.open('/#/parameter-dashboard/issuelog-par');
   }
 
-  addmeasurement(){
+  addmeasurement(item){
     this.dialog.open(AddMeasurementComponent,{
+      data:item,
       width:"600px",
       height:"auto"
     })
