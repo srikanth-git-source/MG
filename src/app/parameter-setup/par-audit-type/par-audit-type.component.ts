@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AlertService } from 'src/app/shared/services/alert.service';
-import { AddAuditDialougeComponent } from './add-audit-dialouge/add-audit-dialouge.component';
+import { AddParAuditComponent } from './add-par-audit/add-par-audit.component';
 
 @Component({
-  selector: 'app-audit-types',
-  templateUrl: './audit-types.component.html',
-  styleUrls: ['./audit-types.component.scss']
+  selector: 'app-par-audit-type',
+  templateUrl: './par-audit-type.component.html',
+  styleUrls: ['./par-audit-type.component.scss']
 })
-
-export class AuditTypesComponent implements OnInit {
+export class ParAuditTypeComponent implements OnInit {
 
   gridCmp: any;
   Status = [{ name: 'Active', value: true }, { name: "Inactive", value: false }];
@@ -22,7 +21,6 @@ export class AuditTypesComponent implements OnInit {
   public popoverStatusTitle: string = 'Confirm Status Change';
   public popoverStatusMessage: string = 'Are you sure you want to change status.?';
 
-
   ngOnInit() {
   }
 
@@ -33,9 +31,8 @@ export class AuditTypesComponent implements OnInit {
   filterToggle:boolean = false;
 
   values = [
-    {modulename:"Product Quality Audit",status:true},
-    {modulename:"Body Audit",status:true},
-    {modulename:"Paint Audit",status:true},
+    {modulename:"C - Rating",status:true},
+    {modulename:"D - Rating",status:true},
   ]
 
   saveStatus() {
@@ -43,7 +40,7 @@ export class AuditTypesComponent implements OnInit {
   }
 
   public addaudit(item){
-    this.dialog.open(AddAuditDialougeComponent,{
+    this.dialog.open(AddParAuditComponent,{
       data:item,
       width:"600px",
       height:"auto"
