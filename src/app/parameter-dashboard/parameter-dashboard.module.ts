@@ -19,6 +19,7 @@ import { ParAuditlogGridComponent } from './par-auditlog/par-auditlog-grid/par-a
 import { ParNotesComponent } from './par-notes/par-notes.component';
 import { AddParnotesComponent } from './par-notes/add-parnotes/add-parnotes.component';
 import { MglTimelineModule } from 'angular-mgl-timeline';
+import { AddparameterlistlineitemComponent } from './par-auditlog/addparameterlistlineitem/addparameterlistlineitem.component';
 
 export const routes = [
   {path:'',component:ParAuditlogComponent,data:{breadcrumb:'Parameter Issuelog'}},
@@ -29,7 +30,7 @@ export const routes = [
 ];
 
 @NgModule({
-  declarations: [ParAuditlogComponent, ParAnalyticsComponent,ParOverviewComponent, ParAuditlogGridComponent, ParNotesComponent, AddParnotesComponent],
+  declarations: [ParAuditlogComponent, ParAnalyticsComponent,ParOverviewComponent, ParAuditlogGridComponent, ParNotesComponent, AddParnotesComponent, AddparameterlistlineitemComponent],
   imports: [
     CommonModule,NgxChartsModule,RouterModule.forChild(routes),
     SharedModule,ConfirmationPopoverModule,ReactiveFormsModule,FormsModule,MglTimelineModule,
@@ -40,7 +41,7 @@ export const routes = [
     ReactiveFormsModule,
     FormsModule,
   ],
-  entryComponents: [ParAuditlogGridComponent,AddParnotesComponent]
+  entryComponents: [ParAuditlogGridComponent,AddParnotesComponent,AddparameterlistlineitemComponent]
 })
 
 export class ParameterDashboardModule { }

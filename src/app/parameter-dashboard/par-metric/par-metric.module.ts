@@ -20,10 +20,12 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { ChartsModule } from 'ng2-charts';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ParAudittypeComponent } from './par-audittype/par-audittype.component';
 
 
 export const routes = [
   {path:'',component:ParCategoryComponent,data:{breadcrumb:'Audits'}},
+  {path:'audittype-par',component:ParAudittypeComponent,data:{breadcrumb:'Audits'}},
   {path:'category-par',component:ParCategoryComponent,data:{breadcrumb:'Audits'}},
   {path:'model-par',component:ParModelComponent,data:{breadcrumb:'Audits'}},
   {path:'fueltype-par',component:ParFueltypeComponent,data:{breadcrumb:'Audits'}},
@@ -33,7 +35,7 @@ export const routes = [
 ];
 
 @NgModule({
-  declarations: [ParFueltypeComponent, ParModelComponent, ParCategoryComponent, ParTransmissionComponent, ParVariantComponent],
+  declarations: [ParFueltypeComponent, ParModelComponent, ParCategoryComponent, ParTransmissionComponent, ParVariantComponent, ParAudittypeComponent],
   imports: [
     CommonModule,NgxChartsModule,RouterModule.forChild(routes),NgxChartsModule,
     SharedModule,ConfirmationPopoverModule,ReactiveFormsModule,FormsModule,

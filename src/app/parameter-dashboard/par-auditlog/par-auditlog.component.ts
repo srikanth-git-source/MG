@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { AddparameterlistlineitemComponent } from './addparameterlistlineitem/addparameterlistlineitem.component';
 import { ParAuditlogGridComponent } from './par-auditlog-grid/par-auditlog-grid.component';
 
 @Component({
@@ -29,14 +30,24 @@ export class ParAuditlogComponent implements OnInit {
 
   values = [
     {sno:'1',category:'Exterior',checkpoint:'1A - HOOD TO FRONT GRILL - GAP( a )',measure:'GAP',lsl:1,usl:'2',value:'1.5',compilance:'25%'},
-    {sno:'1',category:'Interior',checkpoint:'1 B - FRONT DASHBOARD TO LEATHER - GAP(a)',measure:'GAP',lsl:1,usl:'2',value:'1.8',compilance:'68%'},
-    {sno:'1',category:'Exterior',checkpoint:'1 -  TAILGATE TRIM TO DECORATIVE PANEL  - GAP',measure:'GAP',lsl:1,usl:'2',value:'1',compilance:'74%'},
-    {sno:'1',category:'Interior',checkpoint:'LEATHER SEATS SIDE TRIM to LEATHER SEATS LOWER TRIM - FLUSH',measure:'FLUSH',lsl:1,usl:'2',value:'1.9',compilance:'69%'},
-    {sno:'1',category:'Exterior',checkpoint:'TAILGATE TRIM to TAILGATE GLASS - PARALLELISM ',measure:'PARALLELISM',lsl:1,usl:2,value:'2',compilance:'54%'},
+    {sno:'2',category:'Interior',checkpoint:'1 B - FRONT DASHBOARD TO LEATHER - GAP(a)',measure:'GAP',lsl:1,usl:'2',value:'1.8',compilance:'68%'},
+    {sno:'3',category:'Exterior',checkpoint:'1 -  TAILGATE TRIM TO DECORATIVE PANEL  - GAP',measure:'GAP',lsl:1,usl:'2',value:'1',compilance:'74%'},
+    {sno:'4',category:'Interior',checkpoint:'LEATHER SEATS SIDE TRIM to LEATHER SEATS LOWER TRIM - FLUSH',measure:'FLUSH',lsl:1,usl:'2',value:'1.9',compilance:'69%'},
+    {sno:'5',category:'Exterior',checkpoint:'TAILGATE TRIM to TAILGATE GLASS - PARALLELISM ',measure:'PARALLELISM',lsl:1,usl:2,value:'2',compilance:'54%'},
 
      ]
      addgrid(){
       this.dialog.open(ParAuditlogGridComponent,{
+        width:"600px",
+        height:"auto"
+      })
+    }
+
+
+   
+    public addparameterlistissuelineitem(item){
+      this.dialog.open(AddparameterlistlineitemComponent,{
+        data:item,
         width:"600px",
         height:"auto"
       })
