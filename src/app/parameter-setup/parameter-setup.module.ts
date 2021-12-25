@@ -24,17 +24,20 @@ import { AddCheckpointComponent } from './checkpoint-master/add-checkpoint/add-c
 import { AddMeasurementComponent } from './measurement-master/add-measurement/add-measurement.component';
 import { ParAuditTypeComponent } from './par-audit-type/par-audit-type.component';
 import { AddParAuditComponent } from './par-audit-type/add-par-audit/add-par-audit.component';
+import { MonthlyTargetsComponent } from './monthly-targets/monthly-targets.component';
+import { AddMonthlyTargetsComponent } from './monthly-targets/add-monthly-targets/add-monthly-targets.component';
 export const routes = [
   { path: '', redirectTo: 'category-master', pathMatch: 'full' },
   { path: 'category-master', component: CategoryMasterComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
   { path: 'checkpoint-master', component: CheckpointMasterComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
   { path: 'measurement-master', component: MeasurementMasterComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
   { path: 'par-audit-type', component: ParAuditTypeComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
+  { path: 'par-monthly-target', component: MonthlyTargetsComponent, data: { breadcrumb: 'Audit Bench-Parameters' }},
  
 ];
 
 @NgModule({
-  declarations: [CategoryMasterComponent, MeasurementMasterComponent, CheckpointMasterComponent, AddCategoryComponent, AddCheckpointComponent, AddMeasurementComponent, ParAuditTypeComponent, AddParAuditComponent],
+  declarations: [CategoryMasterComponent, MeasurementMasterComponent, CheckpointMasterComponent, AddCategoryComponent, AddCheckpointComponent, AddMeasurementComponent, ParAuditTypeComponent, AddParAuditComponent, MonthlyTargetsComponent, AddMonthlyTargetsComponent],
   imports: [
      ModalModule,
     RouterModule.forChild(routes), DataTableModule,TableModule,MatDialogModule ,
@@ -45,6 +48,6 @@ export const routes = [
     AgmJsMarkerClustererModule, AgmCoreModule,
     ChartModule,OwlDateTimeModule,OwlNativeDateTimeModule,
   ],
-  entryComponents:[AddCategoryComponent,AddCheckpointComponent,AddMeasurementComponent,AddParAuditComponent]
+  entryComponents:[AddCategoryComponent,AddCheckpointComponent,AddMeasurementComponent,AddParAuditComponent,AddMonthlyTargetsComponent]
 })
 export class ParameterSetupModule { }
