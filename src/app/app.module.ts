@@ -74,6 +74,8 @@ import { ParameterSetupNewComponent } from "./parameter-setup-new/parameter-setu
 import { ParMetricComponent } from "./parameter-dashboard/par-metric/par-metric.component";
 import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
 import { MasterDataComponent } from "./me/admin/master-data/master-data.component";
+import { RadarComponent } from './me/radar/radar.component';
+
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -162,7 +164,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ParameterSetupComponent,
     ParameterDashboardComponent,
     NewDashboardComponent,
-    MasterDataComponent
+    MasterDataComponent,
+    RadarComponent,
+    
   ],
   entryComponents: [
     VerticalMenuComponent,

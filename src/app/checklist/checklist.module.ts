@@ -21,6 +21,8 @@ import { AddDefectDialogueComponent } from './defect-master/add-defect-dialogue/
 import { AddIssueDialogueComponent } from './issue-master/add-issue-dialogue/add-issue-dialogue.component';
 import { AuditTypesComponent } from './audit-types/audit-types.component';
 import { AddAuditDialougeComponent } from './audit-types/add-audit-dialouge/add-audit-dialouge.component';
+import { MonthlyTargetsComponent } from './monthly-targets/monthly-targets.component';
+import { AddTargetDialougeComponent } from './monthly-targets/add-target-dialouge/add-target-dialouge.component';
 
 
 export const routes = [
@@ -29,7 +31,8 @@ export const routes = [
   { path: 'function-master', component: FunctionMasterComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
   { path: 'defect-master', component: DefectMasterComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
   { path: 'issue-master', component: IssueMasterComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
-  { path: 'audit-types', component: AuditTypesComponent, data: { breadcrumb: 'Audit Bench-Checklists' }}
+  { path: 'audit-types', component: AuditTypesComponent, data: { breadcrumb: 'Audit Bench-Checklists' }},
+  { path: 'monthly-targets', component: MonthlyTargetsComponent, data: { breadcrumb: 'Audit Bench-Checklists' }}
 ];
 
 @NgModule({
@@ -44,8 +47,8 @@ export const routes = [
   providers: [DragulaService],
   declarations: [ModuleMasterComponent, FunctionMasterComponent, DefectMasterComponent,
      IssueMasterComponent, AddModuleDialogueComponent, AddFunctionDialogueComponent, 
-     AddDefectDialogueComponent, AddIssueDialogueComponent, AuditTypesComponent, AddAuditDialougeComponent],
-  entryComponents:[AddModuleDialogueComponent,AddFunctionDialogueComponent,AddDefectDialogueComponent, AddIssueDialogueComponent,AddAuditDialougeComponent]
+     AddDefectDialogueComponent, AddIssueDialogueComponent, AuditTypesComponent, AddAuditDialougeComponent, MonthlyTargetsComponent, AddTargetDialougeComponent],
+  entryComponents:[AddModuleDialogueComponent,AddFunctionDialogueComponent,AddDefectDialogueComponent, AddIssueDialogueComponent,AddAuditDialougeComponent,AddTargetDialougeComponent]
 })
 
 export class ChecklistModule { }
