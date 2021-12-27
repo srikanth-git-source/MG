@@ -47,5 +47,15 @@ export class MonthlyTargetsComponent implements OnInit {
     this.alertService.createAlert('Successfully saved.', 1);
 }
 
+openUploadCSV()
+{
+
+}
+
+downloadSampleExcel()
+{
+  
+}
+
 
 }
