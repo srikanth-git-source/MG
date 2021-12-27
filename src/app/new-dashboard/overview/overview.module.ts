@@ -5,17 +5,18 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AstorModule } from './astor/astor.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { OverviewComponent } from './overview.component';
 
 
 export const routes = [
-  {path:'',component:AstorComponent,data:{breadcrumb:'Dashboard'}},
-  { path:'astor', loadChildren: './astor/astor.module#AstorModule', data: { breadcrumb: 'Dashboard' } },
+  {path:'',component:OverviewComponent,data:{breadcrumb:'Dashboard'}},
+  { path:'astor',component:AstorComponent, loadChildren: './astor/astor.module#AstorModule', data: { breadcrumb: 'Dashboard' } },
 ]
 
 
 
 @NgModule({
-  declarations: [AstorComponent],
+  declarations: [OverviewComponent,AstorComponent],
   imports: [
     CommonModule,RouterModule.forChild(routes),SharedModule,AstorModule,NgApexchartsModule
   ]

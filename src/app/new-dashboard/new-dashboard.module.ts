@@ -24,15 +24,16 @@ import { OverviewModule } from './overview/overview.module';
 
 
 export const routes = [
-  {path:'', redirectTo: 'overview',data:{breadcrumb:'Dashboard'}}, 
-  {path:'overview',loadChildren: './overview/overview.module#OverviewModule', data:{breadcrumb:'Dashboard'}},
+  {path:'', redirectTo: 'overview',data:{breadcrumb:'Dashboard'}},
+  {path:'overview',component:OverviewComponent,loadChildren: './overview/overview.module#OverviewModule', data:{breadcrumb:'Dashboard'}},
+  
   {path:'quality-audit',component:QualityAuditComponent,data:{breadcrumb:'Dashboard'}},
   {path:'agency-report',component:AgencyReportComponent,data:{breadcrumb:'Dashboard'}},
   {path:'repeated-issues',component:RepeatedIssuesComponent,data:{breadcrumb:'Dashboard'}},
 ];
 
 @NgModule({
-  declarations: [OverviewComponent, QualityAuditComponent, AgencyReportComponent, RepeatedIssuesComponent,],
+  declarations: [ QualityAuditComponent, AgencyReportComponent, RepeatedIssuesComponent,],
   imports: [
     OverviewModule,
     CommonModule,NgxChartsModule,RouterModule.forChild(routes),

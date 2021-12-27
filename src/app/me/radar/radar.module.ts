@@ -12,7 +12,7 @@ export const routes = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [StatisticsComponent],
   imports: [
     CommonModule
   ]
