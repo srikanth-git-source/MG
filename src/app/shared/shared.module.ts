@@ -14,6 +14,8 @@ import {
 } from 'primeng/primeng';
 import { CalendarModule } from 'angular-calendar';
 import { NgxEditorModule } from 'ngx-editor';
+
+import { NgApexchartsModule } from "ng-apexcharts";
 import {
   MatAutocompleteModule,
   MatButtonModule,
