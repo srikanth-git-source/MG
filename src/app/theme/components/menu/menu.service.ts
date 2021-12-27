@@ -19,7 +19,7 @@ export class MenuService {
       temp.push(
         
         new Menu (1, 'Radar', '/dashboard/statistics', null, 'dashboard', null, false, 0,"white",true),
-        new Menu (2, 'Dashboard', '/new-dashboard', null, 'assignment', null, false, 0,"white",true),
+        new Menu (2, 'Dashboard', '/new-dashboard/overview', null, 'assignment', null, false, 0,"white",true),
         // new Menu (3, 'Calender', '/calender', null, 'calendar_today', null, false, 0,"white",true),
         new Menu (4, 'Audits', '/audits/checklistaudit', null, 'find_in_page', null, false, 0,"white",true),
         new Menu (2, 'Checklist Setup', '/checklist', null, 'assignment', null, false, 0,"white",true),
