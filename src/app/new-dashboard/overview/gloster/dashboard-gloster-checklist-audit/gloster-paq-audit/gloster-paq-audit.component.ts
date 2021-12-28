@@ -20,13 +20,13 @@ export type ChartOptions = {
 
 
 @Component({
-  selector: 'app-hector-paq-audit',
-  templateUrl: './hector-paq-audit.component.html',
-  styleUrls: ['./hector-paq-audit.component.scss']
+  selector: 'app-gloster-paq-audit',
+  templateUrl: './gloster-paq-audit.component.html',
+  styleUrls: ['./gloster-paq-audit.component.scss']
 })
-export class HectorPaqAuditComponent implements OnInit {
-
+export class GlosterPaqAuditComponent implements OnInit {
   filterToggle:boolean = false;
+
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() { 
@@ -102,6 +102,5 @@ export class HectorPaqAuditComponent implements OnInit {
     {issues:"Rear bumper contamination	",average:"360"}, 
     
     ];
-
 
 }
