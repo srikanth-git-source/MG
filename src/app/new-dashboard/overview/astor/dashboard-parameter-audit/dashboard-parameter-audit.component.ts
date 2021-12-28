@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard-parameter-audit.component.html',
   styleUrls: ['./dashboard-parameter-audit.component.scss']
 })
+
 export class DashboardParameterAuditComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+    
+  }
 
   ngOnInit() {
   }
+
+
 
 }

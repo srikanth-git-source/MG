@@ -24,7 +24,7 @@ import { OverviewModule } from './overview/overview.module';
 
 
 export const routes = [
-  {path:'', redirectTo: 'overview',data:{breadcrumb:'Dashboard'}},
+  {path:'',component:OverviewComponent,data:{breadcrumb:'Dashboard'}},
   {path:'overview',component:OverviewComponent,loadChildren: './overview/overview.module#OverviewModule', data:{breadcrumb:'Dashboard'}},
   
   {path:'quality-audit',component:QualityAuditComponent,data:{breadcrumb:'Dashboard'}},

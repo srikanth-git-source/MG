@@ -11,7 +11,7 @@ import { HectorModule } from './hector/hector.module';
 
 
 export const routes = [
-  {path:'',component:OverviewComponent,data:{breadcrumb:'Dashboard'}},
+  {path:'',component:AstorComponent,data:{breadcrumb:'Dashboard'}},
   { path:'astor',component:AstorComponent, loadChildren: './astor/astor.module#AstorModule', data: { breadcrumb: 'Dashboard' } },
   { path:'hector',component:HectorComponent, loadChildren: './hector/hector.module#HectorModule', data: { breadcrumb: 'Dashboard' } },
 
