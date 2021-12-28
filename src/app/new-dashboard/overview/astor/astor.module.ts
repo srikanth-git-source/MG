@@ -13,7 +13,7 @@ export const routes = [
   {path:'',component:DashboardChecklistAuditComponent,data:{breadcrumb:'Dashboard'}},
   // { path:'astor',component:AstorComponent, data: { breadcrumb: 'Dashboard' } },
   { path:'dashboard-checklist-audit',component:DashboardChecklistAuditComponent, loadChildren: './dashboard-checklist-audit/dashboard-checklist-audit.module#DashboardChecklistAuditModule', data: { breadcrumb: 'Dashboard' } },
-  { path:'dashboard-parameter-audit',component:DashboardParameterAuditComponent, loadChildren: './dashboard-parameter-audit/astor-parameter-audit.module#AstorParameterAuditModule', data: { breadcrumb: 'Dashboard' } },
+  { path:'astor-parameter-audit',component:DashboardParameterAuditComponent, loadChildren: './dashboard-parameter-audit/astor-parameter-audit.module#AstorParameterAuditModule', data: { breadcrumb: 'Dashboard' } },
 ]
 
 
