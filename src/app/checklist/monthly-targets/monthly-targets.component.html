@@ -2,6 +2,7 @@
 <div>
   <div class="col-xs-12" style="margin-left:8px;margin-top:10px;padding-right: 0px;padding-left: 0px;">
     <div id="grid-table-container" class="table-responsive" style="width: 99%;">
+      <!-- Add,upload,download & filter tabs -->
       <div class="container-fluid">
         <div class="w-100">
           <div class="flex-p">
@@ -10,40 +11,24 @@
                 <div class="row-wrap">
                   <div class="w-100">
                     <div class="row pull-right" style="margin-right: -5px;">
-
                       <div class="">
-
                         <button style="margin-bottom: 7px" mat-raised-button
                           class="pull-right  btn-primary margin-right-5 mt-3" (click)="addtarget(null)">
-                          <mat-icon>add</mat-icon> Add Targets
+                          <mat-icon>add</mat-icon> Add Monthly Targets
                         </button>
-
-
-
                         <button style="margin-bottom: 7px" mat-raised-button
                           class="pull-right  btn-primary margin-right-10 mt-3" (click)="openUploadCSV()">
                           <mat-icon>cloud_upload</mat-icon> Upload CSV
                         </button>
-
-
                         <button style="margin-bottom: 7px" mat-raised-button
                           class="pull-right  btn-primary margin-right-10 mt-3" (click)="downloadSampleExcel()">
                           <mat-icon>archive</mat-icon> Download Sample
                         </button>
-
-
-
                         <button style="margin-bottom: 7px" mat-raised-button color="primary"
                           class="pull-right filters-hover margin-right-10 mt-3" (click)="filterToggle = !filterToggle">
                           <mat-icon>filter_list</mat-icon> Filter
                         </button>
-                        <!-- <button  mat-raised-button style="margin-right: 12px;" color="primary" class="pull-right  mt-3"  (click)="addgrid()">
-                              <mat-icon>grid_on</mat-icon>Manage Grid
-                              </button> -->
-
                       </div>
-
-
                     </div>
                   </div>
                 </div>
@@ -52,33 +37,32 @@
           </div>
         </div>
       </div>
-
-
+<!-- Filter UI -->
       <div fxLayout="row wrap" *ngIf="filterToggle">
         <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
           <mat-card class="filter">
             <mat-card-content>
               <div class="row" style="padding-top:10px !important">
                 <div class="col-sm-5">
-                  <div class="col-sm-3">
-                    <label class="pull-right" style="margin-top: 6px;">Target Demerit:</label>
+                  <div class="col-sm-4">
+                    <label class="pull-right" style="margin-top: 6px;">Keyword Search:</label>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder="Enter Target Demerit ">
+                    <input type="text" class="form-control" placeholder="Search by Keyword ">
                   </div>
                 </div>
 
                 <div class="col-sm-5">
                   <div class="col-sm-3">
-                    <label class="pull-right" style="margin-top: 6px;">Status:</label>
+                    <!-- <label class="pull-right" style="margin-top: 6px;">Status:</label> -->
                   </div>
                   <div class="col-sm-6">
-                    <mat-select class="form-control" placeholder="Select Status" required>
+                    <!-- <mat-select class="form-control" placeholder="Select Status" required>
                       <mat-option *ngFor="let option of Status" [value]="option.value">
                         {{option.name}}
                       </mat-option>
 
-                    </mat-select>
+                    </mat-select> -->
                   </div>
                 </div>
 
@@ -96,14 +80,15 @@
           </mat-card>
         </div>
       </div>
+      <!-- Table  -->
       <table style="margin-top: 7px;padding-left: 0px; padding-right: 0px;" matSort id="example2"
         class="table table-bordered table-hover">
         <thead class="tbl-head">
           <tr>
             <th class="theadcolor">Target Demerit</th>
+            <th class="theadcolor text-center">Model</th>
             <th class="theadcolor text-center">Month</th>
             <th class="theadcolor text-center">Year</th>
-            <th class="theadcolor text-center">Model</th>
             <th class="theadcolor text-center">Status</th>
             <th class="theadcolor text-center">Actions</th>
           </tr>
@@ -111,10 +96,9 @@
         <tbody>
           <tr *ngFor="let item of values">
             <td>{{item.target}}</td>
+            <td class="text-center">{{item.model}}</td>
             <td class="text-center">{{item.month}}</td>
             <td class="text-center">{{item.year}}</td>
-            <td class="text-center">{{item.model}}</td>
-
             <td class="text-center"><a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
                 mwlConfirmationPopover [popoverTitle]="popoverStatusTitle" [popoverMessage]="popoverStatusMessage"
                 placement="left" (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true"

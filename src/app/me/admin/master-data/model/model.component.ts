@@ -34,7 +34,7 @@ export class ModelComponent implements OnInit {
     {model:"Hector",status:true},
     {model:"Astor",status:true},
     {model:"Gloster",status:true},
-    {model:"EV",status:true}, 
+    {model:"ZSEV",status:true}, 
   ]
   statusOptions = [
     {value:1, name: 'Prepared Quote', colorCode: '#00ff0040'},

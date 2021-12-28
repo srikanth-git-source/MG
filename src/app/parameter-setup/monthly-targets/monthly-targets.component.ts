@@ -24,10 +24,10 @@ export class MonthlyTargetsComponent implements OnInit {
   
 
   values = [
-    {target:'Vehicle',month:'03',year:"2020",model:"X-1",status:true},
-    {target:'Vehicle2',month:'04',year:"2020",model:"X-2",status:true},
-    {target:'Vehicle3',month:'05',year:"2020",model:"X-3",status:true},
-    {target:'Vehicle4',month:'06',year:"2020",model:"X-4",status:true},
+    {target:'150',month:'Oct',year:"2021",model:"Hector",status:true},
+    {target:'175',month:'Nov',year:"2021",model:"Astor",status:true},
+    {target:'90',month:'Dec',year:"2021",model:"Gloster",status:true},
+    {target:'100',month:'Jan',year:"2022",model:"ZSEV",status:true},
     
     ]
 
