@@ -1,36 +1,50 @@
-
-
-
-  
-
-
-
-<div class="row">
-  <div class="col-sm-4">
-    <div id="chart">
-      <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels"
-        [plotOptions]="chartOptions.plotOptions" [xaxis]="chartOptions.xaxis" [stroke]="chartOptions.stroke">
-      </apx-chart>
+<div class="col-sm-12 no-padding">
+  <div class="col-sm-12 no-padding" style="margin-top: 15px;">
+    <div class="col-sm-2" style="padding-left:7px">
+      <div class="col-md-12 no-padding">
+        <div class="pills">
+          <ul class="nav nav-pills">
+            <li routerLinkActive="active" routerLink="astor-pqa">
+              <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                Product Quality Audit
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12 no-padding">
+        <div class="pills">
+          <ul class="nav nav-pills">
+            <li routerLinkActive="active" routerLink="astor-body">
+              <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                Body Audit
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12 no-padding">
+        <div class="pills">
+          <ul class="nav nav-pills">
+            <li routerLinkActive="active" routerLink="astor-paint">
+              <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                Paint Audit
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    
+    <div class="col-sm-10">
+      <router-outlet></router-outlet>
+
+    </div>
 
   </div>
-  <div class="col-sm-4">
-    <table matSort id="example2" class="table table-bordered table-hover">
-      <thead class="tbl-head">
-        <tr>
 
-          <th class="text-center">Top 3 Issues</th>
-          <th class="text-center">Average Demerit Per Vehicle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of items">
-          <td class="text-center">{{item.issues }}</td>
-          <td class="text-center">{{item.average }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- <div class="col-sm-12">
+    <router-outlet></router-outlet>
+  </div> -->
+
+
 </div>
-
-  </div>
