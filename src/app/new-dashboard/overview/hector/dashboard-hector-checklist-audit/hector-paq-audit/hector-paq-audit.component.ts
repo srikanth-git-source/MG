@@ -20,11 +20,11 @@ export type ChartOptions = {
 
 
 @Component({
-  selector: 'app-astor-paint-audit',
-  templateUrl: './astor-paint-audit.component.html',
-  styleUrls: ['./astor-paint-audit.component.scss']
+  selector: 'app-hector-paq-audit',
+  templateUrl: './hector-paq-audit.component.html',
+  styleUrls: ['./hector-paq-audit.component.scss']
 })
-export class AstorPaintAuditComponent implements OnInit {
+export class HectorPaqAuditComponent implements OnInit {
 
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
@@ -33,17 +33,17 @@ export class AstorPaintAuditComponent implements OnInit {
       series: [
         {
           name: "Monthly",
-          data: [45, 35, 60]
+          data: [95, 55, 80]
         },
         {
           name: "Weekly",
 
-          data: [33, 38, 40]
+          data: [53, 32, 70]
         },
         {
           name: "Target",
 
-          data: [42, 39, 60]
+          data: [62, 21, 60]
         },
         // {
         //   name: "serie3",
@@ -90,17 +90,15 @@ export class AstorPaintAuditComponent implements OnInit {
   }
   MonthSelected = 11;
   Yearselected = 0;
-
-
-  
+ 
 
   ngOnInit() {
   }
 
   items = [
-    {issues:"Thin Paint	",average:"560"}, 
-    {issues:"Tool / Scuff Marks	",average:"420"}, 
-    {issues:"Scratch",average:"260"}, 
+    {issues:"RHR BSO Ding	",average:"660"}, 
+    {issues:"LHR Door outer scratch	",average:"520"}, 
+    {issues:"Rear bumper contamination	",average:"360"}, 
     
     ];
 
