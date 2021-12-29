@@ -15,7 +15,7 @@ import { PipesModule } from "./theme/pipes/pipes.module";
 import { routing } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { LayoutComponent } from "./layout/layout.component";
-import { NotFoundComponent } from "./me/not-found/not-found.component";
+import { NotFoundComponent } from "./morris_garrage_admin/not-found/not-found.component";
 import { AppSettings } from "./app.settings";
 import { LoginComponent } from "./login/login.component";
 import { SidenavComponent } from "./theme/components/sidenav/sidenav.component";
@@ -61,7 +61,7 @@ import { AssignComponent } from "./assign/assign.component";
 import { QuestionsComponent } from './questions/questions.component';
 import { AddChecklistComponent } from './add-checklist/add-checklist.component';
 import { AuditsComponent } from "./audits/audits.component";
-import { DashboardComponent } from "./me/dashboard/dashboard.component";
+import { DashboardComponent } from "./morris_garrage_admin/dashboard/dashboard.component";
 import { CreateticketsComponent } from "./tickets/createtickets/createtickets.component";
 import { TicketreportsComponent } from "./tickets/ticketreports/ticketreports.component";
 import { UpdateticketComponent } from "./tickets/updateticket/updateticket.component";
@@ -73,7 +73,7 @@ import { MetricComponent } from "./checklist-dashboard/metric/metric.component";
 import { ParameterSetupNewComponent } from "./parameter-setup-new/parameter-setup-new.component";
 import { ParMetricComponent } from "./parameter-dashboard/par-metric/par-metric.component";
 import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
-import { MasterDataComponent } from "./me/admin/master-data/master-data.component";
+import { MasterDataComponent } from "./morris_garrage_admin/admin/master-data/master-data.component";
 
 
 

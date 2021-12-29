@@ -24,7 +24,7 @@ export type ChartOptions = {
   styleUrls: ['./dashboard-checklist-audit.component.scss']
 })
 export class DashboardChecklistAuditComponent implements OnInit {
-
+  filterToggle: boolean;
   constructor() { }
 
   ngOnInit() {

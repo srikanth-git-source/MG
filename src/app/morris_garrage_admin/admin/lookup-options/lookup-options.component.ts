@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material';
 import { AppSettings } from 'src/app/app.settings';
 import { AlertService } from 'src/app/shared/services/alert.service';
 import { AddLookupDialogComponent } from './add-lookup-dialog/add-lookup-dialog.component';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @Component({
