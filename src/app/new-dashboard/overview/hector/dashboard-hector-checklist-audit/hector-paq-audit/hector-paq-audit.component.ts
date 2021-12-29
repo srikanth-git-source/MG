@@ -26,6 +26,7 @@ export type ChartOptions = {
 })
 export class HectorPaqAuditComponent implements OnInit {
 
+  filterToggle:boolean = false;
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() { 

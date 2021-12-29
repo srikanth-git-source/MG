@@ -25,6 +25,7 @@ export type ChartOptions = {
 })
 export class AstorDratingComponent implements OnInit {
 
+  filterToggle: boolean;
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() { 
