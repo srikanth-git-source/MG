@@ -20,12 +20,11 @@ export type ChartOptions = {
 
 
 @Component({
-  selector: 'app-hector-paq-audit',
-  templateUrl: './hector-paq-audit.component.html',
-  styleUrls: ['./hector-paq-audit.component.scss']
+  selector: 'app-gloster-paint-audit',
+  templateUrl: './gloster-paint-audit.component.html',
+  styleUrls: ['./gloster-paint-audit.component.scss']
 })
-export class HectorPaqAuditComponent implements OnInit {
-
+export class GlosterPaintAuditComponent implements OnInit {
   filterToggle:boolean = false;
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
@@ -34,17 +33,17 @@ export class HectorPaqAuditComponent implements OnInit {
       series: [
         {
           name: "Monthly",
-          data: [95, 55, 80]
+          data: [45, 35, 60]
         },
         {
           name: "Weekly",
 
-          data: [53, 32, 70]
+          data: [33, 38, 40]
         },
         {
           name: "Target",
 
-          data: [62, 21, 60]
+          data: [42, 39, 60]
         },
         // {
         //   name: "serie3",
@@ -91,17 +90,14 @@ export class HectorPaqAuditComponent implements OnInit {
   }
   MonthSelected = 11;
   Yearselected = 0;
- 
 
   ngOnInit() {
   }
 
   items = [
-    {issues:"RHR BSO Ding	",average:"660"}, 
-    {issues:"LHR Door outer scratch	",average:"520"}, 
-    {issues:"Rear bumper contamination	",average:"360"}, 
+    {issues:"Thin Paint	",average:"560"}, 
+    {issues:"Tool / Scuff Marks	",average:"420"}, 
+    {issues:"Scratch",average:"260"}, 
     
     ];
-
-
 }
