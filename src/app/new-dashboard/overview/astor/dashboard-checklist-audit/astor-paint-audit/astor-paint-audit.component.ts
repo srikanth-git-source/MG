@@ -25,7 +25,7 @@ export type ChartOptions = {
   styleUrls: ['./astor-paint-audit.component.scss']
 })
 export class AstorPaintAuditComponent implements OnInit {
-
+  filterToggle: boolean;
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() { 

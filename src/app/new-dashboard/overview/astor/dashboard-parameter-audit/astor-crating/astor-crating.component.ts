@@ -88,6 +88,7 @@ export class AstorCratingComponent implements OnInit {
   }
   MonthSelected = 11;
   Yearselected = 0;
+  filterToggle: boolean;
   ngOnInit() {
   }
 

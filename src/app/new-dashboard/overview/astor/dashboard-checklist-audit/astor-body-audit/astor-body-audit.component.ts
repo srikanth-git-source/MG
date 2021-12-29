@@ -24,7 +24,7 @@ export type ChartOptions = {
   styleUrls: ['./astor-body-audit.component.scss']
 })
 export class AstorBodyAuditComponent implements OnInit {
-
+  filterToggle: boolean;
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() { 

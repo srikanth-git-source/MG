@@ -26,7 +26,7 @@ export type ChartOptions = {
 })
 export class AstorPaqAuditComponent implements OnInit {
 
-  
+  filterToggle: boolean;
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() { 
