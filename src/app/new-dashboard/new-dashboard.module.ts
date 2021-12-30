@@ -26,10 +26,9 @@ import { OverviewModule } from './overview/overview.module';
 export const routes = [
   {path:'',component:OverviewComponent,data:{breadcrumb:'Dashboard'}},
   {path:'overview',component:OverviewComponent,loadChildren: './overview/overview.module#OverviewModule', data:{breadcrumb:'Dashboard'}},
-  
   {path:'quality-audit',component:QualityAuditComponent,loadChildren: './quality-audit/dashboard-quality-audit.module#DashboardQualityAuditModule',data:{breadcrumb:'Dashboard'}},
-  {path:'agency-report',component:AgencyReportComponent,data:{breadcrumb:'Dashboard'}},
-  {path:'repeated-issues',component:RepeatedIssuesComponent,data:{breadcrumb:'Dashboard'}},
+  // {path:'agency-report',component:AgencyReportComponent,data:{breadcrumb:'Dashboard'}},
+  {path:'repeated-issues',component:RepeatedIssuesComponent,loadChildren: './repeated-issues/dashboard-repeated-issues.module#DashboardRepeatedIssuesModule',data:{breadcrumb:'Dashboard'}},
 ];
 
 @NgModule({
