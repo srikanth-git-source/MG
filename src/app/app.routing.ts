@@ -24,6 +24,8 @@ import { MetricComponent } from "./checklist-dashboard/metric/metric.component";
 import { ParMetricComponent } from "./parameter-dashboard/par-metric/par-metric.component";
 import { NewDashboardComponent } from "./new-dashboard/new-dashboard.component";
 import { MasterDataComponent } from "./morris_garrage_admin/admin/master-data/master-data.component";
+import { RadarStatisticsComponent } from "./morris_garrage_admin/radar/radar-statistics/radar-statistics.component";
+import { RadarComponent } from "./morris_garrage_admin/radar/radar.component";
 
 export const routes: Routes = [
   
@@ -34,8 +36,9 @@ export const routes: Routes = [
     path: "",
     component: LayoutComponent,
     children: [
-      {path:"dashboard",component:DashboardComponent,loadChildren:'./morris_garrage_admin/dashboard/dashboard.module#DashboardModule',data:{breadcrumb:'Dashboard'}},
-      { path: "", redirectTo: "dashboard", pathMatch: "full" },      
+      // {path:"dashboard",component:DashboardComponent,loadChildren:'./morris_garrage_admin/dashboard/dashboard.module#DashboardModule',data:{breadcrumb:'Dashboard'}},
+      {path:"radar",component:RadarComponent,loadChildren:'./morris_garrage_admin/radar/radar.module#RadarModule',data:{breadcrumb:'Dashboard'}},
+      { path: "", redirectTo: "radar", pathMatch: "full" },      
       { path: 'admin', loadChildren: './morris_garrage_admin/admin/admin.module#AdminModule', data: { breadcrumb: 'Carriers' } },
       { path: 'admin/organisation', loadChildren: './morris_garrage_admin/admin/organisations/organisations.module#OrganisationsModule', data: { breadcrumb: 'Carriers' } },
       { path: 'admin/master-data', loadChildren: './morris_garrage_admin/admin/master-data/master-data.module#MasterDataModule', data: { breadcrumb: 'Master Data' } },
