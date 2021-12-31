@@ -37,7 +37,7 @@ export class LoginComponent {
     if (this.form.valid) {
       console.log(this.form.value);
       if(values["email"]=="admin@mg.com" && values["password"]=="password") {
-        this.router.navigate(['/dashboard/statistics']);
+        this.router.navigate(['/radar/radar-statistics']);
         this.alertService.createAlert("Login Success", 1);
         localStorage.setItem("loginUser", values["username"]);
         localStorage.setItem('userType','admin');
