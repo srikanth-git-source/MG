@@ -19,7 +19,7 @@ export class MenuService {
       temp.push(
         
         // new Menu (1, 'Radar', '/dashboard/statistics', null, 'dashboard', null, false, 0,"white",true),
-        new Menu (1, 'NewRadar', '/radar/radar-statistics', null, 'dashboard', null, false, 0,"white",true),
+        new Menu (1, 'Radar', '/radar/radar-statistics', null, 'dashboard', null, false, 0,"white",true),
         new Menu (2, 'Dashboard', '/new-dashboard/overview/astor/dashboard-checklist-audit/astor-pqa', null, 'assignment', null, false, 0,"white",true),
         // new Menu (3, 'Calender', '/calender', null, 'calendar_today', null, false, 0,"white",true),
         new Menu (4, 'Audits', '/audits/checklistaudit', null, 'find_in_page', null, false, 0,"white",true),
