@@ -25,11 +25,11 @@ export class RadarPaAudittypeTrendComponent implements OnInit {
     const three = [
       {
         name: 'C Rating',
-        value: 1290
+        value: 60
       },
       {
         name: 'D Rating',
-        value: 320
+        value: 20
       },
      
    
@@ -38,11 +38,11 @@ export class RadarPaAudittypeTrendComponent implements OnInit {
     const first = [
       {
         name: 'C Rating',
-        value: 20
+        value: 70
       },
       {
         name: 'D Rating',
-        value: 13
+        value: 20
       },
      
      
@@ -54,11 +54,8 @@ export class RadarPaAudittypeTrendComponent implements OnInit {
   }
 
   items = [
-    {model:'C Rating',demerit:'60%',issues:20}, 
-    {model:'D Rating',demerit:'20%',issues:70},
-   
-    
-    
+    {model:'C Rating',demerit:'60%',issues:70}, 
+    {model:'D Rating',demerit:'20%',issues:20},
     ];
 
 
