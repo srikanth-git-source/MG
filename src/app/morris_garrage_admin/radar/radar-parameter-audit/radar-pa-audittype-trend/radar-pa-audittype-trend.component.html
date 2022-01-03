@@ -3,7 +3,7 @@
   <div class="col-sm-12">
     <div class="chart-header text-center">
       <mat-card >
-        <h3 style="color: #212121;">Defects Distribution by Audit Type</h3>
+        <h3>Defects Distribution by Audit Type</h3>
       </mat-card>
     </div>
     <div id="grid-table-container" class="table-responsive mt-4">
@@ -36,10 +36,10 @@
 <!-- Pie charts div-->
 <div class="row col-12 mt-5">
   <!-- Pie chart by checkpoints -->
-  <div class="col-sm-6">
+  <div class="col-sm-6 text-center">
       <mat-card >
         <div class="chart-header">
-          <p style="font-size: 20px;margin-top:10px;margin-left: 36%;">Distribution by Checkpoints</p>
+          <h4>Distribution by Checkpoints</h4>
         </div>
         <ngx-charts-pie-chart
           [scheme]="colorScheme"
@@ -54,10 +54,10 @@
     </mat-card>
 </div>
 <!-- Pie chart by compilance -->
-<div class="col-6">
+<div class="col-6 text-center">
       <mat-card >
         <div class="chart-header">
-          <p style="font-size: 20px;margin-top:10px;margin-left: 36%;">Distribution by Compilance</p>
+          <h4>Distribution by Compilance</h4>
         </div>
         <ngx-charts-pie-chart
           [scheme]="colorScheme"
