@@ -1,28 +1,12 @@
+<!-- Table div-->
 <div class="row col-12 mt-5">
-  <div class="col-6">
-    <div class="chart-header">
-      <h3 style="color: #212121;font-size:26;margin-top:10px;margin-left: 20%;">Defects Distribution by Category</h3>
+  <div class="col-sm-12">
+    <div class="chart-header text-center">
+      <mat-card >
+        <h3>Defects Distribution by Category</h3>
+      </mat-card>
     </div>
-    <div id="grid-table-container" class="table-responsive" style="margin-top:25px;width: 95%;margin-left:17px">
-      <!-- <table matSort id="example2" class="table table-bordered table-hover">
-        <thead class="tbl-head">
-          <tr>
-            <th>Period</th>
-            <th class="text-center">Amount (AUD)</th>
-            <th class="text-center">Invoices</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of items">
-            
-            <td>{{item.period }}</td>
-            <td class="text-center">{{item.amt }}</td>  
-            <td class="text-center"><a style="color:blue" routerLink="/mrc/accounting/Payables/ageing-invoices" matTooltip="View Invoice">{{item.inv }}</a></td>
-
-          </tr>
-
-        </tbody>
-      </table> -->
+    <div id="grid-table-container" class="table-responsive mt-4">
       <table matSort id="example2" class="table table-bordered table-hover">
         <thead class="tbl-head">
           <tr >
@@ -39,69 +23,53 @@
                      </tr>
                      <tr >
                       <td class="text-center">Total</td>
-                      <td class="text-center">51</td> 
-                      <td class="text-center">3341</td> 
-                               </tr>    
+                      <td class="text-center">137</td> 
+                      <td class="text-center">75%</td> 
+                      </tr>    
         </tbody>
       </table>
       
     </div>
 
   </div>
-
-<div class="col-3">
-  <!-- <div style="margin-left: 2px"> -->
-    
-    <!-- <div class="flex-p "> -->
+</div>
+<!-- Pie charts div-->
+<div class="row col-12 mt-5">
+  <!-- Pie chart by checkpoints -->
+  <div class="col-sm-6 text-center">
       <mat-card >
         <div class="chart-header">
-          <p style="font-size: 20px;margin-top:10px;margin-left: 36%;">By Checkpoints</p>
+          <h4>Distribution by Checkpoints</h4>
         </div>
-      <!-- <div class="w-200 h-300p"> -->
         <ngx-charts-pie-chart
           [scheme]="colorScheme"
           [results]="first"
-
           [explodeSlices]="explodeSlices"
+          [legend]="showLegend"
           [labels]="showLabels"
           [doughnut]="doughnut"
           [gradient]="gradient"
         >
         </ngx-charts-pie-chart>
-       
-      <!-- </div> -->
-    
     </mat-card>
- 
-  <!-- </div> -->
-<!-- </div> -->
 </div>
-<div class="col-3">
-  <!-- <div style="margin-left: 2%"> -->
-    
-    <!-- <div class="flex-p "> -->
+<!-- Pie chart by compilance -->
+<div class="col-6 text-center">
       <mat-card >
         <div class="chart-header">
-          <p style="font-size: 20px;margin-top:10px;margin-left: 36%;">By Compilance</p>
+          <h4>Distribution by Compilance</h4>
         </div>
-      <!-- <div class="w-100 h-300p"> -->
         <ngx-charts-pie-chart
           [scheme]="colorScheme"
           [results]="three"
-         
           [explodeSlices]="explodeSlices"
+          [legend]="showLegend"
           [labels]="showLabels"
           [doughnut]="doughnut"
           [gradient]="gradient"
         >
         </ngx-charts-pie-chart>
-       
-      <!-- </div> -->
-    
     </mat-card>
- 
-  <!-- </div> -->
-<!-- </div> -->
 </div>
 </div>
 

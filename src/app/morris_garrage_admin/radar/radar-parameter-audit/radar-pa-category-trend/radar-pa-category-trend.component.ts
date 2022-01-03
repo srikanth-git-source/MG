@@ -24,11 +24,11 @@ export class RadarPaCategoryTrendComponent implements OnInit {
     const three = [
       {
         name: 'Interior',
-        value: 1290
+        value: 50
       },
       {
         name: 'Exterior',
-        value: 320
+        value: 25
       },
      
    
@@ -37,11 +37,11 @@ export class RadarPaCategoryTrendComponent implements OnInit {
     const first = [
       {
         name: 'Interior',
-        value: 20
+        value: 120
       },
       {
         name: 'Exterior',
-        value: 13
+        value: 17
       },
      
      
