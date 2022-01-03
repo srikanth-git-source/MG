@@ -27,10 +27,12 @@ export class MenuService {
         new Menu (5, 'Parameter Setup', '/parameter-setup', null, 'confirmation_number', null, false, 0,"white",true),
         new Menu (6, 'Admin', '/admin', null, 'admin_panel_settings', null, true, 0,"white",true),   
         new Menu (7, 'Users', '/admin/users', null, 'groups', null, false, 6,"white",true), 
-        new Menu (8, 'Organisations', '/admin/organisation/location', null, 'event_seat', null, false, 6,"white",true),
-        new Menu (9, 'Settings', '/admin/settings', null, 'manage_accounts', null, false, 6,"white",true), 
-        new Menu (10, 'Lookup Options', '/admin/lookup-options', null, 'launch', null, false, 6,"white",true), 
-        new Menu (11, 'Master Data', '/admin/master-data/model', null, 'horizontal_split', null, false, 6,"white",true),
+        new Menu (8, 'Roles', '/admin/roles', null, 'account_circle', null, false, 6,"white",true), 
+        new Menu (9, 'Organisations', '/admin/organisation/location', null, 'event_seat', null, false, 6,"white",true),
+        new Menu (10, 'Settings', '/admin/settings', null, 'manage_accounts', null, false, 6,"white",true), 
+        new Menu (11, 'Lookup Options', '/admin/lookup-options', null, 'launch', null, false, 6,"white",true), 
+        new Menu (12, 'Master Data', '/admin/master-data/model', null, 'horizontal_split', null, false, 6,"white",true),
+
         );
       } else if (this.userType == 'inspector') {
         temp.push(

@@ -152,7 +152,6 @@
             <th class="theadcolor text-center">Location</th>
             <th class="theadcolor text-center">Office</th>
             <th class="theadcolor text-center">Role</th>
-            <th style="width: 50px;" class="theadcolor text-center">Permissions</th>
             <th class="theadcolor text-center">Status</th>
             <th class="theadcolor text-center">Actions</th>
           </tr>
@@ -164,14 +163,7 @@
              <td >{{item.username}}</td>
             <td class="text-center">{{item.location}}</td>
             <td class="text-center">{{item.office}}</td>
-            <td class="text-center">{{item.Role}}</td>
-
-            <td class="text-center">
-              <a  style="cursor: pointer; color: cornflowerblue;"  routerLink = "/admin/permissions" matTooltip="Click to view Permissions">{{item.PermissionsCount}}</a>       
-            </td>
-
-
-            <td class="text-center"><a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
+            <td class="text-center">{{item.Role}}</td> <td class="text-center"><a [ngStyle]="{'color': item.status? 'blue' : 'red','cursor':'pointer'}"
               mwlConfirmationPopover [popoverTitle]="popoverStatusTitle"
               [popoverMessage]="popoverStatusMessage" placement="left"
               (confirm)="saveStatus();item.status=!item.status" (cancel)="cancelClicked = true" matTooltip="Click to Change Status">
