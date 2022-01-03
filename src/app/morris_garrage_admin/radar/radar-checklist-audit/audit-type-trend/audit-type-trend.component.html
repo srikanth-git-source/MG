@@ -1,30 +1,12 @@
 <div class="container-fluid mb-4">
   <div class="row mt-5">
     <div class="col-sm-12">
-      <div class="chart-header">
-        <h3 class="text-center" style="color: #212121;font-size:26;margin-top:10px;">Demerit Distribution by Audit Type
+      <!-- Demerit Distribution by Agency table -->
+      <mat-card class="chart-header mb-4">
+        <h3 class="text-center" style="color: #212121;font-size:26;">Demerit Distribution by Audit Type
         </h3>
-      </div>
-      <div id="grid-table-container" class="table-responsive" style="margin-top:25px;width: 100%;">
-        <!-- <table matSort id="example2" class="table table-bordered table-hover">
-        <thead class="tbl-head">
-          <tr>
-            <th>Period</th>
-            <th class="text-center">Amount (AUD)</th>
-            <th class="text-center">Invoices</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of items">
-            
-            <td>{{item.period }}</td>
-            <td class="text-center">{{item.amt }}</td>  
-            <td class="text-center"><a style="color:blue" routerLink="/mrc/accounting/Payables/ageing-invoices" matTooltip="View Invoice">{{item.inv }}</a></td>
-
-          </tr>
-
-        </tbody>
-      </table> -->
+      </mat-card>
+      <div id="grid-table-container" class="table-responsive" >
         <table matSort id="example2" class="table table-bordered table-hover">
           <thead class="tbl-head">
             <tr>
@@ -46,51 +28,30 @@
             </tr>
           </tbody>
         </table>
-
       </div>
-
     </div>
   </div>
+      <!-- pie charts for table -->
   <div class="row">
     <div class="col-sm-6">
-      <!-- <div style="margin-left: 2px"> -->
-
-      <!-- <div class="flex-p "> -->
       <mat-card>
         <div class="chart-header">
           <p class="text-center" style="font-size: 20px;margin-top:10px;">By Issues</p>
         </div>
-        <!-- <div class="w-200 h-300p"> -->
         <ngx-charts-pie-chart [scheme]="colorScheme" [results]="first" [explodeSlices]="explodeSlices"
-          [labels]="showLabels" [doughnut]="doughnut"  [legend]="showLegend" [gradient]="gradient">
+          [labels]="showLabels" [doughnut]="doughnut" [legend]="showLegend" [gradient]="gradient">
         </ngx-charts-pie-chart>
-
-        <!-- </div> -->
-
       </mat-card>
-
-      <!-- </div> -->
-      <!-- </div> -->
     </div>
     <div class="col-sm-6">
-      <!-- <div style="margin-left: 2%"> -->
-
-      <!-- <div class="flex-p "> -->
       <mat-card>
         <div class="chart-header">
           <p class="text-center" style="font-size: 20px;margin-top:10px;">By Demerits</p>
         </div>
-        <!-- <div class="w-100 h-300p"> -->
         <ngx-charts-pie-chart [scheme]="colorScheme" [results]="three" [explodeSlices]="explodeSlices"
-          [labels]="showLabels" [doughnut]="doughnut"  [legend]="showLegend" [gradient]="gradient">
+          [labels]="showLabels" [doughnut]="doughnut" [legend]="showLegend" [gradient]="gradient">
         </ngx-charts-pie-chart>
-
-        <!-- </div> -->
-
       </mat-card>
-
-      <!-- </div> -->
-      <!-- </div> -->
     </div>
   </div>
 </div>
