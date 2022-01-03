@@ -17,12 +17,15 @@ import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { AdduserComponent } from './users/adduser/adduser.component';
 import { PermissionsComponent } from './users/permissions/permissions.component';
+import { RolesComponent } from './roles/roles.component';
+import { AddroleComponent } from './roles/addrole/addrole.component';
 
 
 export const routes = [
   { path: '', redirectTo: 'lookup-options', pathMatch: 'full' },
   { path: 'lookup-options', component: LookupOptionsComponent, data: { breadcrumb: 'Lookup Options' }},
   { path: 'users', component: UsersComponent, data: { breadcrumb: 'Manage Users' }},
+  { path: 'roles', component: RolesComponent, data: { breadcrumb: 'Manage Roles' }},
   // { path: 'organisation', component: OrganisationsComponent, loadChildren: './organisations/organisations.module#OrganisationsModule', pathMatch: 'full', data: { breadcrumb: 'Organization Setup' } },
   { path: 'settings', component: SettingsComponent, pathMatch: 'full', data: { breadcrumb: 'Settings' } },
   {path:'permissions',component:PermissionsComponent,data:{breadcrumb:'Permissions'}},
@@ -46,11 +49,13 @@ export const routes = [
         SettingsComponent,
         AdduserComponent,
         PermissionsComponent,
+        RolesComponent,
+        AddroleComponent,
       
         
          ],
   entryComponents:[
-    AddLookupDialogComponent,AdduserComponent
+    AddLookupDialogComponent,AdduserComponent,AddroleComponent
   ]
 })
 export class AdminModule { }
