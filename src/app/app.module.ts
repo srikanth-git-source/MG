@@ -75,6 +75,7 @@ import { ParMetricComponent } from "./parameter-dashboard/par-metric/par-metric.
 import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
 import { MasterDataComponent } from "./morris_garrage_admin/admin/master-data/master-data.component";
 import { RadarComponent } from './morris_garrage_admin/radar/radar.component';
+import { SetPasswordComponent } from './login/set-password/set-password.component';
 
 
 
@@ -166,6 +167,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NewDashboardComponent,
     MasterDataComponent,
     RadarComponent,
+    SetPasswordComponent,
     
   ],
   entryComponents: [

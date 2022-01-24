@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  //url:'http://localhost:50932/',
-   url:'http://greenstorageapi.optionmatrix.org/',
+  apiUrl:'https://localhost:44300/',
 };
 
 /*

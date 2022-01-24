@@ -58,6 +58,10 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit() {
    
+    if (localStorage.getItem("loginUser") == "amit@optionmatrix.com") {
+      this.show_universal_filter = true;
+      this.Show_analytics = true;
+    }
     if (localStorage.getItem("loginUser") == "admin@optimaheat.com") {
       this.show_universal_filter = true;
       this.Show_analytics = true;
