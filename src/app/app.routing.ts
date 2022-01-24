@@ -26,12 +26,14 @@ import { NewDashboardComponent } from "./new-dashboard/new-dashboard.component";
 import { MasterDataComponent } from "./morris_garrage_admin/admin/master-data/master-data.component";
 import { RadarStatisticsComponent } from "./morris_garrage_admin/radar/radar-statistics/radar-statistics.component";
 import { RadarComponent } from "./morris_garrage_admin/radar/radar.component";
+import { SetPasswordComponent } from "./login/set-password/set-password.component";
 
 export const routes: Routes = [
   
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent,data:{breadcrumb:"Login"}},
   { path: "forgotpassword", component: ForgotPasswordComponent, data: {breadcrumb:"Not Found"}},
+  { path: "setpassword", component: SetPasswordComponent, data: {breadcrumb:"Not Found"}},
   {
     path: "",
     component: LayoutComponent,
